@@ -1,0 +1,20 @@
+[
+{
+"modid": "SimpleArsenic",
+"name": "Simple Arsenic, and Old Lace",
+"description": "Addition of Arsenic, Arsenide Bronze, and Arsenide Gold, as well as Lace Shrouds. Fusion Furnace plug-in",
+"version": "1.3.0",
+"credits": "Created by akkamaddi, reliant on AleXndrTheGr8st",
+"logoFile": "",
+"mcversion": "",
+"url": "",
+"updateUrl": "",
+"authors": [ "akkamaddi" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [
+"MinecraftForge"
+"simpleoresfusion"
+]
+}
+]
