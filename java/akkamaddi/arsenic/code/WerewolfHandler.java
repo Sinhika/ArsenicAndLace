@@ -8,13 +8,13 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EntityDamageSource;
-import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class WerewolfHandler
 {
-    private final Class werewolf;
-    private Method isHumanForm;
+    private final Class<?> werewolf;
+    private final Method isHumanForm;
 
     public WerewolfHandler() throws ClassNotFoundException
     {
@@ -54,7 +54,7 @@ public class WerewolfHandler
         }
     }
 
-    @ForgeSubscribe public void onLivingHurt(LivingHurtEvent event)
+    @SubscribeEvent public void onLivingHurt(LivingHurtEvent event)
     {
         if (!isWerewolfInWolfForm(event.entityLiving))
         {
@@ -73,23 +73,23 @@ public class WerewolfHandler
 
         Item item = stack.getItem();
 
-        if (item.itemID ==  ArsenicAndLace.arsenideGoldHoe.itemID)
+        if (item ==  ArsenicAndLace.arsenideGoldHoe)
         {
             event.ammount = 6;
         }
-        else if (item.itemID ==  ArsenicAndLace.arsenideGoldShovel.itemID)
+        else if (item ==  ArsenicAndLace.arsenideGoldShovel)
         {
             event.ammount = 7;
         }
-        else if (item.itemID ==  ArsenicAndLace.arsenideGoldPickaxe.itemID)
+        else if (item ==  ArsenicAndLace.arsenideGoldPickaxe)
         {
             event.ammount = 8;
         }
-        else if (item.itemID ==  ArsenicAndLace.arsenideGoldAxe.itemID)
+        else if (item ==  ArsenicAndLace.arsenideGoldAxe)
         {
             event.ammount = 9;
         }
-        else if (item.itemID ==  ArsenicAndLace.arsenideGoldSword.itemID)
+        else if (item ==  ArsenicAndLace.arsenideGoldSword)
         {
             event.ammount = 10;
         }

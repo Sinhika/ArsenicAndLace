@@ -5,10 +5,10 @@ import java.util.Random;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntityZombie;
-import net.minecraft.item.Item;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class HandlerJoinWorld
 {
@@ -22,7 +22,7 @@ public class HandlerJoinWorld
     /**
      * This class allows zombies and skeletons to spawn holding/wearing Arsenic items.
      */
-    @ForgeSubscribe
+    @SubscribeEvent
     public void EntityJoinWorldEvent(EntityJoinWorldEvent event)
     {
         rand = Math.random();
@@ -375,38 +375,38 @@ public class HandlerJoinWorld
 
             if (range == 58)
             {
-                living.setCurrentItemOrArmor(4, new ItemStack(Item.helmetLeather));
-                living.setCurrentItemOrArmor(3, new ItemStack(Item.plateLeather));
-                living.setCurrentItemOrArmor(2, new ItemStack(Item.legsLeather));
-                living.setCurrentItemOrArmor(1, new ItemStack(Item.bootsLeather));
+                living.setCurrentItemOrArmor(4, new ItemStack(Items.leather_helmet));
+                living.setCurrentItemOrArmor(3, new ItemStack(Items.leather_chestplate));
+                living.setCurrentItemOrArmor(2, new ItemStack(Items.leather_leggings));
+                living.setCurrentItemOrArmor(1, new ItemStack(Items.leather_boots));
                 living.setCurrentItemOrArmor(0, new ItemStack(ArsenicAndLace.arsenicSword));
             }
 
             if (range == 59)
             {
-                living.setCurrentItemOrArmor(4, new ItemStack(Item.helmetLeather));
-                living.setCurrentItemOrArmor(1, new ItemStack(Item.bootsLeather));
+                living.setCurrentItemOrArmor(4, new ItemStack(Items.leather_helmet));
+                living.setCurrentItemOrArmor(1, new ItemStack(Items.leather_boots));
                 living.setCurrentItemOrArmor(0, new ItemStack(ArsenicAndLace.arsenicPickaxe));
             }
 
             if (range == 60)
             {
-                living.setCurrentItemOrArmor(4, new ItemStack(Item.helmetLeather));
-                living.setCurrentItemOrArmor(3, new ItemStack(Item.plateLeather));
+                living.setCurrentItemOrArmor(4, new ItemStack(Items.leather_helmet));
+                living.setCurrentItemOrArmor(3, new ItemStack(Items.leather_chestplate));
                 living.setCurrentItemOrArmor(0, new ItemStack(ArsenicAndLace.arsenicAxe));
             }
 
             if (range == 61)
             {
-                living.setCurrentItemOrArmor(2, new ItemStack(Item.legsLeather));
-                living.setCurrentItemOrArmor(1, new ItemStack(Item.bootsLeather));
+                living.setCurrentItemOrArmor(2, new ItemStack(Items.leather_leggings));
+                living.setCurrentItemOrArmor(1, new ItemStack(Items.leather_boots));
                 living.setCurrentItemOrArmor(0, new ItemStack(ArsenicAndLace.arsenicShovel));
             }
 
             if (range == 62)
             {
-                living.setCurrentItemOrArmor(4, new ItemStack(Item.helmetLeather));
-                living.setCurrentItemOrArmor(1, new ItemStack(Item.bootsLeather));
+                living.setCurrentItemOrArmor(4, new ItemStack(Items.leather_helmet));
+                living.setCurrentItemOrArmor(1, new ItemStack(Items.leather_boots));
                 living.setCurrentItemOrArmor(0, new ItemStack(ArsenicAndLace.arsenicHoe));
             }
 
@@ -461,6 +461,7 @@ public class HandlerJoinWorld
     }
 }
 
+@SuppressWarnings("serial")
 class RandomRange extends Random
 {
     public int nextInt(int min, int max)
