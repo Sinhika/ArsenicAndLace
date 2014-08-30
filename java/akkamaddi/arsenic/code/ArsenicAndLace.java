@@ -7,9 +7,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
+import akkamaddi.akkamaddiCore.api.APIcore;
+import akkamaddi.akkamaddiCore.api.CommonProxy;
+import akkamaddi.akkamaddiCore.api.WerewolfHandler;
 import alexndr.SimpleOres.api.content.SimpleArmor;
 import alexndr.SimpleOres.api.content.SimpleAxe;
 import alexndr.SimpleOres.api.content.SimpleBlock;
@@ -30,7 +32,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = "SimpleArsenic", name = "Simple Arsenic, and Old Lace", version = "1.7.10-1.4.0", 
-	dependencies = "required-after:simpleores ; required-after:fusionplugin ; after:MoCreatures")
+	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore ; after:MoCreatures")
 
 public class ArsenicAndLace
 {
@@ -39,7 +41,8 @@ public class ArsenicAndLace
     public static ArsenicAndLace instance;
 
     // Says where the client and server 'proxy' code is loaded.
-    @SidedProxy(clientSide = "akkamaddi.arsenic.code.ClientProxy", serverSide = "akkamaddi.arsenic.code.CommonProxy")
+    @SidedProxy(clientSide = "akkamaddi.arsenic.code.ClientProxy", 
+    		    serverSide = "akkamaddi.akkamaddiCore.api.CommonProxy")
     public static CommonProxy proxy;
 
     // set simple items class paths
@@ -136,10 +139,10 @@ public class ArsenicAndLace
      * Creating the Armor Renderers. This is simply so you can see the armor texture when you wear it.
      */
     // public static int rendererArsenic;
-    public static int rendererArsenideBronze;
-    public static int rendererArsenideGold;
-    public static int rendererOldLace;
-    public static int rendererTenebrium;
+    public static int rendererArsenideBronze = 0;
+    public static int rendererArsenideGold = 0;
+    public static int rendererOldLace = 0;
+    public static int rendererTenebrium = 0;
 
     // set tool properties
     // EnumToolMaterial. In form ("NAME", mining level, max uses, speed, damage to entity, enchantability)
@@ -491,12 +494,13 @@ public class ArsenicAndLace
         LootHelper.addLoot("pyramidJungleChest", new ItemStack(arsenicSword), 3, 5, 2);
 
         if (ArsenicAndLace.werewolfEffectiveness)
-            try
-            {
-                MinecraftForge.EVENT_BUS.register(new WerewolfHandler());
-            }
-            catch (ClassNotFoundException ignored) {}
-
+        {
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldHoe, 6.0F);
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldShovel, 7.0F);
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldPickaxe, 8.0F);
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldAxe, 9.0F);
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldSword, 10.0F);
+        }
         // run tab icon call
         setTabIcons();
         // recipes
@@ -510,16 +514,9 @@ public class ArsenicAndLace
     public void load(FMLInitializationEvent event)
     {
         proxy.registerRenderers();
-        MinecraftForge.EVENT_BUS.register(new HandlerJoinWorld());
-        
-        //Armor Renderers
-        rendererArsenideBronze = proxy.addArmor("arsenideBronze");
-        rendererArsenideGold = proxy.addArmor("arsenideGold");
-        rendererOldLace = proxy.addArmor("oldLace");
-        rendererTenebrium = proxy.addArmor("tenebrium");
-        // name stuff
-        
-    }
+        APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
+//        MinecraftForge.EVENT_BUS.register(new HandlerJoinWorld());
+     }
 
     @EventHandler // used in 1.6.2
     public void postInit(FMLPostInitializationEvent event)

@@ -24,6 +24,7 @@ public class ArsenicRecipes {
 				ArsenicAndLace.arsenideGoldIngot));
 		OreDictionary.registerOre("ingotTenebrium", new ItemStack(
 				ArsenicAndLace.tenebriumIngot));
+		
 		// recipes: Crafting
 		// Storage Blocks
 		GameRegistry.addRecipe(new ItemStack(ArsenicAndLace.blockArsenic, 1),
