@@ -31,7 +31,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "SimpleArsenic", name = "Simple Arsenic, and Old Lace", version = "1.7.10-1.4.0", 
+@Mod(modid = "arsenic", name = "Simple Arsenic and Old Lace", version = "1.7.10-1.4.0", 
 	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore ; after:MoCreatures")
 
 public class ArsenicAndLace
@@ -505,7 +505,9 @@ public class ArsenicAndLace
         setTabIcons();
         // recipes
         ArsenicRecipes.doArsenicRecipes();
-    }
+        
+        APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
+    } // end preInit()
 
     /**
      * Do your mod setup. Build whatever data structures you care about. 
@@ -514,8 +516,6 @@ public class ArsenicAndLace
     public void load(FMLInitializationEvent event)
     {
         proxy.registerRenderers();
-        APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
-//        MinecraftForge.EVENT_BUS.register(new HandlerJoinWorld());
      }
 
     @EventHandler // used in 1.6.2
