@@ -130,10 +130,14 @@ public class ArsenicAndLace
      * EnumArmorMaterial. In form ("NAME", max damage (like uses, multiply by pieces for their max damage), new int[] {helmet defense, chestplate defense, leggings defense, boots defense}, enchantability)
      */
     // public static EnumArmorMaterial armorArsenic = EnumHelper.addArmorMaterial("ARSENIC", 6, new int[] {1, 3, 2, 1}, 10);
-    public static ArmorMaterial armorArsenideBronze = EnumHelper.addArmorMaterial("ARSENIDEBRONZE", 16, new int[] {3, 5, 3, 1}, 9);
-    public static ArmorMaterial armorArsenideGold = EnumHelper.addArmorMaterial("ARSENIDEGOLD", 12, new int[] {2, 6, 3, 1}, 22);
-    public static ArmorMaterial armorOldLace = EnumHelper.addArmorMaterial("OLDLACE", 4, new int[] {1, 1, 1, 1}, 24);
-    public static ArmorMaterial armorTenebrium = EnumHelper.addArmorMaterial("TENEBRIUM", 52, new int[] {4, 8, 8, 4}, 17);
+	public static ArmorMaterial armorArsenideBronze = EnumHelper
+			.addArmorMaterial("ARSENIDEBRONZE", 16, new int[] { 3, 5, 3, 1 }, 9);
+	public static ArmorMaterial armorArsenideGold = EnumHelper
+			.addArmorMaterial("ARSENIDEGOLD", 12, new int[] { 2, 6, 3, 1 }, 22);
+	public static ArmorMaterial armorOldLace = EnumHelper.addArmorMaterial(
+			"OLDLACE", 4, new int[] { 1, 1, 1, 1 }, 24);
+	public static ArmorMaterial armorTenebrium = EnumHelper.addArmorMaterial(
+			"TENEBRIUM", 52, new int[] { 4, 8, 8, 4 }, 17);
 
     /**
      * Creating the Armor Renderers. This is simply so you can see the armor texture when you wear it.
@@ -501,6 +505,7 @@ public class ArsenicAndLace
         	WerewolfHandler.Damage2Wolf.put(arsenideGoldAxe, 9.0F);
         	WerewolfHandler.Damage2Wolf.put(arsenideGoldSword, 10.0F);
         }
+        
         // run tab icon call
         setTabIcons();
         // recipes
