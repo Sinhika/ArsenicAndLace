@@ -477,22 +477,12 @@ public class ArsenicRecipes {
 				new ItemStack(ArsenicAndLace.largeTenebriumChunkItem), 30.0F);
 		FusionRecipes.addSmelting(
 				new ItemStack(Items.dye, 1, 2),
-				new ItemStack(Blocks.leaves, 1, 0),
+				new ItemStack(Blocks.leaves, 1, OreDictionary.WILDCARD_VALUE),
 				new ItemStack(Items.rotten_flesh),
 				new ItemStack(Items.slime_ball), 2.0F);
 		FusionRecipes.addSmelting(
 				new ItemStack(Items.dye, 1, 2),
-				new ItemStack(Blocks.leaves, 1, 1),
-				new ItemStack(Items.rotten_flesh),
-				new ItemStack(Items.slime_ball), 2.0F);
-		FusionRecipes.addSmelting(
-				new ItemStack(Items.dye, 1, 2),
-				new ItemStack(Blocks.leaves, 1, 2),
-				new ItemStack(Items.rotten_flesh),
-				new ItemStack(Items.slime_ball), 2.0F);
-		FusionRecipes.addSmelting(
-				new ItemStack(Items.dye, 1, 2),
-				new ItemStack(Blocks.leaves, 1, 3),
+				new ItemStack(Blocks.leaves2, 1, OreDictionary.WILDCARD_VALUE),
 				new ItemStack(Items.rotten_flesh),
 				new ItemStack(Items.slime_ball), 2.0F);
 

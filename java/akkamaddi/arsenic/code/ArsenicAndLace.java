@@ -31,7 +31,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "arsenic", name = "Simple Arsenic and Old Lace", version = "1.7.10-1.4.0", 
+@Mod(modid = "arsenic", name = "Simple Arsenic and Old Lace", version = "1.7.10-1.4.1", 
 	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore ; after:MoCreatures")
 
 public class ArsenicAndLace
@@ -252,8 +252,7 @@ public class ArsenicAndLace
 				.setCreativeTab(ArsenicAndLace.tabAkkamaddiArsenic)
 				.setUnlocalizedName("arsenideBronzeSword");
 		arsenideBronzeShovel = new SimpleShovel(
-
-		ArsenicAndLace.toolArsenideBronze).modId("arsenic")
+				ArsenicAndLace.toolArsenideBronze).modId("arsenic")
 				.setCreativeTab(ArsenicAndLace.tabAkkamaddiArsenic)
 				.setUnlocalizedName("arsenideBronzeShovel");
 		arsenideBronzeAxe = new SimpleAxe(ArsenicAndLace.toolArsenideBronze)
