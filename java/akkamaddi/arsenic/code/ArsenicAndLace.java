@@ -1,5 +1,7 @@
 package akkamaddi.arsenic.code;
 
+import java.io.File;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Items;
@@ -31,7 +33,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "arsenic", name = "Simple Arsenic and Old Lace", version = "1.7.10-1.4.1", 
+@Mod(modid = "arsenic", name = "Simple Arsenic and Old Lace", version = "1.7.10-1.4.2", 
 	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore ; after:MoCreatures")
 
 public class ArsenicAndLace
@@ -171,8 +173,10 @@ public class ArsenicAndLace
     @EventHandler // used in 1.6.2
     public void preInit(FMLPreInitializationEvent event)
     {
-        // Stub Method
-        Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+		File installDir = event.getModConfigurationDirectory();
+		File configDir = new File(installDir, "akkamaddi");
+	    File configFile = new File(configDir, "arsenic.cfg");
+	    Configuration config = new Configuration(configFile);
         config.load();
 		werewolfEffectiveness = config.get(Configuration.CATEGORY_GENERAL,
 				"Works on Mo'Creatures lycanthropes, true or false", true)
