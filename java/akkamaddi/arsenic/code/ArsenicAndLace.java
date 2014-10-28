@@ -152,10 +152,14 @@ public class ArsenicAndLace
 
     // set tool properties
     // EnumToolMaterial. In form ("NAME", mining level, max uses, speed, damage to entity, enchantability)
-    public static ToolMaterial toolArsenic = EnumHelper.addToolMaterial("ARSENIC", 1, 62, 2.0F, 2, 10);
-    public static ToolMaterial toolArsenideBronze = EnumHelper.addToolMaterial("ARSENIDEBRONZE", 2, 640, 9.5F, 2, 9);
-    public static ToolMaterial toolArsenideGold = EnumHelper.addToolMaterial("ARSENIDEGOLD", 1, 56, 12.0F, 2, 20);
-    public static ToolMaterial toolTenebrium = EnumHelper.addToolMaterial("TENEBRIUM", 4, 3820, 9.0F, 3, 17);
+	public static ToolMaterial toolArsenic = EnumHelper.addToolMaterial(
+			"ARSENIC", 1, 62, 2.0F, 2, 10);
+	public static ToolMaterial toolArsenideBronze = EnumHelper.addToolMaterial(
+			"ARSENIDEBRONZE", 2, 640, 9.5F, 2, 9);
+	public static ToolMaterial toolArsenideGold = EnumHelper.addToolMaterial(
+			"ARSENIDEGOLD", 1, 56, 12.0F, 2, 20);
+	public static ToolMaterial toolTenebrium = EnumHelper.addToolMaterial(
+			"TENEBRIUM", 4, 3820, 9.0F, 3, 17);
 
     // Tab
     public void setTabIcons()
