@@ -33,7 +33,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "arsenic", name = "Simple Arsenic and Old Lace", version = "1.7.10-1.4.2", 
+@Mod(modid = "arsenic", name = "Simple Arsenic and Old Lace", version = "1.7.10-1.4.3", 
 	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore ; after:MoCreatures")
 
 public class ArsenicAndLace
@@ -124,6 +124,7 @@ public class ArsenicAndLace
     // booleans
     public static boolean werewolfEffectiveness;
     public static boolean enableRecycling;
+    public static boolean itemizeMobs;
 
     // tab
     public static SimpleTab tabAkkamaddiArsenic = new SimpleTab("tabAkkamaddiArsenic");
@@ -174,7 +175,7 @@ public class ArsenicAndLace
      * Run before anything else. Read your config, create blocks, items, etc, and 
      * register them with the GameRegistry. Register recipes.
      */
-    @EventHandler // used in 1.6.2
+    @EventHandler 
     public void preInit(FMLPreInitializationEvent event)
     {
 		File installDir = event.getModConfigurationDirectory();
@@ -188,7 +189,9 @@ public class ArsenicAndLace
 		enableRecycling = config.get(Configuration.CATEGORY_GENERAL,
 				"Enable arsenide recycling recipes, false or true", false)
 				.getBoolean(false);
-        config.save();
+		itemizeMobs = config.get( Configuration.CATEGORY_GENERAL, 
+				"Equip mobs with Arsenic gear, false or true",false).getBoolean(false);
+	    config.save();
         
         // define items
 		arsenicIngot = new SimpleIngot().modId("arsenic")
@@ -518,7 +521,9 @@ public class ArsenicAndLace
         // recipes
         ArsenicRecipes.doArsenicRecipes();
         
-        APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
+        if (itemizeMobs) {
+        	APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
+        }
     } // end preInit()
 
     /**
