@@ -431,10 +431,14 @@ public class ArsenicAndLace
         GameRegistry.registerBlock(plateArsenic, "plateArsenic");
         
         blockArsenic.setHarvestLevel("pickaxe", 0);
+        ((SimpleBlock) blockArsenic).setAsBeaconBase(true);
         blockArsenideBronze.setHarvestLevel( "pickaxe", 0);
+        ((SimpleBlock) blockArsenideBronze).setAsBeaconBase(true);
         blockArsenideGold.setHarvestLevel( "pickaxe", 0);
+        ((SimpleBlock) blockArsenideGold).setAsBeaconBase(true);
         plateArsenic.setHarvestLevel( "pickaxe", 0);
         blockTenebrium.setHarvestLevel( "pickaxe", 0);
+        ((SimpleBlock) blockTenebrium).setAsBeaconBase(true);
         
         toolArsenic.customCraftingMaterial = ArsenicAndLace.arsenicIngot;
         toolArsenideBronze.customCraftingMaterial = ArsenicAndLace.arsenideBronzeIngot;
