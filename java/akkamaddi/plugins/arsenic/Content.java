@@ -107,6 +107,7 @@ public class Content
 				.setType("arsenideGold")
 				.setCreativeTab(ArsenicAndLace.tabAkkamaddiArsenic)
 				.setUnlocalizedName("arsenideGoldBoots");
+		
 		oldLaceChest = new SimpleArmor(ArsenicAndLace.armorOldLace, 1).modId("arsenic")
 				.setType("oldLace")
 				.setCreativeTab(ArsenicAndLace.tabAkkamaddiArsenic)

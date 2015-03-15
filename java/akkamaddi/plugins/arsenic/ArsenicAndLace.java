@@ -1,18 +1,19 @@
 package akkamaddi.plugins.arsenic;
 
-import alexndr.api.content.inventory.SimpleTab;
-import alexndr.api.core.ContentTypes;
-import alexndr.api.core.LogHelper;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
+import alexndr.api.content.inventory.SimpleTab;
+import alexndr.api.core.ContentTypes;
+import alexndr.api.core.LogHelper;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler; // used in 1.6.2
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+// used in 1.6.2
 
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION, 
 dependencies = "required-after:simplecore; required-after:simpleores ; required-after:fusion ; required-after:akkamaddicore")
@@ -82,31 +83,52 @@ public class ArsenicAndLace
 	 */
 	private static void setToolAndArmorStats() 
 	{
-	    /**
-	     * EnumArmorMaterial. In form ("NAME", max damage (like uses, multiply by pieces for their max damage), new int[] {helmet defense, chestplate defense, leggings defense, boots defense}, enchantability)
-	     */
+		/**
+		 * EnumArmorMaterial. In form ("NAME", max damage (like uses, multiply
+		 * by pieces for their max damage), new int[] {helmet defense,
+		 * chestplate defense, leggings defense, boots defense}, enchantability)
+		 */
 	    // public static EnumArmorMaterial armorArsenic = EnumHelper.addArmorMaterial("ARSENIC", 6, new int[] {1, 3, 2, 1}, 10);
-		armorArsenideBronze = EnumHelper.addArmorMaterial(
-				"ARSENIDEBRONZE", 16, new int[] { 3, 5, 3, 1 }, 9);
-		armorArsenideGold = EnumHelper.addArmorMaterial(
-				"ARSENIDEGOLD", 12, new int[] { 2, 6, 3, 1 }, 22);
-		armorOldLace = EnumHelper.addArmorMaterial("OLDLACE", 4,
-				new int[] { 1, 1, 1, 1 }, 24);
+		armorOldLace = EnumHelper.addArmorMaterial("OLDLACE",
+				Settings.oldLaceArmorDurability,
+				Settings.oldLaceArmorDamageReduction,
+				Settings.oldLaceArmorEnchantability);
+		armorArsenideBronze = EnumHelper.addArmorMaterial("ARSENIDEBRONZE",
+				Settings.arsenideBronzeArmorDurability,
+				Settings.arsenideBronzeArmorDamageReduction,
+				Settings.arsenideBronzeArmorEnchantability);
+		armorArsenideGold = EnumHelper.addArmorMaterial("ARSENIDEGOLD",
+				Settings.arsenideGoldArmorDurability,
+				Settings.arsenideGoldArmorDamageReduction,
+				Settings.arsenideGoldArmorEnchantability);
 		armorTenebrium = EnumHelper.addArmorMaterial("TENEBRIUM",
-				52, new int[] { 4, 8, 8, 4 }, 17);
+				Settings.tenebriumArmorDurability,
+				Settings.tenebriumArmorDamageReduction,
+				Settings.tenebriumArmorEnchantability);
 
 		// set tool properties
 		// EnumToolMaterial. In form ("NAME", mining level, max uses, speed,
 		// damage to entity, enchantability)
-		toolArsenic = EnumHelper.addToolMaterial("ARSENIC", 1, 62,
-				2.0F, 2, 10);
-		toolArsenideBronze = EnumHelper.addToolMaterial(
-				"ARSENIDEBRONZE", 2, 640, 9.5F, 2, 9);
-		toolArsenideGold = EnumHelper.addToolMaterial(
-				"ARSENIDEGOLD", 1, 56, 12.0F, 2, 20);
-		toolTenebrium = EnumHelper.addToolMaterial("TENEBRIUM", 4,
-				3820, 9.0F, 3, 17);
-
+		toolArsenic = EnumHelper.addToolMaterial("ARSENIC",
+				Settings.arsenicMiningLevel, Settings.arsenicUsesNum,
+				Settings.arsenicMiningSpeed, Settings.arsenicDamageVsEntity,
+				Settings.arsenicEnchantability);
+		toolArsenideBronze = EnumHelper.addToolMaterial("ARSENIDEBRONZE",
+				Settings.arsenideBronzeMiningLevel,
+				Settings.arsenideBronzeUsesNum,
+				Settings.arsenideBronzeMiningSpeed,
+				Settings.arsenideBronzeDamageVsEntity,
+				Settings.arsenideBronzeEnchantability);
+		toolArsenideGold = EnumHelper.addToolMaterial("ARSENIDEGOLD",
+				Settings.arsenideGoldMiningLevel, Settings.arsenideGoldUsesNum,
+				Settings.arsenideGoldMiningSpeed,
+				Settings.arsenideGoldDamageVsEntity,
+				Settings.arsenideGoldEnchantability);
+		toolTenebrium = EnumHelper.addToolMaterial("TENEBRIUM",
+				Settings.tenebriumMiningLevel, Settings.tenebriumUsesNum,
+				Settings.tenebriumMiningSpeed,
+				Settings.tenebriumDamageVsEntity,
+				Settings.tenebriumEnchantability);
 	 } // end ()
 	
 	/**

@@ -73,7 +73,21 @@ public class Settings extends ASettings
 	/**
 	 * Sets the default armor stats.
 	 */
-	public static void armorStatDefaults() {}
+	public static void armorStatDefaults() 
+	{
+		oldLaceArmorDurability = 4;
+		oldLaceArmorDamageReduction = new int[] { 1, 1, 1, 1 };
+		oldLaceArmorEnchantability = 24;
+		arsenideBronzeArmorDurability = 16;
+		arsenideBronzeArmorDamageReduction = new int[] { 3, 5, 3, 1 };
+		arsenideBronzeArmorEnchantability = 9;
+		arsenideGoldArmorDurability = 12;
+		arsenideGoldArmorDamageReduction = new int[] { 2, 6, 3, 1 };
+		arsenideGoldArmorEnchantability = 22;
+		tenebriumArmorDurability = 52;
+		tenebriumArmorDamageReduction = new int[] { 4, 8, 8, 4 };
+		tenebriumArmorEnchantability = 17;
+	} // end armorStatDefaults
 	
 	/**
 	 * sets customized armor stats.
@@ -83,7 +97,22 @@ public class Settings extends ASettings
 	/**
 	 * Sets the default block stats.
 	 */
-	public static void blockStatDefaults() {}
+	public static void blockStatDefaults() 
+	{
+		arsenicHardness = ;
+		arsenicResistance = ;
+		arsenicHarvestLevel = ;
+		arsenideBronzeHardness = ;
+		arsenideBronzeResistance = ;
+		arsenideBronzeHarvestLevel = ;
+		arsenideGoldHardness = ;
+		arsenideGoldResistance = ;
+		arsenideGoldHarvestLevel = ;
+		tenebriumHardness = ;
+		tenebriumResistance = ;
+		tenebriumHarvestLevel = ;
+		
+	} // end blockStatDefaults
 
 	/**
 	 * sets customized block stats.
@@ -93,13 +122,67 @@ public class Settings extends ASettings
 	/**
 	 * Sets the default tool stats.
 	 */
-	public static void toolStatDefaults() {}
+	public static void toolStatDefaults() 
+	{
+		arsenicMiningLevel = 1;
+		arsenicUsesNum = 62;
+		arsenicMiningSpeed = 2.0F;
+		arsenicDamageVsEntity = 2;
+		arsenicEnchantability = 10;
+		arsenideBronzeMiningLevel = 2;
+		arsenideBronzeUsesNum = 640;
+		arsenideBronzeMiningSpeed = 9.5F;
+		arsenideBronzeDamageVsEntity = 2;
+		arsenideBronzeEnchantability =  9;
+		arsenideGoldMiningLevel = 1;
+		arsenideGoldUsesNum = 56;
+		arsenideGoldMiningSpeed = 12.0F;
+		arsenideGoldDamageVsEntity = 2; 
+		arsenideGoldEnchantability = 20;
+		tenebriumMiningLevel = 4;
+		tenebriumUsesNum = 3820;
+		tenebriumMiningSpeed = 9.0F;
+		tenebriumDamageVsEntity = 3;
+		tenebriumEnchantability = 17;
+	} // end toolStatDefaults
 
 	/**
 	 * set customized tool stats.
 	 */
 	public static void customizeToolStats() {}
 
+	// general toggles
 	public static boolean werewolfEffectiveness;
+	
+	// Tool Stats
+	public static int arsenicMiningLevel, arsenideBronzeMiningLevel,
+			arsenideGoldMiningLevel, tenebriumMiningLevel;
+	public static int arsenicUsesNum, arsenideBronzeUsesNum,
+			arsenideGoldUsesNum, tenebriumUsesNum;
+	public static float arsenicMiningSpeed, arsenideBronzeMiningSpeed,
+			arsenideGoldMiningSpeed, tenebriumMiningSpeed;
+	public static float arsenicDamageVsEntity, arsenideBronzeDamageVsEntity,
+			arsenideGoldDamageVsEntity, tenebriumDamageVsEntity;
+	public static int arsenicEnchantability, arsenideBronzeEnchantability,
+			arsenideGoldEnchantability, tenebriumEnchantability;
+
+	// Armor Stats
+	public static int oldLaceArmorDurability, arsenideBronzeArmorDurability,
+			arsenideGoldArmorDurability, tenebriumArmorDurability;
+	public static int[] oldLaceArmorDamageReduction,
+			arsenideBronzeArmorDamageReduction,
+			arsenideGoldArmorDamageReduction, tenebriumArmorDamageReduction;
+	public static int oldLaceArmorEnchantability,
+			arsenideBronzeArmorEnchantability, arsenideGoldArmorEnchantability,
+			tenebriumArmorEnchantability;
+
+	// Block stats
+	public static float arsenicHardness, arsenideBronzeHardness,
+			arsenideGoldHardness, tenebriumHardness;
+	public static float arsenicResistance, arsenideBronzeResistance,
+			arsenideGoldResistance, tenebriumResistance;
+	public static int arsenicHarvestLevel, arsenideBronzeHarvestLevel,
+			arsenideGoldHarvestLevel, tenebriumHarvestLevel;
+
 	
 } // end class ASettings
