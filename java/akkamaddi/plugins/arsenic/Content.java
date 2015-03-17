@@ -256,7 +256,6 @@ public class Content
         blockArsenic.setHarvestLevel("pickaxe", Settings.arsenicHarvestLevel);
         blockArsenideBronze.setHarvestLevel( "pickaxe", Settings.arsenideBronzeHarvestLevel);
         blockArsenideGold.setHarvestLevel( "pickaxe", Settings.arsenideGoldHarvestLevel);
-        plateArsenic.setHarvestLevel( "pickaxe", Settings.arsenicHarvestLevel);
         blockTenebrium.setHarvestLevel( "pickaxe", Settings.tenebriumHarvestLevel);
  
 		plateArsenic = new ArsenicPlate("plateArsenic", Material.wood,
@@ -264,6 +263,7 @@ public class Content
 				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("plateArsenic")
 				.setCreativeTab(ArsenicAndLace.tabAkkamaddiArsenic);
+        plateArsenic.setHarvestLevel( "pickaxe", Settings.arsenicHarvestLevel);
         
 	} // end doBlocks()
 	
