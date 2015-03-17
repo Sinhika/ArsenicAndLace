@@ -92,32 +92,119 @@ public class Settings extends ASettings
 	/**
 	 * sets customized armor stats.
 	 */
-	public static void customizeArmorStats() {}
+	public static void customizeArmorStats() 
+	{
+		oldLaceArmorDurability = config.getInt("Old Lace Shroud Durability",
+				"Armor Stat Modification", oldLaceArmorDurability, 0, 255,
+				"Controls the durability of Old Lace Armor.");
+		oldLaceArmorDamageReduction = config.get("Armor Stat Modification",
+				"Old Lace Shroud Damage Reduction Array",
+				oldLaceArmorDamageReduction).getIntList();
+		oldLaceArmorEnchantability = config.getInt(
+				"Old Lace Shroud Enchantability", "Armor Stat Modification", 
+				oldLaceArmorEnchantability,
+				0, 255, "Controls the enchantability of Old Lace Shroud.");
+		
+		arsenideBronzeArmorDurability = config.getInt("Arsenide Bronze Armor Durability",
+				"Armor Stat Modification", arsenideBronzeArmorDurability, 0, 255,
+				"Controls the durability of Arsenide Bronze Armor.");
+		arsenideBronzeArmorDamageReduction = config.get("Armor Stat Modification",
+				"Arsenide Bronze Armor Damage Reduction Array",
+				arsenideBronzeArmorDamageReduction).getIntList();
+		arsenideBronzeArmorEnchantability = config.getInt(
+				"Arsenide Bronze Armor Enchantability", "Armor Stat Modification", 
+				arsenideBronzeArmorEnchantability,
+				0, 255, "Controls the enchantability of Arsenide Bronze Armor.");
+
+		arsenideGoldArmorDurability = config.getInt("Arsenide Gold Armor Durability",
+				"Armor Stat Modification", arsenideGoldArmorDurability, 0, 255,
+				"Controls the durability of Arsenide Gold Armor.");
+		arsenideGoldArmorDamageReduction = config.get("Armor Stat Modification",
+				"Arsenide Gold Armor Damage Reduction Array",
+				arsenideGoldArmorDamageReduction).getIntList();
+		arsenideGoldArmorEnchantability = config.getInt(
+				"Arsenide Gold Armor Enchantability", "Armor Stat Modification", 
+				arsenideGoldArmorEnchantability,
+				0, 255, "Controls the enchantability of Arsenide Gold Armor.");
+
+		tenebriumArmorDurability = config.getInt("Tenebrium Armor Durability",
+				"Armor Stat Modification", tenebriumArmorDurability, 0, 255,
+				"Controls the durability of Tenebrium Armor.");
+		tenebriumArmorDamageReduction = config.get("Armor Stat Modification",
+				"Tenebrium Armor Damage Reduction Array",
+				tenebriumArmorDamageReduction).getIntList();
+		tenebriumArmorEnchantability = config.getInt(
+				"Tenebrium Armor Enchantability", "Armor Stat Modification", 
+				tenebriumArmorEnchantability,
+				0, 255, "Controls the enchantability of Tenebrium Armor.");
+
+	} // end customizeArmorStats
 	
 	/**
 	 * Sets the default block stats.
 	 */
 	public static void blockStatDefaults() 
 	{
-		arsenicHardness = ;
-		arsenicResistance = ;
-		arsenicHarvestLevel = ;
-		arsenideBronzeHardness = ;
-		arsenideBronzeResistance = ;
-		arsenideBronzeHarvestLevel = ;
-		arsenideGoldHardness = ;
-		arsenideGoldResistance = ;
-		arsenideGoldHarvestLevel = ;
-		tenebriumHardness = ;
-		tenebriumResistance = ;
-		tenebriumHarvestLevel = ;
+		arsenicHardness = 3.0F;
+		arsenicResistance = 10.0F;
+		arsenicHarvestLevel = 0;
+		arsenideBronzeHardness = 5.0F;
+		arsenideBronzeResistance = 20.0F;
+		arsenideBronzeHarvestLevel = 0;
+		arsenideGoldHardness = 4.0F;
+		arsenideGoldResistance = 16.0F;
+		arsenideGoldHarvestLevel = 0;
+		tenebriumHardness = 12.0F;
+		tenebriumResistance = 55.0F;
+		tenebriumHarvestLevel = 0;
 		
 	} // end blockStatDefaults
 
 	/**
 	 * sets customized block stats.
 	 */
-	public static void customizeBlockStats() {}
+	public static void customizeBlockStats() 
+	{
+		arsenicHardness = config.getFloat("Arsenic Hardness",
+				"Block Stat Modification", arsenicHardness, 0.0F, 32000.0F,
+				"How many hits to break a block");
+		arsenicResistance = config.getFloat("Arsenic Resistance",
+				"Block Stat Modification", arsenicResistance, 0.0F, 32000.0F,
+				"Explosion Resistance");
+		arsenicHarvestLevel = config.getInt("Arsenic Harvest Level",
+				"Block Stat Modification", arsenicHarvestLevel, 0, 255,
+				"Tool level required to harvest this block");
+		
+		arsenideBronzeHardness = config.getFloat("Arsenide Bronze Hardness",
+				"Block Stat Modification", arsenideBronzeHardness, 0.0F, 32000.0F,
+				"How many hits to break a block");
+		arsenideBronzeResistance = config.getFloat("Arsenide Bronze Resistance",
+				"Block Stat Modification", arsenideBronzeResistance, 0.0F, 32000.0F,
+				"Explosion Resistance");
+		arsenideBronzeHarvestLevel = config.getInt("Arsenide Bronze Harvest Level",
+				"Block Stat Modification", arsenideBronzeHarvestLevel, 0, 255,
+				"Tool level required to harvest this block");
+
+		arsenideGoldHardness = config.getFloat("Arsenide Gold Hardness",
+				"Block Stat Modification", arsenideGoldHardness, 0.0F, 32000.0F,
+				"How many hits to break a block");
+		arsenideGoldResistance = config.getFloat("Arsenide Gold Resistance",
+				"Block Stat Modification", arsenideGoldResistance, 0.0F, 32000.0F,
+				"Explosion Resistance");
+		arsenideGoldHarvestLevel = config.getInt("Arsenide Gold Harvest Level",
+				"Block Stat Modification", arsenideGoldHarvestLevel, 0, 255,
+				"Tool level required to harvest this block");
+
+		tenebriumHardness = config.getFloat("Tenebrium Hardness",
+				"Block Stat Modification", tenebriumHardness, 0.0F, 32000.0F,
+				"How many hits to break a block");
+		tenebriumResistance = config.getFloat("Tenebrium Resistance",
+				"Block Stat Modification", tenebriumResistance, 0.0F, 32000.0F,
+				"Explosion Resistance");
+		tenebriumHarvestLevel = config.getInt("Tenebrium Harvest Level",
+				"Block Stat Modification", tenebriumHarvestLevel, 0, 255,
+				"Tool level required to harvest this block");
+} // end customizeBlockStats
 	
 	/**
 	 * Sets the default tool stats.
@@ -149,7 +236,98 @@ public class Settings extends ASettings
 	/**
 	 * set customized tool stats.
 	 */
-	public static void customizeToolStats() {}
+	public static void customizeToolStats() 
+	{
+		arsenicMiningLevel = config
+				.getInt("Arsenic Mining Level",
+						"Tool Stat Modification",
+						arsenicMiningLevel,
+						0,
+						255,
+						"Controls the mining level of Arsenic Tools. 0 = wood, 1 = stone, 2 = iron, 3 = diamond.");
+		arsenicUsesNum = config.getInt("Arsenic Tools Durability",
+				"Tool Stat Modification", arsenicUsesNum, 0, 32000,
+				"Controls the number of uses Arsenic Tools have.");
+		arsenicMiningSpeed = config
+				.getFloat("Arsenic Mining Speed", "Tool Stat Modification",
+						arsenicMiningSpeed, 0, 32000,
+						"Controls the speed at which Arsenic Tools harvest their appropriate blocks.");
+		arsenicDamageVsEntity = config
+				.getFloat("Arsenic Damage Vs. Entities",
+						"Tool Stat Modification", arsenicDamageVsEntity, 0,
+						32000,
+						"Controls the amount of damage that Arsenic Tools will do to entities.");
+		arsenicEnchantability = config.getInt("Arsenic Tools Enchantability",
+				"Tool Stat Modification", arsenicEnchantability, 0, 32000,
+				"Controls the enchantability of Arsenic Tools.");
+		
+		arsenideBronzeMiningLevel = config
+				.getInt("Arsenide Bronze Mining Level",
+						"Tool Stat Modification",
+						arsenideBronzeMiningLevel,
+						0,
+						255,
+						"Controls the mining level of Arsenide Bronze Tools. 0 = wood, 1 = stone, 2 = iron, 3 = diamond.");
+		arsenideBronzeUsesNum = config.getInt("Arsenide Bronze Tools Durability",
+				"Tool Stat Modification", arsenideBronzeUsesNum, 0, 32000,
+				"Controls the number of uses Arsenide Bronze Tools have.");
+		arsenideBronzeMiningSpeed = config
+				.getFloat("Arsenide Bronze Mining Speed", "Tool Stat Modification",
+						arsenideBronzeMiningSpeed, 0, 32000,
+						"Controls the speed at which Arsenide Bronze Tools harvest their appropriate blocks.");
+		arsenideBronzeDamageVsEntity = config
+				.getFloat("Arsenide Bronze Damage Vs. Entities",
+						"Tool Stat Modification", arsenideBronzeDamageVsEntity, 0, 32000,
+						"Controls the amount of damage that Arsenide Bronze Tools will do to entities.");
+		arsenideBronzeEnchantability = config.getInt("Arsenide Bronze Tools Enchantability",
+				"Tool Stat Modification", arsenideBronzeEnchantability, 0, 32000,
+				"Controls the enchantability of Arsenide Bronze Tools.");
+
+		arsenideGoldMiningLevel = config
+				.getInt("Arsenide Gold Mining Level",
+						"Tool Stat Modification",
+						arsenideGoldMiningLevel,
+						0,
+						255,
+						"Controls the mining level of Arsenide Gold Tools. 0 = wood, 1 = stone, 2 = iron, 3 = diamond.");
+		arsenideGoldUsesNum = config.getInt("Arsenide Gold Tools Durability",
+				"Tool Stat Modification", arsenideGoldUsesNum, 0, 32000,
+				"Controls the number of uses Arsenide Gold Tools have.");
+		arsenideGoldMiningSpeed = config
+				.getFloat("Arsenide Gold Mining Speed", "Tool Stat Modification",
+						arsenideGoldMiningSpeed, 0, 32000,
+						"Controls the speed at which Arsenide Gold Tools harvest their appropriate blocks.");
+		arsenideGoldDamageVsEntity = config
+				.getFloat("Arsenide Gold Damage Vs. Entities",
+						"Tool Stat Modification", arsenideGoldDamageVsEntity, 0, 32000,
+						"Controls the amount of damage that Arsenide Gold Tools will do to entities.");
+		arsenideGoldEnchantability = config.getInt("Arsenide Gold Tools Enchantability",
+				"Tool Stat Modification", arsenideGoldEnchantability, 0, 32000,
+				"Controls the enchantability of Arsenide Gold Tools.");
+
+		tenebriumMiningLevel = config
+				.getInt("Tenebrium Mining Level",
+						"Tool Stat Modification",
+						tenebriumMiningLevel,
+						0,
+						255,
+						"Controls the mining level of Tenebrium Tools. 0 = wood, 1 = stone, 2 = iron, 3 = diamond.");
+		tenebriumUsesNum = config.getInt("Tenebrium Tools Durability",
+				"Tool Stat Modification", tenebriumUsesNum, 0, 32000,
+				"Controls the number of uses Tenebrium Tools have.");
+		tenebriumMiningSpeed = config
+				.getFloat("Tenebrium Mining Speed", "Tool Stat Modification",
+						tenebriumMiningSpeed, 0, 32000,
+						"Controls the speed at which Tenebrium Tools harvest their appropriate blocks.");
+		tenebriumDamageVsEntity = config
+				.getFloat("Tenebrium Damage Vs. Entities",
+						"Tool Stat Modification", tenebriumDamageVsEntity, 0, 32000,
+						"Controls the amount of damage that Tenebrium Tools will do to entities.");
+		tenebriumEnchantability = config.getInt("Tenebrium Tools Enchantability",
+				"Tool Stat Modification", tenebriumEnchantability, 0, 32000,
+				"Controls the enchantability of Tenebrium Tools.");
+
+	} // end customizeToolStats
 
 	// general toggles
 	public static boolean werewolfEffectiveness;

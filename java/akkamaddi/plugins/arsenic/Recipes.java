@@ -512,17 +512,12 @@ public class Recipes
 				new ItemStack(Content.arsenideGoldIngot),
 				new ItemStack(Items.quartz),
 				new ItemStack(Content.largeTenebriumChunkItem), 30.0F);
+		
 		FusionFurnaceRecipes.addSmelting(
-				new ItemStack(Items.dye, 1, 2),
-				new ItemStack(Blocks.leaves, 1, OreDictionary.WILDCARD_VALUE),
-				new ItemStack(Items.rotten_flesh),
+				FusionMaterial.of("dyeGreen"),
+				FusionMaterial.of("treeLeaves"),
+				FusionMaterial.of(new ItemStack(Items.rotten_flesh)),
 				new ItemStack(Items.slime_ball), 2.0F);
-		FusionFurnaceRecipes.addSmelting(
-				new ItemStack(Items.dye, 1, 2),
-				new ItemStack(Blocks.leaves2, 1, OreDictionary.WILDCARD_VALUE),
-				new ItemStack(Items.rotten_flesh),
-				new ItemStack(Items.slime_ball), 2.0F);
-
 		// recycling
 
 		if (Settings.enableRecycling) 

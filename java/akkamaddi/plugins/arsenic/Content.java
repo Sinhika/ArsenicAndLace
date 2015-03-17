@@ -217,11 +217,16 @@ public class Content
 		
         if (Settings.werewolfEffectiveness)
         {
-        	WerewolfHandler.Damage2Wolf.put(arsenideGoldHoe, 6.0F);
-        	WerewolfHandler.Damage2Wolf.put(arsenideGoldShovel, 7.0F);
-        	WerewolfHandler.Damage2Wolf.put(arsenideGoldPickaxe, 8.0F);
-        	WerewolfHandler.Damage2Wolf.put(arsenideGoldAxe, 9.0F);
-        	WerewolfHandler.Damage2Wolf.put(arsenideGoldSword, 10.0F);
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldHoe, 
+        			ArsenicAndLace.toolArsenideGold.getDamageVsEntity() + 4.0F);
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldShovel, 
+        			ArsenicAndLace.toolArsenideGold.getDamageVsEntity() + 5.0F);
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldPickaxe, 
+        			ArsenicAndLace.toolArsenideGold.getDamageVsEntity() + 6.0F);
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldAxe, 
+        			ArsenicAndLace.toolArsenideGold.getDamageVsEntity() + 7.0F);
+        	WerewolfHandler.Damage2Wolf.put(arsenideGoldSword, 
+        			ArsenicAndLace.toolArsenideGold.getDamageVsEntity() + 8.0F);
         }
 		
 	} // end doTools()
@@ -229,29 +234,31 @@ public class Content
 	public static void doBlocks() 
 	{
         // define blocks
-		blockArsenic = new SimpleBlock(Material.iron).modId("arsenic")
-				.setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal)
+		blockArsenic = new SimpleBlock(Material.iron).modId("arsenic").setBeaconBase(true)
+				.setHardness(Settings.arsenicHardness).setResistance(Settings.arsenicResistance)
+				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockArsenic").setCreativeTab(ArsenicAndLace.tabAkkamaddiArsenic);
-		blockArsenideBronze = new SimpleBlock(Material.iron).modId("arsenic")
-				.setHardness(5.0F).setResistance(20.0F).setStepSound(Block.soundTypeMetal)
+		blockArsenideBronze = new SimpleBlock(Material.iron).modId("arsenic").setBeaconBase(true)
+				.setHardness(Settings.arsenideBronzeHardness)
+				.setResistance(Settings.arsenideBronzeResistance)
+				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockArsenideBronze").setCreativeTab(ArsenicAndLace.tabAkkamaddiArsenic);
-		blockArsenideGold = new SimpleBlock(Material.iron).modId("arsenic")
-				.setHardness(4.0F).setResistance(16.0F).setStepSound(Block.soundTypeMetal)
+		blockArsenideGold = new SimpleBlock(Material.iron).modId("arsenic").setBeaconBase(true)
+				.setHardness(Settings.arsenideGoldHardness)
+				.setResistance(Settings.arsenideGoldResistance)
+				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockArsenideGold").setCreativeTab(ArsenicAndLace.tabAkkamaddiArsenic);
-		blockTenebrium = new SimpleBlock(Material.iron).modId("arsenic")
-				.setHardness(12.0F).setResistance(55.0F).setStepSound(Block.soundTypeMetal)
+		blockTenebrium = new SimpleBlock(Material.iron).modId("arsenic").setBeaconBase(true)
+				.setHardness(Settings.tenebriumHardness).setResistance(Settings.tenebriumResistance)
+				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockTenebrium").setCreativeTab(ArsenicAndLace.tabAkkamaddiArsenic);
 		
-        blockArsenic.setHarvestLevel("pickaxe", 0);
-        ((SimpleBlock) blockArsenic).setBeaconBase(true);
-        blockArsenideBronze.setHarvestLevel( "pickaxe", 0);
-        ((SimpleBlock) blockArsenideBronze).setBeaconBase(true);
-        blockArsenideGold.setHarvestLevel( "pickaxe", 0);
-        ((SimpleBlock) blockArsenideGold).setBeaconBase(true);
-        plateArsenic.setHarvestLevel( "pickaxe", 0);
-        blockTenebrium.setHarvestLevel( "pickaxe", 0);
-        ((SimpleBlock) blockTenebrium).setBeaconBase(true);
-
+        blockArsenic.setHarvestLevel("pickaxe", Settings.arsenicHarvestLevel);
+        blockArsenideBronze.setHarvestLevel( "pickaxe", Settings.arsenideBronzeHarvestLevel);
+        blockArsenideGold.setHarvestLevel( "pickaxe", Settings.arsenideGoldHarvestLevel);
+        plateArsenic.setHarvestLevel( "pickaxe", Settings.arsenicHarvestLevel);
+        blockTenebrium.setHarvestLevel( "pickaxe", Settings.tenebriumHarvestLevel);
+ 
 		plateArsenic = new ArsenicPlate("plateArsenic", Material.wood,
 				EnumMobType.everything).modId("arsenic").setHardness(0.5F)
 				.setStepSound(Block.soundTypeMetal)
