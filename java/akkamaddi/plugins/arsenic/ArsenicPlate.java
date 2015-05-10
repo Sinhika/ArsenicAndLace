@@ -1,7 +1,11 @@
-package akkamaddi.arsenic.code;
+package akkamaddi.plugins.arsenic;
 
 import java.util.Iterator;
 import java.util.List;
+
+import akkamaddi.api.core.EnumMobType;
+import alexndr.api.core.ContentRegistry;
+import alexndr.api.core.ContentTypes;
 
 import net.minecraft.block.BlockBasePressurePlate;
 import net.minecraft.block.material.Material;
@@ -10,15 +14,20 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ArsenicPlate extends BlockBasePressurePlate {
+public class ArsenicPlate extends BlockBasePressurePlate 
+{
+	private String modId;
+	
 	/** The mob type that can trigger this pressure plate. */
 	private EnumMobType triggerMobType;
 
 	protected ArsenicPlate(String par2Str, Material par3Material,
-			EnumMobType par4EnumMobType) {
+			EnumMobType par4EnumMobType) 
+	{
 		super(par2Str, par3Material);
 		this.triggerMobType = par4EnumMobType;
 	}
@@ -82,10 +91,29 @@ public class ArsenicPlate extends BlockBasePressurePlate {
 		return 0;
 	}
 
+	/**
+	 * Sets the blockName of the block, and also registers the block with the GameRegistry.
+	 * @param blockName The name of the block (unlocalized).
+	 * @return ArsenicPlate
+	 */
+	@Override
+	public ArsenicPlate setBlockName(String blockName)
+	{
+		super.setBlockName(blockName);
+		GameRegistry.registerBlock(this, blockName);
+		ContentRegistry.registerBlock(this, blockName, modId, ContentTypes.Block.GENERAL);
+		return this;
+	}
+
+	public ArsenicPlate modId(String m) {
+		modId = m;
+		return this;
+	}
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-		this.blockIcon = iconRegister.registerIcon("arsenic" + ":"
+		this.blockIcon = iconRegister.registerIcon(modId + ":"
 				+ (this.getUnlocalizedName().substring(5)));
 	}
 }
