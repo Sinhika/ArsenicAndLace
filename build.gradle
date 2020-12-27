@@ -1,33 +1,179 @@
-version = "1.7.10-1.5.0"
-sourceSets.main {
-    java {
-	srcDirs project.projectDir.getPath() exclude ("bin/**", "build*",".gradle/**","eclipse/**")
-	}
-    resources {
-	srcDirs 'resources' exclude ("bin/**", "build*",".gradle/**","eclipse/**")
-	}
-} 
+buildscript {
+    repositories {
+        maven { url = 'https://files.minecraftforge.net/maven' }
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+    }
+}
+apply plugin: 'net.minecraftforge.gradle'
+// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+def getVersionAppendage() {
+    if (System.env.BUILD_NUMBER)
+        return System.env.BUILD_NUMBER
+
+    def proc = "git rev-parse --short HEAD".execute()
+    proc.waitFor()
+    return "DEV-" + proc.text.trim()
+}
+
+version = "${version_minecraft}-${version_mod}." + getVersionAppendage()
+group = 'mod.akkamaddi.arsenic'
+archivesBaseName = 'arsenic'
+
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+
+minecraft {
+    // Simply re-run your setup task after changing the mappings to update your workspace.
+    mappings channel: 'snapshot', version: "${version_snapshot}"
+    // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
+    
+    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    // Default run configurations.
+    // These can be tweaked, removed, or duplicated as needed.
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                arsenic {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                arsenic {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+
+            args '--mod', 'arsenic', '--all', '--output', file('src/generated/resources/')
+
+            mods {
+                arsenic {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+repositories {
+        maven {
+                name = "mcmodsrepo"
+                url = "file:///${project.projectDir}/../mcmodsrepo"
+        }
+}
+
+sourceSets {
+    main.resources.srcDirs += 'src/generated/resources'
+}
+
 
 dependencies {
-    // you may put jars on which you depend on in ./libs
-   }
+    // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
+    // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
+    // The userdev artifact is a special name and will get all sorts of transformations applied to it.
+    //minecraft 'net.minecraftforge:forge:1.15.2-31.1.34'
+    minecraft "net.minecraftforge:forge:${version_forge}"
+    compile fg.deobf("mod.alexndr.simplecorelib:SimpleCoreLib:${simplecorelib_version}")
+    compile fg.deobf("mod.alexndr.fusion:Fusion:${fusion_version}")
+    runtimeOnly fg.deobf("mod.alexndr.simpleores:SimpleOres2:${simpleores_version}")
+}
 
-processResources
-{
-    // this will ensure that this task is redone when the versions change.
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
 
-    // replace stuff in mcmod.info, nothing else
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-                
-        // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+build.dependsOn sourcesJar
+
+artifacts {
+    archives sourcesJar
+}
+
+// Example for how to get properties into the manifest for reading by the runtime..
+jar {
+    manifest {
+        attributes([
+            "Specification-Title": "arsenic",
+            "Specification-Vendor": "Sinhika",
+            "Specification-Version": "1", // We are version 1 of ourselves
+            "Implementation-Title": project.name,
+            "Implementation-Version": "${version}",
+            "Implementation-Vendor" :"Sinhika",
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
     }
-        
-    // copy everything else, thats not the mcmod.info
+}
+
+
+// Process resources on build
+processResources {
+    // This will ensure that this task is redone when the versions change.
+    inputs.property 'version', project.version
+
+    // Replace stuff in mods.toml, nothing else
     from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
+        include 'META-INF/mods.toml'
+
+        // Replace version
+        expand 'version':project.version
+    }
+
+    // Copy everything else except the mods.toml
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'META-INF/mods.toml'
+    }
+}
+
+// Example configuration to allow publishing using the maven-publish task
+// This is the preferred method to reobfuscate your jar file
+jar.finalizedBy('reobfJar') 
+// However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
+//publish.dependsOn('reobfJar')
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+        }
+    }
+    repositories {
+        maven {
+            url "file:///${project.projectDir}/../mcmodsrepo"
+        }
     }
 }
