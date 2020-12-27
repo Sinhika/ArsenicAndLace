@@ -2,6 +2,10 @@ package init;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraftforge.common.ToolType;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -21,4 +25,10 @@ public final class ModBlocks
     public static final DeferredRegister<Block> BLOCKS = 
             DeferredRegister.create(ForgeRegistries.BLOCKS, ArsenicAndLace.MODID);
 
+    // storage blocks
+    public static final RegistryObject<Block> arsenic_block = BLOCKS.register("arsenic_block",
+            () -> new Block(Block.Properties.create(Material.IRON)
+                    .hardnessAndResistance(3.0F, 10.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
+    
 } // end class

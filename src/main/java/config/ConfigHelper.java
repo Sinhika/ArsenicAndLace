@@ -14,6 +14,11 @@ public final class ConfigHelper
         ArsenicConfig.INSTANCE.putFlag("recycling_enabled", 
                 ConfigHolder.SERVER.serverEnableRecycling.get());
         
+        ArsenicConfig.INSTANCE.putFlag("arsenic_making_enabled", 
+                ConfigHolder.SERVER.serverEnableArsenicMaking.get());
+        ArsenicConfig.INSTANCE.putFlag("arsenic_tools_enabled",
+                ConfigHolder.SERVER.serverEnableArsenicTools.get());
+        
         ArsenicConfig.INSTANCE.putFlag("arsenide_bronze_making_enabled", 
                 ConfigHolder.SERVER.serverEnableArsenideBronzeMaking.get());
         ArsenicConfig.INSTANCE.putFlag("arsenide_bronze_tools_enabled",

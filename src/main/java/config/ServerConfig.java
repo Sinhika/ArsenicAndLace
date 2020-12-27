@@ -1,12 +1,14 @@
 package config;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
-import mod.akkamaddi.haditecoal.HaditeCoal;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 public final class ServerConfig
 {
     final ForgeConfigSpec.BooleanValue serverEnableRecycling; // recipe flag
+    
+    final ForgeConfigSpec.BooleanValue serverEnableArsenicMaking; // recipe flag
+    final ForgeConfigSpec.BooleanValue serverEnableArsenicTools; // recipe flag
     final ForgeConfigSpec.BooleanValue serverEnableArsenideBronzeMaking; // recipe flag
     final ForgeConfigSpec.BooleanValue serverEnableArsenideBronzeTools; // recipe flag
     final ForgeConfigSpec.BooleanValue serverEnableArsenideGoldMaking; // recipe flag
@@ -23,6 +25,16 @@ public final class ServerConfig
                 .define("EnableRecycling", true);
         builder.pop();
         
+        builder.push("Arsenic");
+        serverEnableArsenicMaking = 
+                builder.comment("Enable making Arsenic alloy in fusion furnace")
+                .translation(ArsenicAndLace.MODID + "config.EnableArsenicMaking")
+                .define("EnableArsenicMaking", true);
+        serverEnableArsenicTools = builder.comment("Enable making Arsenic tools")
+                .translation(ArsenicAndLace.MODID + "config.EnableArsenicTools")
+                .define("EnableArsenicTools", true);
+        builder.pop();
+
         builder.push("Arsenide Bronze");
         serverEnableArsenideBronzeMaking = 
                 builder.comment("Enable making Arsenide Bronze alloy in fusion furnace")
