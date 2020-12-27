@@ -23,4 +23,5 @@ gen_blockstate_jsons.py --type=simple arsenic_block
 gen_blockstate_jsons.py --type=simple tenebrium_block
 gen_blockstate_jsons.py --type=simple arsenide_gold_block
 gen_blockstate_jsons.py --type=simple arsenide_bronze_block
+gen_blockstate_jsons.py --type=pressure_plate arsenic_plate
 
