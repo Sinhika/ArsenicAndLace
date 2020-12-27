@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "powered=false": {
+            "model": "arsenic:block/arsenic_plate"
+        },
+        "powered=true": {
+            "model": "arsenic:block/arsenic_plate_down"
+        }
+    }
+}
