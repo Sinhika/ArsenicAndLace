@@ -30,5 +30,17 @@ public final class ModBlocks
             () -> new Block(Block.Properties.create(Material.IRON)
                     .hardnessAndResistance(3.0F, 10.0F).sound(SoundType.METAL)
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
-    
+    public static final RegistryObject<Block> arsenide_bronze_block = BLOCKS.register("arsenide_bronze_block",
+            () -> new Block(Block.Properties.create(Material.IRON)
+                    .hardnessAndResistance(5.0F, 20.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
+    public static final RegistryObject<Block> arsenide_gold_block = BLOCKS.register("arsenide_gold_block",
+            () -> new Block(Block.Properties.create(Material.IRON)
+                    .hardnessAndResistance(4.0F, 16.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
+    public static final RegistryObject<Block> tenebrium_block = BLOCKS.register("tenebrium_block",
+            () -> new Block(Block.Properties.create(Material.IRON)
+                    .hardnessAndResistance(12.0F, 55.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
+   
 } // end class
