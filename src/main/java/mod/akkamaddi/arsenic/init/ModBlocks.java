@@ -1,7 +1,9 @@
 package mod.akkamaddi.arsenic.init;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
@@ -43,4 +45,11 @@ public final class ModBlocks
                     .hardnessAndResistance(12.0F, 55.0F).sound(SoundType.METAL)
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
    
+    // pressure plate
+    public static RegistryObject<PressurePlateBlock> arsenic_plate = BLOCKS.register("arsenic_plate",
+            () -> new  PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, 
+                                          AbstractBlock.Properties.create(Material.IRON, 
+                                                  ModBlocks.arsenic_block.get().getMaterialColor())
+                                          .doesNotBlockMovement().hardnessAndResistance(0.5F).sound(SoundType.METAL)));
+    
 } // end class

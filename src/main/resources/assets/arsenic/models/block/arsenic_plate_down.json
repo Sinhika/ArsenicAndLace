@@ -1,0 +1,4 @@
+{
+    "parent": "minecraft:block/pressure_plate_down",
+    "textures": "arsenic:block/arsenic_plate"
+}

@@ -36,4 +36,5 @@ gen_model_jsons.py --type=block arsenic_block
 gen_model_jsons.py --type=block tenebrium_block 
 gen_model_jsons.py --type=block arsenide_gold_block
 gen_model_jsons.py --type=block arsenide_bronze_block
+gen_model_jsons.py --type=pressure_plate arsenic_plate
 
