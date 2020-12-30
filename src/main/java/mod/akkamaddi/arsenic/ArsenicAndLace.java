@@ -3,9 +3,9 @@ package mod.akkamaddi.arsenic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import config.ConfigHolder;
-import init.ModBlocks;
-import init.ModItems;
+import mod.akkamaddi.arsenic.config.ConfigHolder;
+import mod.akkamaddi.arsenic.init.ModBlocks;
+import mod.akkamaddi.arsenic.init.ModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;

@@ -1,4 +1,4 @@
-package init;
+package mod.akkamaddi.arsenic.init;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

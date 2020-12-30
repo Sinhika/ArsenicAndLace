@@ -1,4 +1,4 @@
-package init;
+package mod.akkamaddi.arsenic.init;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import net.minecraft.item.Item;

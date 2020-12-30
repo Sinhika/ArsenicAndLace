@@ -1,4 +1,4 @@
-package config;
+package mod.akkamaddi.arsenic.config;
 
 import java.util.HashMap;
 import java.util.Map;

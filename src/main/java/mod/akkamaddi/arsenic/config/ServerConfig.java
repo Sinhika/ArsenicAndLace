@@ -1,4 +1,4 @@
-package config;
+package mod.akkamaddi.arsenic.config;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import net.minecraftforge.common.ForgeConfigSpec;
