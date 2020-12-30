@@ -46,7 +46,7 @@ public final class ModBlocks
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
    
     // pressure plate
-    public static RegistryObject<PressurePlateBlock> arsenic_plate = BLOCKS.register("arsenic_plate",
+    public static final RegistryObject<PressurePlateBlock> arsenic_plate = BLOCKS.register("arsenic_plate",
             () -> new  PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, 
                                           AbstractBlock.Properties.create(Material.IRON, 
                                                   ModBlocks.arsenic_block.get().getMaterialColor())
