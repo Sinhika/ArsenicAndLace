@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "arsenic:item/large_arsenic_chunk"
+    }
+}
