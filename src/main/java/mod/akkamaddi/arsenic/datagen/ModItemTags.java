@@ -1,7 +1,6 @@
 package mod.akkamaddi.arsenic.datagen;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
-import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
