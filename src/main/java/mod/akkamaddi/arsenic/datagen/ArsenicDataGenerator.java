@@ -27,7 +27,6 @@ public class ArsenicDataGenerator
         if (event.includeServer())
         {
             gen.addProvider(new Recipes(gen));
-//            gen.addProvider(new SilentsRecipes(gen));
             gen.addProvider(new ModBlockTags(gen, event.getExistingFileHelper()));
             gen.addProvider(new ModItemTags(gen, event.getExistingFileHelper()));
             gen.addProvider(new ArsenicLootTableProvider(gen));
