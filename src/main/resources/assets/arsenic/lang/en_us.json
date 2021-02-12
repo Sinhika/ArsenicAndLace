@@ -1,5 +1,9 @@
 {
-    "itemGroup.arsenic": "akkamaddi's Simple Arsenic",
+    "itemGroup.arsenic": "akkamaddi's Arsenic and Lace",
+    "material.arsenic.arsenic": "Arsenic",
+    "material.arsenic.arsenide_bronze": "Arsenide Bronze",
+    "material.arsenic.arsenide_gold": "Arsenide Gold",
+    "material.arsenic.tenebrium": "Tenebrium",
     "block.arsenic.tenebrium_block": "Tenebrium Block",
     "block.arsenic.arsenic_plate": "Arsenic Pressure Plate",
     "block.arsenic.arsenide_gold_block": "Arsenide Gold Block",

@@ -3,7 +3,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[35,)" #mandatory
+loaderVersion="[36,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/ArsenicAndLace/issues"
 license="LGPL 3"
 
@@ -21,35 +21,35 @@ description='''Addition of Arsenic, Arsenide Bronze, Arsenide Gold and Tenebrium
 [[dependencies.arsenic]]
     modId="forge"
     mandatory=true
-    versionRange="[35.1.0,)"
+    versionRange="[36,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.arsenic]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.4,)"
+    versionRange="[1.16.5,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.arsenic]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.16.4-2.0.4.3, 1.16.4-2.0.5.0)"
+    versionRange="[1.16.5-2.0.5.0, 1.16.4-2.0.6.0)"
     ordering="NONE"
     side="BOTH"    
 
 [[dependencies.arsenic]]
     modId="simpleores"
     mandatory=false
-    versionRange="[1.16.4-2.4.3.8, 1.16.4-2.4.4.0)"
+    versionRange="[1.16.5-2.4.4.0, 1.16.4-2.4.5.0)"
     ordering="BEFORE"
     side="BOTH"    
 
 [[dependencies.arsenic]]
     modId="fusion"
     mandatory=true
-    versionRange="1.16.4,]"
+    versionRange="1.16.5,]"
     ordering="NONE"
     side="BOTH"
     
