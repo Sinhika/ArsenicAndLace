@@ -81,6 +81,20 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                         ModItems.arsenide_gold_shovel.get(), ModItems.arsenide_gold_sword.get(), ModItems.arsenide_gold_boots.get(),
                         ModItems.arsenide_gold_chestplate.get(), ModItems.arsenide_gold_helmet.get(), ModItems.arsenide_gold_leggings.get()),
                 ModItems.arsenide_gold_nugget.get(), hasItem(ModItems.arsenide_gold_axe.get()), 6.0F, 200);
+        
+        // dust recipes (for Silents & other tech mods)
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.arsenic_dust.get()),
+                ModItems.arsenic_ingot.get(), hasItem(ModItems.arsenic_dust.get()), 4.0F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.fromItems(ModItems.arsenide_bronze_dust.get()),
+                ModItems.arsenide_bronze_ingot.get(), 
+                hasItem(ModItems.arsenide_bronze_dust.get()), 5.0F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.arsenide_gold_dust.get()),
+                ModItems.arsenide_gold_ingot.get(), hasItem(ModItems.arsenide_gold_dust.get()), 
+                6.0F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.tenebrium_dust.get()),
+                ModItems.tenebrium_ingot.get(), hasItem(ModItems.tenebrium_dust.get()), 
+                6.0F, 200, "_from_dust");
     } // end registerFurnaceRecipes()
 
     private void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
@@ -108,6 +122,12 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 
     private void registerMiscRecipes(Consumer<IFinishedRecipe> consumer)
     {
+        // lace breakdown
+        ShapelessRecipeBuilder.shapelessRecipe(Items.STRING, 4)
+            .addIngredient(ModItems.old_lace_chest.get())
+            .addCriterion("has_item", hasItem(ModItems.old_lace_chest.get()))
+            .build(consumer);
+        
         // arsenide_salt
         ShapelessRecipeBuilder.shapelessRecipe(ModItems.arsenide_salt.get())
             .addIngredient(ModItems.realgar.get()).addIngredient(ModItems.orpiment.get())
@@ -153,6 +173,20 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 ModItems.arsenide_gold_nugget.get(), hasItem(ModItems.arsenide_gold_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.tenebrium_ingot.get(), ModBlocks.tenebrium_block.get(), 
                 ModItems.tenebrium_nugget.get(), hasItem(ModItems.tenebrium_ingot.get()));
+        
+        setbuilder.buildChunkConversionRecipes(consumer, ModItems.arsenic_nugget.get(),
+                ModItems.medium_arsenic_chunk.get(), ModItems.large_arsenic_chunk.get(),
+                hasItem(ModItems.arsenic_nugget.get()));
+        setbuilder.buildChunkConversionRecipes(consumer, ModItems.tenebrium_nugget.get(),
+                ModItems.medium_tenebrium_chunk.get(), ModItems.large_tenebrium_chunk.get(),
+                hasItem(ModItems.tenebrium_nugget.get()));
+        setbuilder.buildChunkConversionRecipes(consumer, ModItems.arsenide_bronze_nugget.get(),
+                ModItems.medium_arsenide_bronze_chunk.get(), ModItems.large_arsenide_bronze_chunk.get(),
+                hasItem(ModItems.arsenide_bronze_nugget.get()));
+        setbuilder.buildChunkConversionRecipes(consumer, ModItems.arsenide_gold_nugget.get(),
+                ModItems.medium_arsenide_gold_chunk.get(), ModItems.large_arsenide_gold_chunk.get(),
+                hasItem(ModItems.arsenide_gold_nugget.get()));
+
     } // end registerStorageRecipes()
 
     @Override
