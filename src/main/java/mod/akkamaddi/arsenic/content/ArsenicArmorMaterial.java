@@ -25,7 +25,7 @@ public enum ArsenicArmorMaterial implements IArmorMaterial
             ()-> { return Ingredient.fromItems(ModItems.arsenide_gold_ingot.get());}, 0.0F),
  
     TENEBRIUM("arsenic:tenebrium", 52, new int[] { 4, 8, 8, 4 }, 17,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F, 
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F, 
             ()-> { return Ingredient.fromItems(ModItems.tenebrium_ingot.get());}, 0.0F);
              
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
