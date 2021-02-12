@@ -1,0 +1,22 @@
+{
+    "__comment": "This table is injected as its own pool into minecraft:chests/desert_pyramid",
+    "pools": [
+        {
+            "name": "main",
+            "conditions": [
+            	{
+            	"condition" : "random_chance",
+            	"chance" : 0.25
+            	} 
+            ],
+            "rolls": 1,
+            "entries": [
+                {
+                        "type": "item",
+                        "name": "arsenic:old_lace_chest",
+                        "weight": 1
+                } 
+            ]
+        }
+    ]
+}
