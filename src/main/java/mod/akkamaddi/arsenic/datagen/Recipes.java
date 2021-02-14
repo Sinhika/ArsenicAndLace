@@ -42,9 +42,9 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     {
         // arsenic compounds
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.realgar.get()),
-                ModItems.arsenic_nugget.get(), hasItem(ModItems.realgar.get()), 2.0F, 200, "from_realgar");
+                ModItems.arsenic_nugget.get(), hasItem(ModItems.realgar.get()), 2.0F, 200, "_from_realgar");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.orpiment.get()),
-                ModItems.arsenic_nugget.get(), hasItem(ModItems.realgar.get()), 2.0F, 200, "from_orpiment");
+                ModItems.arsenic_nugget.get(), hasItem(ModItems.realgar.get()), 2.0F, 200, "_from_orpiment");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.arsenide_salt.get()),
                 ModItems.medium_arsenic_chunk.get(), hasItem(ModItems.arsenide_salt.get()), 4.0F, 200);
                 
@@ -126,7 +126,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         ShapelessRecipeBuilder.shapelessRecipe(Items.STRING, 4)
             .addIngredient(ModItems.old_lace_chest.get())
             .addCriterion("has_item", hasItem(ModItems.old_lace_chest.get()))
-            .build(consumer);
+            .build(consumer, "arsenic:string_from_lace");
         
         // arsenide_salt
         ShapelessRecipeBuilder.shapelessRecipe(ModItems.arsenide_salt.get())

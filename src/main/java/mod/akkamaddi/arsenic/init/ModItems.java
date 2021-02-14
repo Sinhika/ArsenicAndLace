@@ -85,13 +85,13 @@ public final class ModItems
     public static final RegistryObject<ArsenicSwordItem> arsenic_sword = ITEMS.register("arsenic_sword",
             () -> new ArsenicSwordItem(ArsenicItemTier.ARSENIC, 3, -2.4F,
             new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<ArsenicSwordItem> arsenide_bronze_sword = ITEMS.register("arsenic_sword",
+    public static final RegistryObject<ArsenicSwordItem> arsenide_bronze_sword = ITEMS.register("arsenide_bronze_sword",
             () -> new ArsenicSwordItem(ArsenicItemTier.ARSENIDE_BRONZE, 3, -2.4F,
             new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<ArsenicSwordItem> arsenide_gold_sword = ITEMS.register("arsenic_sword",
+    public static final RegistryObject<ArsenicSwordItem> arsenide_gold_sword = ITEMS.register("arsenide_gold_sword",
             () -> new ArsenicSwordItem(ArsenicItemTier.ARSENIDE_GOLD, 3, -2.4F,
             new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<ArsenicSwordItem> tenebrium_sword = ITEMS.register("arsenic_sword",
+    public static final RegistryObject<ArsenicSwordItem> tenebrium_sword = ITEMS.register("tenebrium_sword",
             () -> new ArsenicSwordItem(ArsenicItemTier.TENEBRIUM, 3, -2.4F,
             new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
 
@@ -102,10 +102,10 @@ public final class ModItems
     public static final RegistryObject<ArsenicAxeItem> arsenide_bronze_axe = ITEMS.register("arsenide_bronze_axe",
             () -> new ArsenicAxeItem(ArsenicItemTier.ARSENIDE_BRONZE, 7.0F, -3.1F,
             new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));    
-    public static final RegistryObject<ArsenicAxeItem> arsenide_gold_axe = ITEMS.register("arsenic_axe",
+    public static final RegistryObject<ArsenicAxeItem> arsenide_gold_axe = ITEMS.register("arsenide_gold_axe",
             () -> new ArsenicAxeItem(ArsenicItemTier.ARSENIDE_GOLD, 7.0F, -3.1F,
             new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));    
-    public static final RegistryObject<ArsenicAxeItem> tenebrium_axe = ITEMS.register("arsenic_axe",
+    public static final RegistryObject<ArsenicAxeItem> tenebrium_axe = ITEMS.register("tenebrium_axe",
             () -> new ArsenicAxeItem(ArsenicItemTier.TENEBRIUM, 7.0F, -3.1F,
             new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));    
 

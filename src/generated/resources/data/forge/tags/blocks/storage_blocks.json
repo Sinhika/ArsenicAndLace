@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#forge:storage_blocks/arsenic",
-    "#forge:storage_blocks/arsenide_bronze",
-    "#forge:storage_blocks/arsenide_gold",
-    "#forge:storage_blocks/tenebrium"
-  ]
-}

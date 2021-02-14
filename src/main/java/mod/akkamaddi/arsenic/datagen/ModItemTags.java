@@ -39,7 +39,7 @@ public class ModItemTags extends ItemTagsProvider
         this.getOrCreateBuilder(TagUtils.forgeTag("nuggets/arsenide_gold")).add(ModItems.arsenide_gold_nugget.get());
         this.getOrCreateBuilder(TagUtils.forgeTag("nuggets/tenebrium")).add(ModItems.tenebrium_nugget.get());
         this.getOrCreateBuilder(TagUtils.forgeTag("nuggets/realgar")).add(ModItems.realgar.get());
-        this.getOrCreateBuilder(TagUtils.forgeTag("nuggets/tenebrium")).add(ModItems.orpiment.get());
+        this.getOrCreateBuilder(TagUtils.forgeTag("nuggets/orpiment")).add(ModItems.orpiment.get());
         
     } // end registerNuggetTags()
     
