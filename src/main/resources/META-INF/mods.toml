@@ -49,7 +49,7 @@ description='''Addition of Arsenic, Arsenide Bronze, Arsenide Gold and Tenebrium
 [[dependencies.arsenic]]
     modId="fusion"
     mandatory=true
-    versionRange="1.16.5,]"
+    versionRange="[1.16.5-2.7.2.5, 1.16.5-2.7.3.0)"
     ordering="NONE"
     side="BOTH"
     

@@ -54,10 +54,16 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
         primary_inputs.add(Ingredient.fromItems(ModItems.realgar.get()));
         primary_inputs.add(Ingredient.fromItems(ModItems.orpiment.get()));
         catalysts[2] = Ingredient.fromItems(Items.POISONOUS_POTATO);
+        
         fusionbuilder.buildBasicAlloyRecipes(consumer, primary_inputs, catalysts, 
                 null, null, ModItems.large_arsenic_chunk.get(), 20.0F, 600,
                 flag("arsenic_making_enabled"));
 
+        catalysts[2] = Ingredient.fromItems(ModItems.old_lace_chest.get());
+        fusionbuilder.buildBasicAlloyRecipes(consumer, primary_inputs, catalysts, 
+                null, null, ModItems.large_arsenic_chunk.get(), 20.0F, 600,
+                flag("arsenic_making_enabled"), "_with_shroud");
+        
         // arsenic recycling recipes
         fusionbuilder.buildFusionRecyclingRecipes(consumer,
                 Ingredient.fromItems(ModItems.arsenic_axe.get(), ModItems.arsenic_hoe.get(),
