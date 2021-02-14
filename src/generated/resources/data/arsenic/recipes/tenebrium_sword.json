@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "tenebrium_tools_enabled",
+          "type": "arsenic:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " S ",
+          " S ",
+          " T "
+        ],
+        "key": {
+          "S": {
+            "item": "arsenic:tenebrium_ingot"
+          },
+          "T": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "arsenic:tenebrium_sword"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "arsenic:large_arsenic_chunk"
+  },
+  "result": "arsenic:arsenic_ingot",
+  "experience": 4.0,
+  "cookingtime": 200
+}

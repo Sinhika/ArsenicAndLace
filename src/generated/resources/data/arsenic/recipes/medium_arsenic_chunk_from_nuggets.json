@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "arsenic:arsenic_nugget"
+    }
+  },
+  "result": {
+    "item": "arsenic:medium_arsenic_chunk"
+  }
+}

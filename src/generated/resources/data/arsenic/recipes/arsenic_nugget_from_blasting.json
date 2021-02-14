@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "arsenic:arsenic_axe"
+    },
+    {
+      "item": "arsenic:arsenic_hoe"
+    },
+    {
+      "item": "arsenic:arsenic_pickaxe"
+    },
+    {
+      "item": "arsenic:arsenic_shovel"
+    },
+    {
+      "item": "arsenic:arsenic_sword"
+    },
+    {
+      "item": "arsenic:arsenic_plate"
+    }
+  ],
+  "result": "arsenic:arsenic_nugget",
+  "experience": 2.0,
+  "cookingtime": 100
+}

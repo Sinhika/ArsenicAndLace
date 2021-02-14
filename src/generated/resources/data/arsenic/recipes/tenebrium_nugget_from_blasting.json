@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "arsenic:tenebrium_axe"
+    },
+    {
+      "item": "arsenic:tenebrium_hoe"
+    },
+    {
+      "item": "arsenic:tenebrium_pickaxe"
+    },
+    {
+      "item": "arsenic:tenebrium_shovel"
+    },
+    {
+      "item": "arsenic:tenebrium_sword"
+    },
+    {
+      "item": "arsenic:tenebrium_boots"
+    },
+    {
+      "item": "arsenic:tenebrium_chestplate"
+    },
+    {
+      "item": "arsenic:tenebrium_helmet"
+    },
+    {
+      "item": "arsenic:tenebrium_leggings"
+    }
+  ],
+  "result": "arsenic:tenebrium_nugget",
+  "experience": 6.0,
+  "cookingtime": 100
+}

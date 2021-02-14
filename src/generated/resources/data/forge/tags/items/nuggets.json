@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:nuggets/arsenic",
+    "#forge:nuggets/arsenide_bronze",
+    "#forge:nuggets/arsenide_gold",
+    "#forge:nuggets/tenebrium",
+    "#forge:nuggets/realgar",
+    "#forge:nuggets/orpiment"
+  ]
+}

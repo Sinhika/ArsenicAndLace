@@ -1,0 +1,19 @@
+{
+  "type": "fusion:alloying",
+  "inputs": [
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:bone"
+  },
+  "output": {
+    "item": "arsenic:realgar"
+  },
+  "cookingtime": 600,
+  "experience": 2.0
+}

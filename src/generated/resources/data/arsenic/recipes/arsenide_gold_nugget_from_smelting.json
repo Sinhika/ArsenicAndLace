@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "arsenic:arsenide_gold_axe"
+    },
+    {
+      "item": "arsenic:arsenide_gold_hoe"
+    },
+    {
+      "item": "arsenic:arsenide_gold_pickaxe"
+    },
+    {
+      "item": "arsenic:arsenide_gold_shovel"
+    },
+    {
+      "item": "arsenic:arsenide_gold_sword"
+    },
+    {
+      "item": "arsenic:arsenide_gold_boots"
+    },
+    {
+      "item": "arsenic:arsenide_gold_chestplate"
+    },
+    {
+      "item": "arsenic:arsenide_gold_helmet"
+    },
+    {
+      "item": "arsenic:arsenide_gold_leggings"
+    }
+  ],
+  "result": "arsenic:arsenide_gold_nugget",
+  "experience": 6.0,
+  "cookingtime": 200
+}

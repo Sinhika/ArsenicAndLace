@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arsenic:medium_arsenic_chunk"
+    },
+    {
+      "item": "arsenic:medium_arsenic_chunk"
+    },
+    {
+      "item": "arsenic:arsenic_nugget"
+    }
+  ],
+  "result": {
+    "item": "arsenic:large_arsenic_chunk"
+  }
+}

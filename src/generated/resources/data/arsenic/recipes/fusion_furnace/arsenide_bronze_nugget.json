@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "arsenide_bronze_making_enabled",
+          "type": "arsenic:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "tag": "forge:ingots/copper"
+          },
+          {
+            "tag": "forge:ingots/arsenic"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:red_dye"
+        },
+        "output": {
+          "item": "arsenic:arsenide_bronze_nugget"
+        },
+        "cookingtime": 600,
+        "experience": 4.0
+      }
+    }
+  ]
+}

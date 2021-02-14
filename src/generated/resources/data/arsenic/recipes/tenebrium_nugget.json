@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arsenic:tenebrium_ingot"
+    }
+  ],
+  "result": {
+    "item": "arsenic:tenebrium_nugget",
+    "count": 9
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arsenic:arsenic_block"
+    }
+  ],
+  "result": {
+    "item": "arsenic:arsenic_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arsenic:arsenic_ingot"
+    }
+  ],
+  "result": {
+    "item": "arsenic:arsenic_nugget",
+    "count": 9
+  }
+}

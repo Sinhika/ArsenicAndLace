@@ -1,0 +1,19 @@
+{
+  "type": "fusion:alloying",
+  "inputs": [
+    {
+      "item": "minecraft:green_dye"
+    },
+    {
+      "tag": "minecraft:leaves"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:rotten_flesh"
+  },
+  "output": {
+    "item": "minecraft:slime_ball"
+  },
+  "cookingtime": 600,
+  "experience": 2.0
+}

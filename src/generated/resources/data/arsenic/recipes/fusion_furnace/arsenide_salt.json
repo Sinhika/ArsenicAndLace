@@ -1,0 +1,19 @@
+{
+  "type": "fusion:alloying",
+  "inputs": [
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    }
+  ],
+  "catalyst": {
+    "item": "arsenic:old_lace_chest"
+  },
+  "output": {
+    "item": "arsenic:arsenide_salt"
+  },
+  "cookingtime": 600,
+  "experience": 10.0
+}

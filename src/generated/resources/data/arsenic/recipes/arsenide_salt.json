@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arsenic:realgar"
+    },
+    {
+      "item": "arsenic:orpiment"
+    }
+  ],
+  "result": {
+    "item": "arsenic:arsenide_salt"
+  }
+}

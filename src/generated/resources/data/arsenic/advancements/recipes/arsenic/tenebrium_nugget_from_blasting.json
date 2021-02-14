@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "arsenic:tenebrium_nugget_from_blasting"
+    ]
+  },
+  "criteria": {
+    "tenebrium_nugget_from_blasting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "arsenic:tenebrium_axe"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "arsenic:tenebrium_nugget_from_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tenebrium_nugget_from_blasting",
+      "has_the_recipe"
+    ]
+  ]
+}

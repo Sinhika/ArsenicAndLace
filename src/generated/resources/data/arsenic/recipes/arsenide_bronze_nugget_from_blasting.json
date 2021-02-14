@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "arsenic:arsenide_bronze_axe"
+    },
+    {
+      "item": "arsenic:arsenide_bronze_hoe"
+    },
+    {
+      "item": "arsenic:arsenide_bronze_pickaxe"
+    },
+    {
+      "item": "arsenic:arsenide_bronze_shovel"
+    },
+    {
+      "item": "arsenic:arsenide_bronze_sword"
+    },
+    {
+      "item": "arsenic:arsenide_bronze_boots"
+    },
+    {
+      "item": "arsenic:arsenide_bronze_chestplate"
+    },
+    {
+      "item": "arsenic:arsenide_bronze_helmet"
+    },
+    {
+      "item": "arsenic:arsenide_bronze_leggings"
+    }
+  ],
+  "result": "arsenic:arsenide_bronze_nugget",
+  "experience": 5.0,
+  "cookingtime": 100
+}

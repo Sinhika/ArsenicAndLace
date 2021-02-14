@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "arsenide_gold_tools_enabled",
+          "type": "arsenic:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "SSS",
+          "S S",
+          "S S"
+        ],
+        "key": {
+          "S": {
+            "item": "arsenic:arsenide_gold_ingot"
+          }
+        },
+        "result": {
+          "item": "arsenic:arsenide_gold_leggings"
+        }
+      }
+    }
+  ]
+}

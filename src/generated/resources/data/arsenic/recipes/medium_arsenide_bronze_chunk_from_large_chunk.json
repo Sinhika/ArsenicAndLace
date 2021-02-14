@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arsenic:large_arsenide_bronze_chunk"
+    }
+  ],
+  "result": {
+    "item": "arsenic:medium_arsenide_bronze_chunk",
+    "count": 2
+  }
+}

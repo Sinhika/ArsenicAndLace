@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "arsenide_gold_making_enabled",
+          "type": "arsenic:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "item": "minecraft:gold_ingot"
+          },
+          {
+            "tag": "forge:ingots/arsenic"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:red_dye"
+        },
+        "output": {
+          "item": "arsenic:arsenide_gold_nugget"
+        },
+        "cookingtime": 600,
+        "experience": 5.0
+      }
+    }
+  ]
+}

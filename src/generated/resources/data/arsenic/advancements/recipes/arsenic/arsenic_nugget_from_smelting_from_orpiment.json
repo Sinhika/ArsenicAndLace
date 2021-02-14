@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "arsenic:arsenic_nugget_from_smelting_from_orpiment"
+    ]
+  },
+  "criteria": {
+    "arsenic_nugget_from_smelting_from_orpiment": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "arsenic:realgar"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "arsenic:arsenic_nugget_from_smelting_from_orpiment"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "arsenic_nugget_from_smelting_from_orpiment",
+      "has_the_recipe"
+    ]
+  ]
+}

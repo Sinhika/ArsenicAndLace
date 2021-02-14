@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "tenebrium_making_enabled",
+          "type": "arsenic:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "item": "minecraft:obsidian"
+          },
+          {
+            "item": "arsenic:arsenide_gold_ingot"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:quartz"
+        },
+        "output": {
+          "item": "arsenic:large_tenebrium_chunk"
+        },
+        "cookingtime": 600,
+        "experience": 40.0
+      }
+    }
+  ]
+}

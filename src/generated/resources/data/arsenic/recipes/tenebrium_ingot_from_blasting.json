@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "arsenic:large_tenebrium_chunk"
+  },
+  "result": "arsenic:tenebrium_ingot",
+  "experience": 6.0,
+  "cookingtime": 100
+}

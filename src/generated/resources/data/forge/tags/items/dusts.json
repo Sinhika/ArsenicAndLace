@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:dusts/arsenic",
+    "#forge:dusts/arsenide_bronze",
+    "#forge:dusts/arsenide_gold",
+    "#forge:dusts/tenebrium",
+    "#forge:dusts/arsenide_salt"
+  ]
+}

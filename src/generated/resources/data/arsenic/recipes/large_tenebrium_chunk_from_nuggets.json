@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arsenic:tenebrium_nugget"
+    },
+    {
+      "item": "arsenic:tenebrium_nugget"
+    },
+    {
+      "item": "arsenic:tenebrium_nugget"
+    },
+    {
+      "item": "arsenic:tenebrium_nugget"
+    },
+    {
+      "item": "arsenic:tenebrium_nugget"
+    },
+    {
+      "item": "arsenic:medium_tenebrium_chunk"
+    }
+  ],
+  "result": {
+    "item": "arsenic:large_tenebrium_chunk"
+  }
+}

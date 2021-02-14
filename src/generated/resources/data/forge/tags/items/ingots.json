@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ingots/arsenic",
+    "#forge:ingots/arsenide_bronze",
+    "#forge:ingots/arsenide_gold",
+    "#forge:ingots/tenebrium"
+  ]
+}

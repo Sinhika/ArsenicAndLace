@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "arsenic:arsenide_bronze_ingot_from_blasting_from_dust"
+    ]
+  },
+  "criteria": {
+    "arsenide_bronze_ingot_from_blasting_from_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "arsenic:arsenide_bronze_dust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "arsenic:arsenide_bronze_ingot_from_blasting_from_dust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "arsenide_bronze_ingot_from_blasting_from_dust",
+      "has_the_recipe"
+    ]
+  ]
+}

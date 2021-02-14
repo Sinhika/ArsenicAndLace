@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA "
+  ],
+  "key": {
+    "A": {
+      "item": "arsenic:arsenic_ingot"
+    }
+  },
+  "result": {
+    "item": "arsenic:arsenic_plate"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "arsenic:tenebrium_ingot"
+    }
+  },
+  "result": {
+    "item": "arsenic:tenebrium_block"
+  }
+}

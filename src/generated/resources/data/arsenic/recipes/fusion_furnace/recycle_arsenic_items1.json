@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_enabled",
+          "type": "arsenic:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "arsenic:arsenic_axe"
+            },
+            {
+              "item": "arsenic:arsenic_hoe"
+            },
+            {
+              "item": "arsenic:arsenic_pickaxe"
+            },
+            {
+              "item": "arsenic:arsenic_shovel"
+            },
+            {
+              "item": "arsenic:arsenic_sword"
+            },
+            {
+              "item": "arsenic:arsenic_plate"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:rotten_flesh"
+        },
+        "output": {
+          "item": "arsenic:large_arsenic_chunk"
+        },
+        "cookingtime": 600,
+        "experience": 10.0
+      }
+    }
+  ]
+}

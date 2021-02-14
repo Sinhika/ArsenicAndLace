@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "arsenic:tenebrium_ingot_from_smelting"
+    ]
+  },
+  "criteria": {
+    "tenebrium_ingot_from_smelting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "arsenic:large_tenebrium_chunk"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "arsenic:tenebrium_ingot_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tenebrium_ingot_from_smelting",
+      "has_the_recipe"
+    ]
+  ]
+}
