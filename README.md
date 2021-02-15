@@ -6,8 +6,8 @@ Minecraft 1.16.5 port of akkamaddi's Simple Arsenic and Old Lace mod
 
 TO-DO
 -----
-* Create logo for CurseForge (400x400)
-* Add Silent's Mechanisms support (crusher & alloy smelter recipes)
+* <s>Create logo for CurseForge (400x400)</s>
+* <s>Add Silent's Mechanisms support (crusher & alloy smelter recipes)</s>
 * Add Silent Gear support (data and model files for materials)
 * create mod logo (mods.toml logo)
 

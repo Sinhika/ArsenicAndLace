@@ -1,0 +1,18 @@
+{
+    "conditions": [
+        {
+            "modid": "silents_mechanisms",
+            "type": "forge:mod_loaded"
+        }
+    ],
+    "type": "silents_mechanisms:crushing",
+    "process_time": 300,
+    "ingredient": {
+        "item": "arsenic:arsenide_bronze_ingot"
+    },
+    "results": [
+        {
+            "item": "arsenic:arsenide_bronze_dust"
+        }
+    ]
+}

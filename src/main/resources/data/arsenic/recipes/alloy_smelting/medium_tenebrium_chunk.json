@@ -1,0 +1,25 @@
+{
+    "conditions": [
+        {
+            "modid": "silents_mechanisms",
+            "type": "forge:mod_loaded"
+        }
+    ],
+    "type": "silents_mechanisms:alloy_smelting",
+    "process_time": 300,
+    "ingredients": [
+        {
+            "item": "minecraft:obsidian"
+        },
+        {
+            "tag": "forge:dusts/arsenide_gold"
+        },
+        {
+            "item": "minecraft:gold_nugget"
+        }
+    ],
+    "result": {
+        "item": "arsenic:medium_tenebrium_chunk",
+        "count": 1
+    }
+}

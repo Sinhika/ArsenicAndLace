@@ -1,0 +1,25 @@
+{
+    "conditions": [
+        {
+            "modid": "silents_mechanisms",
+            "type": "forge:mod_loaded"
+        }
+    ],
+    "type": "silents_mechanisms:alloy_smelting",
+    "process_time": 300,
+    "ingredients": [
+        {
+            "tag": "forge:dusts/gold"
+        },
+        {
+            "tag": "forge:dusts/arsenic"
+        },
+        {
+            "item": "minecraft:red_dye"
+        }
+    ],
+    "result": {
+        "item": "arsenic:arsenide_gold_nugget",
+        "count": 1
+    }
+}
