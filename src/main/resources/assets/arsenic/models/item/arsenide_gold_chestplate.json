@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "arsenic:item/arsenide_bronze_legs"
+        "layer0": "arsenic:item/arsenide_gold_chestplate"
     }
 }

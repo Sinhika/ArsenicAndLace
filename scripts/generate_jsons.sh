@@ -92,19 +92,19 @@ gen_model_jsons.py --type=tool --item_only arsenide_gold_hoe
 # armor sets
 gen_model_jsons.py --type=armor --item_only old_lace_chest
 
-gen_model_jsons.py --type=armor --item_only tenebrium_helm
-gen_model_jsons.py --type=armor --item_only tenebrium_chest
-gen_model_jsons.py --type=armor --item_only tenebrium_legs
+gen_model_jsons.py --type=armor --item_only tenebrium_helmet
+gen_model_jsons.py --type=armor --item_only tenebrium_chestplate
+gen_model_jsons.py --type=armor --item_only tenebrium_leggings
 gen_model_jsons.py --type=armor --item_only tenebrium_boots
 
-gen_model_jsons.py --type=armor --item_only arsenide_gold_helm
-gen_model_jsons.py --type=armor --item_only arsenide_gold_chest
-gen_model_jsons.py --type=armor --item_only arsenide_gold_legs
+gen_model_jsons.py --type=armor --item_only arsenide_gold_helmet
+gen_model_jsons.py --type=armor --item_only arsenide_gold_chestplate
+gen_model_jsons.py --type=armor --item_only arsenide_gold_leggings
 gen_model_jsons.py --type=armor --item_only arsenide_gold_boots
 
-gen_model_jsons.py --type=armor --item_only arsenide_bronze_helm
-gen_model_jsons.py --type=armor --item_only arsenide_bronze_chest
-gen_model_jsons.py --type=armor --item_only arsenide_bronze_legs
+gen_model_jsons.py --type=armor --item_only arsenide_bronze_helmet
+gen_model_jsons.py --type=armor --item_only arsenide_bronze_chestplate
+gen_model_jsons.py --type=armor --item_only arsenide_bronze_leggingss
 gen_model_jsons.py --type=armor --item_only arsenide_bronze_boots
 
 
