@@ -104,7 +104,7 @@ gen_model_jsons.py --type=armor --item_only arsenide_gold_boots
 
 gen_model_jsons.py --type=armor --item_only arsenide_bronze_helmet
 gen_model_jsons.py --type=armor --item_only arsenide_bronze_chestplate
-gen_model_jsons.py --type=armor --item_only arsenide_bronze_leggingss
+gen_model_jsons.py --type=armor --item_only arsenide_bronze_leggings
 gen_model_jsons.py --type=armor --item_only arsenide_bronze_boots
 
 
