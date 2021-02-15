@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "arsenic_making_enabled",
+          "type": "arsenic:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "item": "arsenic:realgar"
+          },
+          {
+            "item": "arsenic:orpiment"
+          }
+        ],
+        "catalyst": {
+          "item": "arsenic:old_lace_chest"
+        },
+        "output": {
+          "item": "arsenic:large_arsenic_chunk"
+        },
+        "cookingtime": 600,
+        "experience": 20.0
+      }
+    }
+  ]
+}
