@@ -42,7 +42,7 @@
           "item": "minecraft:rotten_flesh"
         },
         "output": {
-          "item": "arsenic:large_arsenic_chunk"
+          "item": "arsenic:large_tenebrium_chunk"
         },
         "cookingtime": 600,
         "experience": 20.0

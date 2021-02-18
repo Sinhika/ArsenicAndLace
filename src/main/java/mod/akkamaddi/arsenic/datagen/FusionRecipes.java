@@ -103,7 +103,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                 Ingredient.fromItems(ModItems.arsenide_bronze_leggings.get(), 
                         ModItems.arsenide_bronze_chestplate.get()), 
                 Ingredient.fromItems(Items.GRAVEL), Ingredient.fromItems(Items.ROTTEN_FLESH),
-                ModItems.large_arsenic_chunk.get(), 10.0F, 600, flag("recycling_enabled"), 
+                ModItems.large_arsenide_bronze_chunk.get(), 10.0F, 600, flag("recycling_enabled"), 
                 "recycle_arsenide_bronze_items");
     } // end registerArsenideBronzeRecipes
 
@@ -136,7 +136,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                 Ingredient.fromItems(ModItems.arsenide_gold_leggings.get(), 
                         ModItems.arsenide_gold_chestplate.get()), 
                 Ingredient.fromItems(Items.GRAVEL), Ingredient.fromItems(Items.ROTTEN_FLESH),
-                ModItems.large_arsenic_chunk.get(), 15.0F, 600, flag("recycling_enabled"), 
+                ModItems.large_arsenide_gold_chunk.get(), 15.0F, 600, flag("recycling_enabled"), 
                 "recycle_arsenide_gold_items");
         
     } // end registerArsenideGoldRecipes
@@ -170,7 +170,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                 Ingredient.fromItems(ModItems.tenebrium_leggings.get(), 
                         ModItems.tenebrium_chestplate.get()), 
                 Ingredient.fromItems(Items.QUARTZ), Ingredient.fromItems(Items.ROTTEN_FLESH),
-                ModItems.large_arsenic_chunk.get(), 20.0F, 600, flag("recycling_enabled"), 
+                ModItems.large_tenebrium_chunk.get(), 20.0F, 600, flag("recycling_enabled"), 
                 "recycle_tenebrium_items");
          
     } // end registerTenebriumRecipes
