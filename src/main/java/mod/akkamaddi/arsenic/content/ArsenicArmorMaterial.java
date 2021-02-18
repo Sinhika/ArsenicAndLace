@@ -16,11 +16,11 @@ public enum ArsenicArmorMaterial implements IArmorMaterial
     OLD_LACE ("arsenic:old_lace", 4, new int[] { 1, 1, 1, 1 }, 24, 
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 
             ()-> { return Ingredient.fromItems(Items.STRING);}, 0.0F),
-    ARSENIDE_BRONZE("arsenic:arsenide_bronze", 16, new int[] { 1, 5, 3, 3 }, 9,
+    ARSENIDE_BRONZE("arsenic:arsenide_bronze", 16, new int[] { 1, 3, 5, 3 }, 9,
               SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 
               ()-> { return Ingredient.fromItems(ModItems.arsenide_bronze_ingot.get());}, 0.0F),
     
-    ARSENIDE_GOLD("arsenic:arsenide_gold", 12, new int[] { 2, 6, 3, 1 }, 22,
+    ARSENIDE_GOLD("arsenic:arsenide_gold", 12, new int[] { 1, 3, 6, 2 }, 22,
             SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 
             ()-> { return Ingredient.fromItems(ModItems.arsenide_gold_ingot.get());}, 0.0F),
  

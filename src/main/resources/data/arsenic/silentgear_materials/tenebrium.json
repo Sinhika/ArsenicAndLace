@@ -1,0 +1,72 @@
+{
+	"conditions": [
+		{
+			"value": {
+				"tag": "forge:ingots/tenebrium",
+				"type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		}
+	],
+	"availability": {
+		"tier": 4,
+		"visible": true,
+		"gear_blacklist": [
+		],
+		"can_salvage": true
+	},
+	"crafting_items": {
+		"main": {
+			"tag": "forge:ingots/tenebrium"
+		}
+	},
+	"name": {
+		"translate": "material.arsenic.tenebrium"
+	},
+	"stats": {
+		"main": {
+			"durability": 3820,
+			"armor_durability": 52.0,
+			"enchantability": 17.0,
+			"harvest_level": 4.0,
+			"harvest_speed": 9.0,
+			"melee_damage": 3.0,
+			"magic_damage": 3.0,
+			"attack_speed": 0.2,
+			"armor": 24.0,
+			"armor_toughness": 2.0,
+			"magic_armor": 24.0,
+			"ranged_damage": 2.0,
+			"ranged_speed": 0.0,
+			"rarity": 80.0,
+			"silentgems:chargeability": 1.0
+		},
+		"rod": {
+			"durability": {
+				"mul2": 0.1
+			},
+			"harvest_speed": {
+				"mul2": 0.1
+			},
+			"rarity": 70.0
+		}
+	},
+	"traits": {
+		"main": [
+			{
+				"name" : "silentgear:adamant",
+				"level": 2
+			},
+			{
+				"name" : "silentgear:heavy",
+				"level" : 1
+			}
+		],
+		"rod": [
+			{
+				"name" : "silentgear:indestructible",
+				"level" : 1
+			}
+		]
+	}
+}

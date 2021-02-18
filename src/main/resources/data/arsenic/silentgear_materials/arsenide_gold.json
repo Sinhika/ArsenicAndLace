@@ -1,0 +1,80 @@
+{
+	"conditions": [
+		{
+			"value": {
+				"tag": "forge:ingots/arsenide_gold",
+				"type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		}
+	],
+	"availability": {
+		"tier": 2,
+		"visible": true,
+		"gear_blacklist": [
+		],
+		"can_salvage": true
+	},
+	"crafting_items": {
+		"main": {
+			"tag": "forge:ingots/arsenide_gold"
+		}
+	},
+	"name": {
+		"translate": "material.arsenic.arsenide_gold"
+	},
+	"stats": {
+		"main": {
+			"durability": 56,
+			"armor_durability": 12.0,
+			"enchantability": 20.0,
+			"harvest_level": 1.0,
+			"harvest_speed": 12.0,
+			"melee_damage": 2.0,
+			"magic_damage": 2.0,
+			"attack_speed": 0.2,
+			"armor": 12.0,
+			"armor_toughness": 0.0,
+			"magic_armor": 0.0,
+			"ranged_damage": 0.0,
+			"ranged_speed": 0.0,
+			"rarity": 40.0,
+			"silentgems:chargeability": 1.0
+		},
+		"rod": {
+			"durability": {
+				"mul2": -0.1
+			},
+			"harvest_speed": {
+				"mul2": 0.1
+			},
+			"rarity": 40.0
+		}
+	},
+	"traits": {
+		"main": [
+			{
+				"name" : "silentgear:brilliant",
+				"level": 1
+			},
+			{
+				"name" : "silentgear:venom",
+				"level" : 2
+			},
+			{
+				"name" : "silentgear:malleable",
+				"level" : 1
+			}
+		],
+		"rod": [
+			{
+				"name": "silentgear:brilliant",
+				"level": 1
+			},
+			{
+				"name" : "silentgear:venom",
+				"level" : 1
+			}
+		]
+	}
+}

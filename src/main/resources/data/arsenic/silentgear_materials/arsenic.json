@@ -1,0 +1,77 @@
+{
+	"conditions": [
+		{
+			"value": {
+				"tag": "forge:ingots/arsenic",
+				"type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		}
+	],
+	"availability": {
+		"tier": 1,
+		"visible": true,
+		"gear_blacklist": [
+			"armor"
+		],
+		"can_salvage": true
+	},
+	"crafting_items": {
+		"main": {
+			"tag": "forge:ingots/arsenic"
+		}
+	},
+	"name": {
+		"translate": "material.arsenic.arsenic"
+	},
+	"stats": {
+		"main": {
+			"durability": 62,
+			"armor_durability": 0.0,
+			"enchantability": 10.0,
+			"harvest_level": 1.0,
+			"harvest_speed": 2.0,
+			"melee_damage": 2.0,
+			"magic_damage": 2.0,
+			"attack_speed": 0.0,
+			"armor": 0.0,
+			"armor_toughness": 0.0,
+			"magic_armor": 0.0,
+			"ranged_damage": 0.0,
+			"ranged_speed": 0.0,
+			"rarity": 20.0,
+			"silentgems:chargeability": 1.0
+		},
+		"rod": {
+			"durability": {
+				"mul2": -0.1
+			},
+			"harvest_speed": {
+				"mul2": 0.1
+			},
+			"rarity": 20.0
+		}
+	},
+	"traits": {
+		"main": [
+			{
+				"name" : "silentgear:brittle",
+				"level": 1
+			},
+			{
+				"name" : "silentgear:venom",
+				"level" : 3
+			}
+		],
+		"rod": [
+			{
+				"name": "silentgear:brittle",
+				"level": 1
+			},
+			{
+				"name" : "silentgear:venom",
+				"level" : 2
+			}
+		]
+	}
+}

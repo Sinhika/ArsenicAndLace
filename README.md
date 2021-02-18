@@ -11,6 +11,8 @@ TO-DO
 * Add Silent Gear support (data and model files for materials)
 * Add shears for metals.
 * create mod logo (mods.toml logo)
+* Add French & Spanish language files.
+* add config strings to language files.
 
 License
 -------

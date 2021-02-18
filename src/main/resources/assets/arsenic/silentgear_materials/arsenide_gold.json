@@ -1,0 +1,38 @@
+{
+  "main/all": [
+    {
+      "texture": "silentgear:main_generic_hc",
+      "color": "#e4c70c"
+    },
+    {
+      "texture": "silentgear:_highlight"
+    }
+  ],
+   "main/fragment": [
+    {
+      "texture": "silentgear:metal",
+      "color": "#e4c70c"
+    }
+  ],
+   "main/armor": [
+    {
+      "texture": "silentgear:main_generic_hc",
+      "color": "#e4c70c"
+    },
+    {
+      "texture": "silentgear:_highlight"
+    }
+  ],
+  "rod/all": [
+    {
+      "texture": "silentgear:rod_generic_hc",
+      "color": "#e4c70c"
+    }
+  ],
+  "rod/part": [
+    {
+      "texture": "silentgear:rod",
+      "color": "#e4c70c"
+    }
+  ]
+}

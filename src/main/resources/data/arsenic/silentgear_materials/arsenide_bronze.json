@@ -1,0 +1,72 @@
+{
+	"conditions": [
+		{
+			"value": {
+				"tag": "forge:ingots/arsenide_bronze",
+				"type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		}
+	],
+	"availability": {
+		"tier": 2,
+		"visible": true,
+		"gear_blacklist": [
+		],
+		"can_salvage": true
+	},
+	"crafting_items": {
+		"main": {
+			"tag": "forge:ingots/arsenide_bronze"
+		}
+	},
+	"name": {
+		"translate": "material.arsenic.arsenide_bronze"
+	},
+	"stats": {
+		"main": {
+			"durability": 640,
+			"armor_durability": 16.0,
+			"enchantability": 2.0,
+			"harvest_level": 2.0,
+			"harvest_speed": 9.5,
+			"melee_damage": 2.0,
+			"magic_damage": 1.0,
+			"attack_speed": 0.2,
+			"armor": 12.0,
+			"armor_toughness": 0.0,
+			"magic_armor": 6.0,
+			"ranged_damage": 1.0,
+			"ranged_speed": 0.0,
+			"rarity": 30.0,
+			"silentgems:chargeability": 1.0
+		},
+		"rod": {
+			"durability": {
+				"mul2": -0.1
+			},
+			"harvest_speed": {
+				"mul2": 0.1
+			},
+			"rarity": 20.0
+		}
+	},
+	"traits": {
+		"main": [
+			{
+				"name" : "silentgear:venom",
+				"level" : 1
+			},
+			{
+				"name" : "silentgear:hard",
+				"level" : 1
+			}
+		],
+		"rod": [
+			{
+				"name": "silentgear:hard",
+				"level": 1
+			}
+		]
+	}
+}
