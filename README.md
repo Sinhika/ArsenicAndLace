@@ -13,6 +13,7 @@ TO-DO
 * create mod logo (mods.toml logo)
 * Add French & Spanish language files.
 * add config strings to language files.
+* add ingots of lower-end metals to loot tables. tools or armor?
 
 License
 -------
