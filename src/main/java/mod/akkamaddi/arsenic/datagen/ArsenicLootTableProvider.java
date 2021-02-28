@@ -8,13 +8,13 @@ import java.util.function.Supplier;
 import com.mojang.datafixers.util.Pair;
 
 import mod.akkamaddi.arsenic.init.ModBlocks;
-import mod.alexndr.simplecorelib.datagen.AbstractLootTableProvider;
+import mod.alexndr.simplecorelib.datagen.BlockLootTableProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.loot.LootParameterSet;
 import net.minecraft.loot.LootTable.Builder;
 import net.minecraft.util.ResourceLocation;
 
-public class ArsenicLootTableProvider extends AbstractLootTableProvider
+public class ArsenicLootTableProvider extends BlockLootTableProvider
 {
 
     public ArsenicLootTableProvider(DataGenerator dataGeneratorIn)
