@@ -13,13 +13,10 @@ import mod.alexndr.simplecorelib.datagen.LootTableInjectorProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.loot.ItemLootEntry;
 import net.minecraft.loot.LootParameterSet;
-import net.minecraft.loot.LootParameterSets;
 import net.minecraft.loot.LootPool;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.RandomValueRange;
-import net.minecraft.loot.conditions.RandomChance;
-import net.minecraft.loot.functions.SetCount;
 import net.minecraft.loot.LootTable.Builder;
+import net.minecraft.loot.RandomValueRange;
+import net.minecraft.loot.functions.SetCount;
 import net.minecraft.util.ResourceLocation;
 
 public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
