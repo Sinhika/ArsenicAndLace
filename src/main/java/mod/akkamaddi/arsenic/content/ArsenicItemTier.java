@@ -9,10 +9,10 @@ import net.minecraft.util.LazyValue;
 
 public enum ArsenicItemTier implements IItemTier 
 {
-    ARSENIC(1, 62, 2.0F, 2.0F, 10, ()->{ return Ingredient.fromItems(ModItems.arsenic_ingot.get()); }),
-    ARSENIDE_BRONZE(2, 640, 9.5F, 2.0F, 9, ()->{ return Ingredient.fromItems( ModItems.arsenide_bronze_ingot.get()); }),
-    ARSENIDE_GOLD(1, 56, 12.0F, 2.0F, 20, ()->{ return Ingredient.fromItems( ModItems.arsenide_gold_ingot.get()); }),
-    TENEBRIUM(4, 3820, 9.0F, 3.0F, 17, ()->{ return Ingredient.fromItems( ModItems.tenebrium_ingot.get()); });
+    ARSENIC(1, 62, 2.0F, 2.0F, 10, ()->{ return Ingredient.of(ModItems.arsenic_ingot.get()); }),
+    ARSENIDE_BRONZE(2, 640, 9.5F, 2.0F, 9, ()->{ return Ingredient.of( ModItems.arsenide_bronze_ingot.get()); }),
+    ARSENIDE_GOLD(1, 56, 12.0F, 2.0F, 20, ()->{ return Ingredient.of( ModItems.arsenide_gold_ingot.get()); }),
+    TENEBRIUM(4, 3820, 9.0F, 3.0F, 17, ()->{ return Ingredient.of( ModItems.tenebrium_ingot.get()); });
 
     private final int harvestLevel;
     private final int maxUses;
@@ -33,32 +33,32 @@ public enum ArsenicItemTier implements IItemTier
     }
     
     @Override
-    public int getMaxUses() {
+    public int getUses() {
        return this.maxUses;
     }
 
     @Override
-    public float getEfficiency() {
+    public float getSpeed() {
        return this.efficiency;
     }
 
     @Override
-    public float getAttackDamage() {
+    public float getAttackDamageBonus() {
        return this.attackDamage;
     }
 
     @Override
-    public int getHarvestLevel() {
+    public int getLevel() {
        return this.harvestLevel;
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
        return this.enchantability;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
-       return this.repairMaterial.getValue();
+    public Ingredient getRepairIngredient() {
+       return this.repairMaterial.get();
     }
 } // end class

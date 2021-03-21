@@ -14,19 +14,19 @@ import net.minecraft.util.SoundEvents;
 public enum ArsenicArmorMaterial implements IArmorMaterial
 {
     OLD_LACE ("arsenic:old_lace", 4, new int[] { 1, 1, 1, 1 }, 24, 
-            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 
-            ()-> { return Ingredient.fromItems(Items.STRING);}, 0.0F),
+            SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 
+            ()-> { return Ingredient.of(Items.STRING);}, 0.0F),
     ARSENIDE_BRONZE("arsenic:arsenide_bronze", 16, new int[] { 1, 3, 5, 3 }, 9,
-              SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 
-              ()-> { return Ingredient.fromItems(ModItems.arsenide_bronze_ingot.get());}, 0.0F),
+              SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 
+              ()-> { return Ingredient.of(ModItems.arsenide_bronze_ingot.get());}, 0.0F),
     
     ARSENIDE_GOLD("arsenic:arsenide_gold", 12, new int[] { 1, 3, 6, 2 }, 22,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 
-            ()-> { return Ingredient.fromItems(ModItems.arsenide_gold_ingot.get());}, 0.0F),
+            SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 
+            ()-> { return Ingredient.of(ModItems.arsenide_gold_ingot.get());}, 0.0F),
  
     TENEBRIUM("arsenic:tenebrium", 52, new int[] { 4, 8, 8, 4 }, 17,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F, 
-            ()-> { return Ingredient.fromItems(ModItems.tenebrium_ingot.get());}, 0.0F);
+            SoundEvents.ARMOR_EQUIP_IRON, 2.0F, 
+            ()-> { return Ingredient.of(ModItems.tenebrium_ingot.get());}, 0.0F);
              
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
     private final String name;
@@ -54,33 +54,33 @@ public enum ArsenicArmorMaterial implements IArmorMaterial
     }
 
     @Override
-    public int getDurability(EquipmentSlotType slotIn)
+    public int getDurabilityForSlot(EquipmentSlotType slotIn)
     {
         return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
     }
 
     @Override
-    public int getDamageReductionAmount(EquipmentSlotType slotIn)
+    public int getDefenseForSlot(EquipmentSlotType slotIn)
     {
         return this.damageReductionAmountArray[slotIn.getIndex()];
     }
 
     @Override
-    public int getEnchantability()
+    public int getEnchantmentValue()
     {
         return this.enchantability;
     }
 
     @Override
-    public SoundEvent getSoundEvent()
+    public SoundEvent getEquipSound()
     {
         return this.soundEvent;
     }
 
     @Override
-    public Ingredient getRepairMaterial()
+    public Ingredient getRepairIngredient()
     {
-        return this.repairMaterial.getValue();
+        return this.repairMaterial.get();
     }
 
     @Override

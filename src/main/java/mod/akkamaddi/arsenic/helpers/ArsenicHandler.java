@@ -18,17 +18,17 @@ public class ArsenicHandler implements IWeaponEffectHelper
     {
         if (stack.getItem() == ModItems.arsenic_sword.get() || stack.getItem() == ModItems.arsenic_axe.get())
         {
-            target.addPotionEffect(new EffectInstance(Effects.POISON, 130));
+            target.addEffect(new EffectInstance(Effects.POISON, 130));
         }
         else if (stack.getItem() == ModItems.arsenide_bronze_sword.get() 
                 || stack.getItem() == ModItems.arsenide_bronze_axe.get())
         {
-            target.addPotionEffect(new EffectInstance(Effects.POISON, 55));
+            target.addEffect(new EffectInstance(Effects.POISON, 55));
         }
         else if (stack.getItem() == ModItems.arsenide_gold_sword.get() 
                 || stack.getItem() == ModItems.arsenide_gold_axe.get())
         {
-            target.addPotionEffect(new EffectInstance(Effects.POISON, 80));
+            target.addEffect(new EffectInstance(Effects.POISON, 80));
         }
         return false;
     }

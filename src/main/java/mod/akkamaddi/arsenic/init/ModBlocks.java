@@ -29,27 +29,27 @@ public final class ModBlocks
 
     // storage blocks
     public static final RegistryObject<Block> arsenic_block = BLOCKS.register("arsenic_block",
-            () -> new Block(Block.Properties.create(Material.IRON)
-                    .hardnessAndResistance(3.0F, 10.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(3.0F, 10.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> arsenide_bronze_block = BLOCKS.register("arsenide_bronze_block",
-            () -> new Block(Block.Properties.create(Material.IRON)
-                    .hardnessAndResistance(5.0F, 20.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(5.0F, 20.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> arsenide_gold_block = BLOCKS.register("arsenide_gold_block",
-            () -> new Block(Block.Properties.create(Material.IRON)
-                    .hardnessAndResistance(4.0F, 16.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(4.0F, 16.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> tenebrium_block = BLOCKS.register("tenebrium_block",
-            () -> new Block(Block.Properties.create(Material.IRON)
-                    .hardnessAndResistance(12.0F, 55.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));    
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(12.0F, 55.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));    
    
     // pressure plate
     public static final RegistryObject<PressurePlateBlock> arsenic_plate = BLOCKS.register("arsenic_plate",
             () -> new  PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, 
-                                          AbstractBlock.Properties.create(Material.IRON, 
-                                                  ModBlocks.arsenic_block.get().getMaterialColor())
-                                          .doesNotBlockMovement().hardnessAndResistance(0.5F).sound(SoundType.METAL)));
+                                          AbstractBlock.Properties.of(Material.METAL, 
+                                                  ModBlocks.arsenic_block.get().defaultMaterialColor())
+                                          .noCollission().strength(0.5F).sound(SoundType.METAL)));
     
 } // end class

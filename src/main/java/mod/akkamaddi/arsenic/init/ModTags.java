@@ -12,7 +12,7 @@ public class ModTags
         public static final ITag.INamedTag<Item> INGOTS_ARSENIC = forgeTag("ingots/arsenic");
         
         private static ITag.INamedTag<Item> forgeTag(String name) {
-            return ItemTags.makeWrapperTag("forge:" + name);
+            return ItemTags.bind("forge:" + name);
         }
     } // end class Items
 

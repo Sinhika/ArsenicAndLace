@@ -35,15 +35,15 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
         
         // desert_pyramid injection table.
         LootPool.Builder foo = createChestPool(1,1, 0.25F)
-                .addEntry(ItemLootEntry.builder(ModItems.old_lace_chest.get()).weight(1));
+                .add(ItemLootEntry.lootTableItem(ModItems.old_lace_chest.get()).setWeight(1));
         addInjectionTable(ArsenicAndLace.MODID, "desert_pyramid", foo);
         
         // jungle_temple
         foo = createChestPool(1,1, 0.25F)
-                .addEntry(ItemLootEntry.builder(ModItems.old_lace_chest.get()).weight(1))
-                .addEntry(ItemLootEntry.builder(ModItems.arsenide_salt.get())
-                            .weight(3)
-                            .acceptFunction(SetCount.builder(RandomValueRange.of(2, 4))));
+                .add(ItemLootEntry.lootTableItem(ModItems.old_lace_chest.get()).setWeight(1))
+                .add(ItemLootEntry.lootTableItem(ModItems.arsenide_salt.get())
+                            .setWeight(3)
+                            .apply(SetCount.setCount(RandomValueRange.between(2, 4))));
         addInjectionTable(ArsenicAndLace.MODID, "jungle_temple", foo);
         return tables;
     }

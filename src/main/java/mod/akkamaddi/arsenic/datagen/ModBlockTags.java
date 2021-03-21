@@ -16,26 +16,26 @@ public class ModBlockTags extends BlockTagsProvider
     }
 
     @Override
-    protected void registerTags()
+    protected void addTags()
     {
         registerStorageBlockTags();
     } // end registerTags()
     
     private void registerStorageBlockTags()
     {
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/arsenic"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/arsenide_bronze"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/arsenide_gold"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/tenebrium"));
         
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/arsenic"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/arsenic"))
             .add(ModBlocks.arsenic_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/arsenide_bronze"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/arsenide_bronze"))
             .add(ModBlocks.arsenide_bronze_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/arsenide_gold"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/arsenide_gold"))
             .add(ModBlocks.arsenide_gold_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/tenebrium"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/tenebrium"))
             .add(ModBlocks.tenebrium_block.get());
     }
     
