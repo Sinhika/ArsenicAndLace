@@ -6,8 +6,6 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 
-import net.minecraft.item.Item.Properties;
-
 public class ArsenicSwordItem extends SwordItem
 {
 

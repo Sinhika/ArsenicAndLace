@@ -6,15 +6,12 @@ import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 
-import net.minecraft.item.Item.Properties;
-
 public class ArsenicAxeItem extends AxeItem
 {
 
     public ArsenicAxeItem(IItemTier tier, float attackDamageIn, float attackSpeedIn, Properties builder)
     {
         super(tier, attackDamageIn, attackSpeedIn, builder);
-        // TODO Auto-generated constructor stub
     }
 
     @Override
