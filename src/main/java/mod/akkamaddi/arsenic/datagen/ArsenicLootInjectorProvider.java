@@ -34,18 +34,24 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
         tables.clear();
         
         // desert_pyramid injection table.
-        LootPool.Builder foo = createChestPool(1,1, 0.25F)
+        LootPool.Builder foo = createChestPool(1,1, 0.75F)
                 .add(ItemLootEntry.lootTableItem(ModItems.old_lace_chest.get()).setWeight(1));
         addInjectionTable(ArsenicAndLace.MODID, "desert_pyramid", foo);
         
         // jungle_temple
-        foo = createChestPool(1,1, 0.25F)
+        foo = createChestPool(1,1, 0.75F)
                 .add(ItemLootEntry.lootTableItem(ModItems.old_lace_chest.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.arsenide_salt.get())
                             .setWeight(3)
                             .apply(SetCount.setCount(RandomValueRange.between(2, 4))));
         addInjectionTable(ArsenicAndLace.MODID, "jungle_temple", foo);
+        
+        // stronghold
+        foo = createChestPool(1,1, 0.33F)
+                .add(ItemLootEntry.lootTableItem(ModItems.old_lace_chest.get()).setWeight(1));
+        addInjectionTable(ArsenicAndLace.MODID, "stronghold", foo);
+        
         return tables;
-    }
+    } // end getTables()
 
 } // end class

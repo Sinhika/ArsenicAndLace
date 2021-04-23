@@ -5,6 +5,8 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public final class ServerConfig
 {
+    final ForgeConfigSpec.BooleanValue serverEnableChestLoot; // load additional chest loot?
+    
     final ForgeConfigSpec.BooleanValue serverEnableRecycling; // recipe flag
     
     final ForgeConfigSpec.BooleanValue serverEnableArsenicMaking; // recipe flag
@@ -19,6 +21,11 @@ public final class ServerConfig
     ServerConfig(final ForgeConfigSpec.Builder builder)
     {
         builder.push("General");
+        serverEnableChestLoot =
+                builder.comment("Enable additional loot from this mod in chests")
+                .translation(ArsenicAndLace.MODID + "config.EnableChestLoot")
+                .define("EnableChestLoot", true);
+                
         serverEnableRecycling = 
                 builder.comment("Enable fusion furnace recycling of arsenide and tenebrium items")
                 .translation(ArsenicAndLace.MODID + "config.EnableRecycling")

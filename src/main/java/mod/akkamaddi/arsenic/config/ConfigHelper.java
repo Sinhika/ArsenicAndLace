@@ -10,6 +10,9 @@ public final class ConfigHelper
 
     public static void bakeServer(final ModConfig config) 
     {
+        // not a flag
+        ArsenicConfig.enableChestLoot = ConfigHolder.SERVER.serverEnableChestLoot.get();
+        
         // recipe flags.
         ArsenicConfig.INSTANCE.putFlag("recycling_enabled", 
                 ConfigHolder.SERVER.serverEnableRecycling.get());

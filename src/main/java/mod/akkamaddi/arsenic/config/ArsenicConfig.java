@@ -10,7 +10,9 @@ public class ArsenicConfig implements ISimpleConfig
     // recipe flags
     private static Map<String, Boolean> flags = new HashMap<>();
     public static ArsenicConfig INSTANCE = new ArsenicConfig();
-
+    
+    public static boolean enableChestLoot;
+    
     @Override
     public void clear()
     {
