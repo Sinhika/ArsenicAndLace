@@ -31,6 +31,7 @@ public class ArsenicDataGenerator
             gen.addProvider(new ModBlockTags(gen, event.getExistingFileHelper()));
             gen.addProvider(new ModItemTags(gen, event.getExistingFileHelper()));
             gen.addProvider(new ArsenicLootTableProvider(gen));
+            gen.addProvider(new ArsenicLootInjectorProvider(gen));
         }
      } // end gatherData()
 
