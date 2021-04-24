@@ -14,28 +14,9 @@ public class ArsenicRequiredInjectionLookup extends InjectionTableLookup
     public ArsenicRequiredInjectionLookup()
     {
         super();
-        this.replace("bastion_bridge", null);
-        this.replace("bastion_hoglin_stable", null);
-        this.replace("bastion_other", null);
-        this.replace("bastion_treasure", null);
-        this.replace("buried_treasure", null);
-        this.replace("nether_bridge", null);
-        this.replace("pillager_outpost", null);
-        this.replace("shipwreck_map", null);
-        this.replace("shipwreck_supply", null);
-        this.replace("shipwreck_treasure", null);
-        this.replace("underwater_ruin_big", null);
-        this.replace("underwater_ruin_small", null);
-        this.replace("woodland_mansion", null);
-        this.replace("village_savanna_house", null);
-        this.replace("village_plains_house", null);
-        this.replace("village_desert_house", null);
-        this.replace("village_snowy_house", null);
-        this.replace("village_taiga_house", null);
-
-        this.put("abandoned_mineshaft", null);
-        this.put("spawn_bonus_chest", null);
-        this.put("nether", null);
+        this.put("desert_pyramid", "desert_pyramid");
+        this.put("jungle_temple", "jungle_temple");
+        this.AddStrongholdAliases();
     } // end ctor
 
     /**
@@ -43,6 +24,7 @@ public class ArsenicRequiredInjectionLookup extends InjectionTableLookup
      */
     public void AddOptionalTables()
     {
+        this.put("abandoned_mineshaft", "abandoned_mineshaft");
         
     } // end AddOptionalTables
     

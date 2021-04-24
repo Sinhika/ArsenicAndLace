@@ -62,7 +62,6 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
                     .apply(SetCount.setCount(RandomValueRange.between(1, 3))));
         addInjectionTable(ArsenicAndLace.MODID, "abandoned_mineshaft", foo);
                 
-        
         return tables;
     } // end getTables()
 
