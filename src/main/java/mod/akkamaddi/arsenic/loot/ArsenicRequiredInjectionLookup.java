@@ -25,7 +25,12 @@ public class ArsenicRequiredInjectionLookup extends InjectionTableLookup
     public void AddOptionalTables()
     {
         this.put("abandoned_mineshaft", "abandoned_mineshaft");
-        
+        this.put("shipwreck_treasure", "shipwreck_treasure");
+        this.put("village_armorer", "village_armorer");
+        this.put("village_toolsmith", "village_toolsmith");
+        this.put("village_weaponsmith", "village_weaponsmith");
+        this.put("simple_dungeon", "simple_dungeon");
+        this.AddDungeonAliases();
     } // end AddOptionalTables
     
 } // end class

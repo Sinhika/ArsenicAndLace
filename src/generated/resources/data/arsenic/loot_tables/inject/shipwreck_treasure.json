@@ -7,37 +7,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 10,
-          "name": "arsenic:old_lace_chest"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 10,
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 2.0,
-                "max": 4.0,
+                "min": 1.0,
+                "max": 3.0,
                 "type": "minecraft:uniform"
               }
             }
           ],
-          "name": "arsenic:arsenide_salt"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "arsenic:arsenide_gold_leggings"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "arsenic:arsenide_gold_boots"
+          "name": "arsenic:arsenide_gold_ingot"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.75
+          "chance": 0.33
         }
       ]
     }
