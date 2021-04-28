@@ -62,9 +62,12 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
         // OPTIONAL TABLES
         // abandoned mineshaft
         foo = createChestPool(1,1, 0.33F)
-            .add(ItemLootEntry.lootTableItem(ModItems.arsenic_ingot.get())
+                .add(ItemLootEntry.lootTableItem(ModItems.orpiment.get())
+                        .setWeight(3)
+                        .apply(SetCount.setCount(RandomValueRange.between(1, 2))))
+            .add(ItemLootEntry.lootTableItem(ModItems.realgar.get())
                     .setWeight(3)
-                    .apply(SetCount.setCount(RandomValueRange.between(1, 3))));
+                    .apply(SetCount.setCount(RandomValueRange.between(1, 2))));
         addInjectionTable(ArsenicAndLace.MODID, "abandoned_mineshaft", foo);
 
         foo = createChestPool(1,1, 0.33F)
