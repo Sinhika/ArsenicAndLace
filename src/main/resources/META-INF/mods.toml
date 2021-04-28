@@ -56,14 +56,14 @@ description='''Addition of Arsenic, Arsenide Bronze, Arsenide Gold and Tenebrium
 [[dependencies.arsenic]]
         modId="silents_mechanisms"
         mandatory=false
-        versionRange="[1.16.3-0.8.9,)"
+        versionRange="[0.8.9,)"
         ordering="BEFORE"
         side="BOTH"
         
 [[dependencies.arsenic]]
         modId="silentgear"
         mandatory=false
-        versionRange="[1.16.3-2.5.2,)"
+        versionRange="[2.5.2,)"
         ordering="BEFORE"
         side="BOTH"
         
