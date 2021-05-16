@@ -21,6 +21,7 @@ public class ModItemTags extends ItemTagsProvider
         registerDustTags();
         registerNuggetTags();
         registerIngotTags();
+        registerMiscTags();
     }
 
     private void registerNuggetTags()
@@ -73,5 +74,12 @@ public class ModItemTags extends ItemTagsProvider
         this.tag(TagUtils.forgeTag("dusts/tenebrium")).add(ModItems.tenebrium_dust.get());
         this.tag(TagUtils.forgeTag("dusts/arsenide_salt")).add(ModItems.arsenide_salt.get());
     } // end registerDustTags()
-    
+
+    private void registerMiscTags()
+    {
+        this.tag(TagUtils.forgeTag("reagents"))
+            .addTag(TagUtils.forgeTag("reagents/old_lace"));
+        this.tag(TagUtils.forgeTag("reagents/old_lace")).add(ModItems.old_lace_chest.get());
+        
+    } // registerMiscTags()
 } // end class
