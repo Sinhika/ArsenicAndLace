@@ -6,8 +6,7 @@ Minecraft 1.16.5 port of akkamaddi's Simple Arsenic and Old Lace mod
 
 TO-DO
 -----
-* <s>Create logo for CurseForge (400x400)</s>
-* <s>Add Silent's Mechanisms support (crusher & alloy smelter recipes)</s>
+* Add chance of zombies and other undead wearing Old Lace shrouds.
 * Add Silent Gear support (data and model files for materials)
 * Add shears for metals.
 * create mod logo (mods.toml logo)
