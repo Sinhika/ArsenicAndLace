@@ -9,12 +9,12 @@ import mod.akkamaddi.arsenic.init.ModItems;
 import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simplecorelib.datagen.RecipeSetBuilder;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.data.ShapedRecipeBuilder;
-import net.minecraft.data.ShapelessRecipeBuilder;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -28,7 +28,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         setbuilder = new RecipeSetBuilder(ArsenicAndLace.MODID);
     }
 
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -38,7 +38,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     } // end registerRecipes() 
 
     
-    private void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerFurnaceRecipes(Consumer<FinishedRecipe> consumer)
     {
         // arsenic compounds
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.realgar.get()),
@@ -97,7 +97,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 6.0F, 200, "_from_dust");
     } // end registerFurnaceRecipes()
 
-    private void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerArmorRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModItems.arsenide_bronze_ingot.get()), "arsenide_bronze",
                 has(ModItems.arsenide_bronze_ingot.get()), flag("arsenide_bronze_tools_enabled"));
@@ -107,7 +107,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 has(ModItems.tenebrium_ingot.get()), flag("tenebrium_tools_enabled"));
     } // end registerArmorRecipes()
 
-    private void registerToolRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerToolRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModItems.arsenic_ingot.get()), "arsenic",
                 has(ModItems.arsenic_ingot.get()), flag("arsenic_tools_enabled"), false);
@@ -120,7 +120,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
        
     } // end registerToolRecipes()
 
-    private void registerMiscRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerMiscRecipes(Consumer<FinishedRecipe> consumer)
     {
         // lace breakdown
         ShapelessRecipeBuilder.shapeless(Items.STRING, 4)
@@ -163,7 +163,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         
     } // end registerMiscRecipes()
 
-    private void registerStorageRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerStorageRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.arsenic_ingot.get(), ModBlocks.arsenic_block.get(), 
                 ModItems.arsenic_nugget.get(), has(ModItems.arsenic_ingot.get()));

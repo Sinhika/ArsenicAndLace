@@ -3,15 +3,15 @@ package mod.akkamaddi.arsenic.content;
 import java.util.function.Supplier;
 
 import mod.akkamaddi.arsenic.init.ModItems;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.util.LazyLoadedValue;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 
-public enum ArsenicArmorMaterial implements IArmorMaterial
+public enum ArsenicArmorMaterial implements ArmorMaterial
 {
     OLD_LACE ("arsenic:old_lace", 4, new int[] { 1, 1, 1, 1 }, 24, 
             SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 
@@ -35,7 +35,7 @@ public enum ArsenicArmorMaterial implements IArmorMaterial
     private final int enchantability;
     private final SoundEvent soundEvent;
     private final float toughness;
-    private final LazyValue<Ingredient> repairMaterial;
+    private final LazyLoadedValue<Ingredient> repairMaterial;
     private final float knockbackResist;
 
     private ArsenicArmorMaterial(String nameIn, int maxDamageIn, int[] drAmtArray,
@@ -49,18 +49,18 @@ public enum ArsenicArmorMaterial implements IArmorMaterial
         enchantability = enchantabilityIn;
         soundEvent = soundIn;
         toughness = toughnessIn;
-        repairMaterial = new LazyValue<>(repairMatIn);
+        repairMaterial = new LazyLoadedValue<>(repairMatIn);
         knockbackResist = knockbackIn;
     }
 
     @Override
-    public int getDurabilityForSlot(EquipmentSlotType slotIn)
+    public int getDurabilityForSlot(EquipmentSlot slotIn)
     {
         return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
     }
 
     @Override
-    public int getDefenseForSlot(EquipmentSlotType slotIn)
+    public int getDefenseForSlot(EquipmentSlot slotIn)
     {
         return this.damageReductionAmountArray[slotIn.getIndex()];
     }

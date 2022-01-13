@@ -1,7 +1,7 @@
 package mod.akkamaddi.arsenic.init;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
@@ -12,10 +12,10 @@ import java.util.function.Supplier;
 public final class ModTabGroups
 {
 
-    public static final ItemGroup MOD_ITEM_GROUP = 
+    public static final CreativeModeTab MOD_ITEM_GROUP = 
             new ModTabGroup(ArsenicAndLace.MODID, () -> new ItemStack(ModBlocks.arsenic_block.get().asItem()));
 
-    public static final class ModTabGroup extends ItemGroup
+    public static final class ModTabGroup extends CreativeModeTab
     {
 
         @Nonnull

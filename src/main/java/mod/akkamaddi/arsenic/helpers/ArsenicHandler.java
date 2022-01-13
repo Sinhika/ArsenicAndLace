@@ -2,10 +2,10 @@ package mod.akkamaddi.arsenic.helpers;
 
 import mod.akkamaddi.arsenic.init.ModItems;
 import mod.alexndr.simplecorelib.helpers.IWeaponEffectHelper;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 
 public class ArsenicHandler implements IWeaponEffectHelper
 {
@@ -18,17 +18,17 @@ public class ArsenicHandler implements IWeaponEffectHelper
     {
         if (stack.getItem() == ModItems.arsenic_sword.get() || stack.getItem() == ModItems.arsenic_axe.get())
         {
-            target.addEffect(new EffectInstance(Effects.POISON, 130));
+            target.addEffect(new MobEffectInstance(MobEffects.POISON, 130));
         }
         else if (stack.getItem() == ModItems.arsenide_bronze_sword.get() 
                 || stack.getItem() == ModItems.arsenide_bronze_axe.get())
         {
-            target.addEffect(new EffectInstance(Effects.POISON, 55));
+            target.addEffect(new MobEffectInstance(MobEffects.POISON, 55));
         }
         else if (stack.getItem() == ModItems.arsenide_gold_sword.get() 
                 || stack.getItem() == ModItems.arsenide_gold_axe.get())
         {
-            target.addEffect(new EffectInstance(Effects.POISON, 80));
+            target.addEffect(new MobEffectInstance(MobEffects.POISON, 80));
         }
         return false;
     }

@@ -1,15 +1,17 @@
 package mod.akkamaddi.arsenic.content;
 
 import mod.akkamaddi.arsenic.helpers.ArsenicHandler;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwordItem;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class ArsenicSwordItem extends SwordItem
 {
 
-    public ArsenicSwordItem(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builderIn)
+    public ArsenicSwordItem(Tier tier, int attackDamageIn, float attackSpeedIn, Properties builderIn)
     {
         super(tier, attackDamageIn, attackSpeedIn, builderIn);
     }

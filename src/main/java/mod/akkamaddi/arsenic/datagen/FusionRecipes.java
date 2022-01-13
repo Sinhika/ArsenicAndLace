@@ -12,11 +12,11 @@ import mod.akkamaddi.arsenic.init.ModTags;
 import mod.alexndr.fusion.api.datagen.FusionRecipeSetBuilder;
 import mod.alexndr.fusion.api.recipe.AbstractFusionRecipeProvider;
 import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
-import net.minecraft.block.Blocks;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -32,7 +32,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
     }
 
     @Override
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerArsenicRecipes(consumer);
         registerArsenideBronzeRecipes(consumer);
@@ -46,7 +46,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
      * 
      * @param consumer
      */
-    protected void registerArsenicRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerArsenicRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];
@@ -79,7 +79,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
      * 
      * @param consumer
      */
-    protected void registerArsenideBronzeRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerArsenideBronzeRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];
@@ -112,7 +112,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
      * 
      * @param consumer
      */
-    protected void registerArsenideGoldRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerArsenideGoldRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];
@@ -146,7 +146,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
      * 
      * @param consumer
      */
-    protected void registerTenebriumRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerTenebriumRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];
@@ -175,7 +175,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
          
     } // end registerTenebriumRecipes
 
-    protected void registerMiscFusionRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerMiscFusionRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];

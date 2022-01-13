@@ -3,11 +3,11 @@ package mod.akkamaddi.arsenic.content;
 import java.util.function.Supplier;
 
 import mod.akkamaddi.arsenic.init.ModItems;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.util.LazyLoadedValue;
 
-public enum ArsenicItemTier implements IItemTier 
+public enum ArsenicItemTier implements Tier 
 {
     ARSENIC(1, 62, 2.0F, 2.0F, 10, ()->{ return Ingredient.of(ModItems.arsenic_ingot.get()); }),
     ARSENIDE_BRONZE(2, 640, 9.5F, 2.0F, 9, ()->{ return Ingredient.of( ModItems.arsenide_bronze_ingot.get()); }),
@@ -19,7 +19,7 @@ public enum ArsenicItemTier implements IItemTier
     private final float efficiency;
     private final float attackDamage;
     private final int enchantability;
-    private final LazyValue<Ingredient> repairMaterial;
+    private final LazyLoadedValue<Ingredient> repairMaterial;
 
     private ArsenicItemTier(int harvestLevelIn, int maxUsesIn, float efficiencyIn, float attackDamageIn, int enchantabilityIn,
                     Supplier<Ingredient> repairMaterialIn)
@@ -29,7 +29,7 @@ public enum ArsenicItemTier implements IItemTier
         this.efficiency = efficiencyIn;
         this.attackDamage = attackDamageIn;
         this.enchantability = enchantabilityIn;
-        this.repairMaterial = new LazyValue<>(repairMaterialIn);
+        this.repairMaterial = new LazyLoadedValue<>(repairMaterialIn);
     }
     
     @Override

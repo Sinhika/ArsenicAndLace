@@ -129,8 +129,8 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft "net.minecraftforge:forge:${version_forge}"
-    compile fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}")
-    compile fg.deobf("fusion:Fusion:${fusion_version}")
+    implementation fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}")
+    implementation fg.deobf("fusion:Fusion:${fusion_version}")
     runtimeOnly fg.deobf("simpleores:SimpleOres2:${simpleores_version}")
 }
 

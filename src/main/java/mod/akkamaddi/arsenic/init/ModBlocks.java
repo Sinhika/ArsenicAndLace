@@ -1,11 +1,11 @@
 package mod.akkamaddi.arsenic.init;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.PressurePlateBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -48,7 +48,7 @@ public final class ModBlocks
     // pressure plate
     public static final RegistryObject<PressurePlateBlock> arsenic_plate = BLOCKS.register("arsenic_plate",
             () -> new  PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, 
-                                          AbstractBlock.Properties.of(Material.METAL, 
+                                          BlockBehaviour.Properties.of(Material.METAL, 
                                                   ModBlocks.arsenic_block.get().defaultMaterialColor())
                                           .noCollission().strength(0.5F).sound(SoundType.METAL)));
     
