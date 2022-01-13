@@ -1,13 +1,15 @@
 package mod.akkamaddi.arsenic.datagen;
 
+import java.util.List;
+
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.init.ModBlocks;
+import mod.alexndr.simplecorelib.datagen.MiningBlockTags;
 import mod.alexndr.simplecorelib.helpers.TagUtils;
-import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ModBlockTags extends BlockTagsProvider
+public class ModBlockTags extends MiningBlockTags
 {
 
     public ModBlockTags(DataGenerator generatorIn, ExistingFileHelper existingFileHelper)
@@ -19,7 +21,32 @@ public class ModBlockTags extends BlockTagsProvider
     protected void addTags()
     {
         registerStorageBlockTags();
+        registerMiningTags();
+        registerBeaconTags();
     } // end registerTags()
+    
+    
+    private void registerMiningTags()
+    {			
+    	// (mineable, stone, iron, diamond, netherite)
+    	this.registerMineableTags(
+    			List.of(ModBlocks.arsenic_block.get(), ModBlocks.arsenide_bronze_block.get(),
+    					ModBlocks.arsenide_gold_block.get(), ModBlocks.tenebrium_block.get()), // mineable
+    			List.of(ModBlocks.arsenic_block.get(), ModBlocks.arsenide_gold_block.get()), // stone
+    			List.of(ModBlocks.arsenide_bronze_block.get()), // iron
+    			List.of(), // diamond
+    			List.of(ModBlocks.tenebrium_block.get()) ); // netherite
+    }
+    
+    private void registerBeaconTags()
+    {
+    	this.tag(TagUtils.modBlockTag("minecraft", "beacon_base_blocks"))
+    		.add(ModBlocks.arsenic_block.get())
+    		.add(ModBlocks.arsenide_bronze_block.get())
+    		.add(ModBlocks.arsenide_gold_block.get())
+    		.add(ModBlocks.tenebrium_block.get());
+    }
+    
     
     private void registerStorageBlockTags()
     {
@@ -37,6 +64,6 @@ public class ModBlockTags extends BlockTagsProvider
             .add(ModBlocks.arsenide_gold_block.get());
         this.tag(TagUtils.forgeBlockTag("storage_blocks/tenebrium"))
             .add(ModBlocks.tenebrium_block.get());
-    }
+    } // end registerStorageBlockTags()
     
 } // end class

@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-  	"arsenic:arsenic_block",
-  	"arsenic:arsenide_bronze_block",
-  	"arsenic:arsenide_gold_block",
-  	"arsenic:tenebrium_block"
-  ]
-}

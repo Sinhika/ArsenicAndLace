@@ -4,6 +4,7 @@ import java.util.List;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.init.ModItems;
+import mod.alexndr.fusion.content.FusionItemTiers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.Tag;
@@ -32,7 +33,7 @@ public final class ArsenicItemTiers
 			List.of(Tiers.STONE), List.of(Tiers.IRON));
 	
 	public static final Tier ARSENIDE_BRONZE = TierSortingRegistry.registerTier(
-			new ForgeTier(Tiers.STONE.getLevel(), 640, 9.5F, 2.0F, 9, ARSENIDE_BRONZE_TAG,
+			new ForgeTier(Tiers.IRON.getLevel(), 640, 9.5F, 2.0F, 9, ARSENIDE_BRONZE_TAG,
 					()->Ingredient.of(ModItems.arsenide_bronze_ingot.get())),
 			new ResourceLocation(ArsenicAndLace.MODID, "arsenide_bronze"), 
 			List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
@@ -44,9 +45,9 @@ public final class ArsenicItemTiers
 			List.of(Tiers.STONE), List.of(Tiers.IRON));
 	
 	public static final Tier TENEBRIUM = TierSortingRegistry.registerTier(
-			new ForgeTier(Tiers.STONE.getLevel(), 3820, 9.0F, 3.0F, 17, TENEBRIUM_TAG,
+			new ForgeTier(5, 3820, 9.0F, 3.0F, 17, TENEBRIUM_TAG,
 					()->Ingredient.of(ModItems.tenebrium_ingot.get())),
 			new ResourceLocation(ArsenicAndLace.MODID, "tenebrium"), 
-			List.of(Tiers.NETHERITE), List.of());
+			List.of(Tiers.NETHERITE), List.of(FusionItemTiers.SINISITE));
 	
 } // end class
