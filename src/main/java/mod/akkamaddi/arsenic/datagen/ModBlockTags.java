@@ -23,8 +23,16 @@ public class ModBlockTags extends MiningBlockTags
         registerStorageBlockTags();
         registerMiningTags();
         registerBeaconTags();
+        registerMiscTags();
     } // end registerTags()
     
+    
+    private void registerMiscTags()
+    {
+    	this.tag(TagUtils.modBlockTag("minecraft", "pressure_plates"))
+    		.add(ModBlocks.arsenic_plate.get());
+    	
+    }
     
     private void registerMiningTags()
     {			
