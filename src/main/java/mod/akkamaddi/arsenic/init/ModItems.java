@@ -3,7 +3,7 @@ package mod.akkamaddi.arsenic.init;
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.content.ArsenicArmorMaterial;
 import mod.akkamaddi.arsenic.content.ArsenicAxeItem;
-import mod.akkamaddi.arsenic.content.ArsenicItemTier;
+import mod.akkamaddi.arsenic.content.ArsenicItemTiers;
 import mod.akkamaddi.arsenic.content.ArsenicSwordItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
@@ -83,72 +83,72 @@ public final class ModItems
     // TOOLS
     // swords
     public static final RegistryObject<ArsenicSwordItem> arsenic_sword = ITEMS.register("arsenic_sword",
-            () -> new ArsenicSwordItem(ArsenicItemTier.ARSENIC, 3, -2.4F,
+            () -> new ArsenicSwordItem(ArsenicItemTiers.ARSENIC, 3, -2.4F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArsenicSwordItem> arsenide_bronze_sword = ITEMS.register("arsenide_bronze_sword",
-            () -> new ArsenicSwordItem(ArsenicItemTier.ARSENIDE_BRONZE, 3, -2.4F,
+            () -> new ArsenicSwordItem(ArsenicItemTiers.ARSENIDE_BRONZE, 3, -2.4F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArsenicSwordItem> arsenide_gold_sword = ITEMS.register("arsenide_gold_sword",
-            () -> new ArsenicSwordItem(ArsenicItemTier.ARSENIDE_GOLD, 3, -2.4F,
+            () -> new ArsenicSwordItem(ArsenicItemTiers.ARSENIDE_GOLD, 3, -2.4F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArsenicSwordItem> tenebrium_sword = ITEMS.register("tenebrium_sword",
-            () -> new ArsenicSwordItem(ArsenicItemTier.TENEBRIUM, 3, -2.4F,
+            () -> new ArsenicSwordItem(ArsenicItemTiers.TENEBRIUM, 3, -2.4F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // axes
     public static final RegistryObject<ArsenicAxeItem> arsenic_axe = ITEMS.register("arsenic_axe",
-            () -> new ArsenicAxeItem(ArsenicItemTier.ARSENIC, 7.0F, -3.1F,
+            () -> new ArsenicAxeItem(ArsenicItemTiers.ARSENIC, 7.0F, -3.1F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));    
     public static final RegistryObject<ArsenicAxeItem> arsenide_bronze_axe = ITEMS.register("arsenide_bronze_axe",
-            () -> new ArsenicAxeItem(ArsenicItemTier.ARSENIDE_BRONZE, 7.0F, -3.1F,
+            () -> new ArsenicAxeItem(ArsenicItemTiers.ARSENIDE_BRONZE, 7.0F, -3.1F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));    
     public static final RegistryObject<ArsenicAxeItem> arsenide_gold_axe = ITEMS.register("arsenide_gold_axe",
-            () -> new ArsenicAxeItem(ArsenicItemTier.ARSENIDE_GOLD, 7.0F, -3.1F,
+            () -> new ArsenicAxeItem(ArsenicItemTiers.ARSENIDE_GOLD, 7.0F, -3.1F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));    
     public static final RegistryObject<ArsenicAxeItem> tenebrium_axe = ITEMS.register("tenebrium_axe",
-            () -> new ArsenicAxeItem(ArsenicItemTier.TENEBRIUM, 7.0F, -3.1F,
+            () -> new ArsenicAxeItem(ArsenicItemTiers.TENEBRIUM, 7.0F, -3.1F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));    
 
     // pickaxes
     public static final RegistryObject<PickaxeItem> arsenic_pickaxe = ITEMS.register("arsenic_pickaxe",
-            () -> new PickaxeItem(ArsenicItemTier.ARSENIC, 1, -2.8F,
+            () -> new PickaxeItem(ArsenicItemTiers.ARSENIC, 1, -2.8F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> arsenide_bronze_pickaxe = ITEMS.register("arsenide_bronze_pickaxe",
-            () -> new PickaxeItem(ArsenicItemTier.ARSENIDE_BRONZE, 1, -2.8F,
+            () -> new PickaxeItem(ArsenicItemTiers.ARSENIDE_BRONZE, 1, -2.8F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> arsenide_gold_pickaxe = ITEMS.register("arsenide_gold_pickaxe",
-            () -> new PickaxeItem(ArsenicItemTier.ARSENIDE_GOLD, 1, -2.8F,
+            () -> new PickaxeItem(ArsenicItemTiers.ARSENIDE_GOLD, 1, -2.8F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> tenebrium_pickaxe = ITEMS.register("tenebrium_pickaxe",
-            () -> new PickaxeItem(ArsenicItemTier.TENEBRIUM, 1, -2.8F,
+            () -> new PickaxeItem(ArsenicItemTiers.TENEBRIUM, 1, -2.8F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
    
     // shovels
     public static final RegistryObject<ShovelItem> arsenic_shovel = ITEMS.register("arsenic_shovel",
-            () -> new ShovelItem(ArsenicItemTier.ARSENIC, 1.5F, -3.0F,
+            () -> new ShovelItem(ArsenicItemTiers.ARSENIC, 1.5F, -3.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> arsenide_bronze_shovel = ITEMS.register("arsenide_bronze_shovel",
-            () -> new ShovelItem(ArsenicItemTier.ARSENIDE_BRONZE, 1.5F, -3.0F,
+            () -> new ShovelItem(ArsenicItemTiers.ARSENIDE_BRONZE, 1.5F, -3.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> arsenide_gold_shovel = ITEMS.register("arsenide_gold_shovel",
-            () -> new ShovelItem(ArsenicItemTier.ARSENIDE_GOLD, 1.5F, -3.0F,
+            () -> new ShovelItem(ArsenicItemTiers.ARSENIDE_GOLD, 1.5F, -3.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> tenebrium_shovel = ITEMS.register("tenebrium_shovel",
-            () -> new ShovelItem(ArsenicItemTier.TENEBRIUM, 1.5F, -3.0F,
+            () -> new ShovelItem(ArsenicItemTiers.TENEBRIUM, 1.5F, -3.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // hoes
     public static final RegistryObject<HoeItem> arsenic_hoe = ITEMS.register("arsenic_hoe",
-            () -> new HoeItem(ArsenicItemTier.ARSENIC, -1, -2.0F,
+            () -> new HoeItem(ArsenicItemTiers.ARSENIC, -1, -2.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<HoeItem> arsenide_bronze_hoe = ITEMS.register("arsenide_bronze_hoe",
-            () -> new HoeItem(ArsenicItemTier.ARSENIDE_BRONZE, -1, -2.0F,
+            () -> new HoeItem(ArsenicItemTiers.ARSENIDE_BRONZE, -1, -2.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<HoeItem> arsenide_gold_hoe = ITEMS.register("arsenide_gold_hoe",
-            () -> new HoeItem(ArsenicItemTier.ARSENIDE_GOLD, -1, -2.0F,
+            () -> new HoeItem(ArsenicItemTiers.ARSENIDE_GOLD, -1, -2.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<HoeItem> tenebrium_hoe = ITEMS.register("tenebrium_hoe",
-            () -> new HoeItem(ArsenicItemTier.TENEBRIUM, -1, -2.0F,
+            () -> new HoeItem(ArsenicItemTiers.TENEBRIUM, -1, -2.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // ARMORS

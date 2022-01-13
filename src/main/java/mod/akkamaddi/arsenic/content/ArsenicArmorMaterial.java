@@ -3,19 +3,20 @@ package mod.akkamaddi.arsenic.content;
 import java.util.function.Supplier;
 
 import mod.akkamaddi.arsenic.init.ModItems;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.util.LazyLoadedValue;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraftforge.common.util.Lazy;
 
 public enum ArsenicArmorMaterial implements ArmorMaterial
 {
     OLD_LACE ("arsenic:old_lace", 4, new int[] { 1, 1, 1, 1 }, 24, 
             SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 
             ()-> { return Ingredient.of(Items.STRING);}, 0.0F),
+    
     ARSENIDE_BRONZE("arsenic:arsenide_bronze", 16, new int[] { 1, 3, 5, 3 }, 9,
               SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 
               ()-> { return Ingredient.of(ModItems.arsenide_bronze_ingot.get());}, 0.0F),
@@ -35,7 +36,7 @@ public enum ArsenicArmorMaterial implements ArmorMaterial
     private final int enchantability;
     private final SoundEvent soundEvent;
     private final float toughness;
-    private final LazyLoadedValue<Ingredient> repairMaterial;
+    private final Lazy<Ingredient> repairMaterial;
     private final float knockbackResist;
 
     private ArsenicArmorMaterial(String nameIn, int maxDamageIn, int[] drAmtArray,
@@ -49,7 +50,7 @@ public enum ArsenicArmorMaterial implements ArmorMaterial
         enchantability = enchantabilityIn;
         soundEvent = soundIn;
         toughness = toughnessIn;
-        repairMaterial = new LazyLoadedValue<>(repairMatIn);
+        repairMaterial = Lazy.of(repairMatIn);
         knockbackResist = knockbackIn;
     }
 
