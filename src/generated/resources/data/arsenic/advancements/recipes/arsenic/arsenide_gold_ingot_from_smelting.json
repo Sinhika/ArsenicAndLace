@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "arsenic:large_arsenide_gold_chunk"
+            "items": [
+              "arsenic:large_arsenide_gold_chunk"
+            ]
           }
         ]
       }

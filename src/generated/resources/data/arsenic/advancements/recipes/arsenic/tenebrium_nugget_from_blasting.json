@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "arsenic:tenebrium_axe"
+            "items": [
+              "arsenic:tenebrium_axe"
+            ]
           }
         ]
       }

@@ -20,7 +20,9 @@
             "conditions": {
               "items": [
                 {
-                  "item": "arsenic:arsenic_ingot"
+                  "items": [
+                    "arsenic:arsenic_ingot"
+                  ]
                 }
               ]
             }

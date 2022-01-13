@@ -39,7 +39,8 @@ public class ModBlockTags extends MiningBlockTags
     	// (mineable, stone, iron, diamond, netherite)
     	this.registerMineableTags(
     			List.of(ModBlocks.arsenic_block.get(), ModBlocks.arsenide_bronze_block.get(),
-    					ModBlocks.arsenide_gold_block.get(), ModBlocks.tenebrium_block.get()), // mineable
+    					ModBlocks.arsenide_gold_block.get(), ModBlocks.tenebrium_block.get(),
+    					ModBlocks.arsenic_plate.get()), // mineable
     			List.of(ModBlocks.arsenic_block.get(), ModBlocks.arsenide_gold_block.get()), // stone
     			List.of(ModBlocks.arsenide_bronze_block.get()), // iron
     			List.of(), // diamond
