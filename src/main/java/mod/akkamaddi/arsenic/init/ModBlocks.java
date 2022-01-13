@@ -1,13 +1,12 @@
 package mod.akkamaddi.arsenic.init;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraftforge.common.ToolType;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -30,20 +29,19 @@ public final class ModBlocks
     // storage blocks
     public static final RegistryObject<Block> arsenic_block = BLOCKS.register("arsenic_block",
             () -> new Block(Block.Properties.of(Material.METAL)
-                    .strength(3.0F, 10.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));    
+                    .strength(3.0F, 10.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> arsenide_bronze_block = BLOCKS.register("arsenide_bronze_block",
             () -> new Block(Block.Properties.of(Material.METAL)
                     .strength(5.0F, 20.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));    
+                    .requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> arsenide_gold_block = BLOCKS.register("arsenide_gold_block",
             () -> new Block(Block.Properties.of(Material.METAL)
                     .strength(4.0F, 16.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));    
+                    .requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> tenebrium_block = BLOCKS.register("tenebrium_block",
             () -> new Block(Block.Properties.of(Material.METAL)
                     .strength(12.0F, 55.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));    
+                    .requiresCorrectToolForDrops()));    
    
     // pressure plate
     public static final RegistryObject<PressurePlateBlock> arsenic_plate = BLOCKS.register("arsenic_plate",

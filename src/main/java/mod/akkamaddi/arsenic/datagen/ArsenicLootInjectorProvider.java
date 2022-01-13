@@ -11,13 +11,13 @@ import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.init.ModItems;
 import mod.alexndr.simplecorelib.datagen.LootTableInjectorProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable.Builder;
-import net.minecraft.world.level.storage.loot.RandomValueBounds;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
 {
@@ -39,7 +39,7 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
             .add(LootItem.lootTableItem(ModItems.old_lace_chest.get()).setWeight(10))
             .add(LootItem.lootTableItem(ModItems.arsenide_salt.get())
                     .setWeight(10)
-                    .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 4))))
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 4))))
             .add(LootItem.lootTableItem(ModItems.arsenide_gold_helmet.get()).setWeight(1))
             .add(LootItem.lootTableItem(ModItems.arsenide_gold_chestplate.get()).setWeight(1));
         addInjectionTable(ArsenicAndLace.MODID, "desert_pyramid", foo);
@@ -49,7 +49,7 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
             .add(LootItem.lootTableItem(ModItems.old_lace_chest.get()).setWeight(10))
             .add(LootItem.lootTableItem(ModItems.arsenide_salt.get())
                         .setWeight(10)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 4))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 4))))
             .add(LootItem.lootTableItem(ModItems.arsenide_gold_leggings.get()).setWeight(1))
             .add(LootItem.lootTableItem(ModItems.arsenide_gold_boots.get()).setWeight(1));
         addInjectionTable(ArsenicAndLace.MODID, "jungle_temple", foo);
@@ -64,26 +64,26 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
         foo = createChestPool(1,1, 0.33F)
                 .add(LootItem.lootTableItem(ModItems.orpiment.get())
                         .setWeight(3)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 2))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2))))
             .add(LootItem.lootTableItem(ModItems.realgar.get())
                     .setWeight(3)
-                    .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 2))));
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2))));
         addInjectionTable(ArsenicAndLace.MODID, "abandoned_mineshaft", foo);
 
         foo = createChestPool(1,1, 0.33F)
                 .add(LootItem.lootTableItem(ModItems.arsenide_gold_ingot.get())
                         .setWeight(1)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))));
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))));
         addInjectionTable(ArsenicAndLace.MODID, "shipwreck_treasure", foo);
         
         // simple dungeon
         foo = createChestPool(1,1, 0.25F)
                 .add(LootItem.lootTableItem(ModItems.arsenide_gold_ingot.get())
                         .setWeight(3)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
                 .add(LootItem.lootTableItem(ModItems.arsenide_bronze_ingot.get())
                     .setWeight(10)
-                    .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 5))));
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 5))));
             addInjectionTable(ArsenicAndLace.MODID, "simple_dungeon", foo);
         
         // villagers
@@ -93,7 +93,7 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
             .add(LootItem.lootTableItem(ModItems.arsenide_bronze_leggings.get()).setWeight(1))
             .add(LootItem.lootTableItem(ModItems.arsenide_bronze_boots.get()).setWeight(1))
             .add(LootItem.lootTableItem(ModItems.arsenide_bronze_ingot.get()).setWeight(5)
-                    .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))));
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))));
         addInjectionTable(ArsenicAndLace.MODID, "village_armorer", foo);
 
         foo = createChestPool(1,1, 0.10F)
@@ -101,7 +101,7 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
             .add(LootItem.lootTableItem(ModItems.arsenide_bronze_shovel.get()).setWeight(5))
             .add(LootItem.lootTableItem(ModItems.arsenide_bronze_ingot.get())
                     .setWeight(3)
-                    .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))));
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))));
         addInjectionTable(ArsenicAndLace.MODID, "village_toolsmith", foo);
 
         foo = createChestPool(1,1, 0.10F)
@@ -110,7 +110,7 @@ public class ArsenicLootInjectorProvider extends LootTableInjectorProvider
                 .add(LootItem.lootTableItem(ModItems.arsenide_bronze_sword.get()).setWeight(5))
                 .add(LootItem.lootTableItem(ModItems.arsenide_bronze_ingot.get())
                         .setWeight(3)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))));
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))));
         addInjectionTable(ArsenicAndLace.MODID, "village_weaponsmith", foo);
                 
         return tables;
