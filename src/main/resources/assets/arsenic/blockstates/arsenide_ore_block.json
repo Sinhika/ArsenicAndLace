@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "arsenic:block/arsenide_ore_block"
+        }
+    }
+}

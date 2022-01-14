@@ -20,6 +20,8 @@ cd $TARGETDIR
 
 # make simple blockstates
 gen_blockstate_jsons.py --type=simple arsenic_block
+gen_blockstate_jsons.py --type=simple arsenide_ore_stone
+gen_blockstate_jsons.py --type=simple arsenide_ore_deepslate
 gen_blockstate_jsons.py --type=simple tenebrium_block
 gen_blockstate_jsons.py --type=simple arsenide_gold_block
 gen_blockstate_jsons.py --type=simple arsenide_bronze_block
@@ -34,6 +36,8 @@ cd $TARGETDIR
 
 # block models
 gen_model_jsons.py --type=block arsenic_block
+gen_model_jsons.py --type=block arsenic_ore_stone
+gen_model_jsons.py --type=block arsenic_ore_deepslate
 gen_model_jsons.py --type=block tenebrium_block 
 gen_model_jsons.py --type=block arsenide_gold_block
 gen_model_jsons.py --type=block arsenide_bronze_block
