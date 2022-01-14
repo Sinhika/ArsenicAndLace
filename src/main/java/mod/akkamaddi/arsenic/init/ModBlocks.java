@@ -2,6 +2,7 @@ package mod.akkamaddi.arsenic.init;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -26,6 +27,16 @@ public final class ModBlocks
     public static final DeferredRegister<Block> BLOCKS = 
             DeferredRegister.create(ForgeRegistries.BLOCKS, ArsenicAndLace.MODID);
 
+    // ore blocks - hard (requires iron tools to mine), but brittle (low strength & blast resistance)
+    public static final RegistryObject<OreBlock> arsenic_ore_stone =  BLOCKS.register("arsenic_ore_stone",
+    		() -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 2.0F, 1.0F)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<OreBlock> arsenic_ore_deepslate =  BLOCKS.register("arsenic_ore_deepslate",
+    		() -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 2.0F, 1.0F)
+                    .requiresCorrectToolForDrops()));
+    
     // storage blocks
     public static final RegistryObject<Block> arsenic_block = BLOCKS.register("arsenic_block",
             () -> new Block(Block.Properties.of(Material.METAL)

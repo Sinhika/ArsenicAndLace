@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "arsenic:arsenide_bronze_block",
     "arsenic:arsenic_ore_stone",
     "arsenic:arsenic_ore_deepslate"
   ]

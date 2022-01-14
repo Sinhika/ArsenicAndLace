@@ -8,6 +8,7 @@ import java.util.function.Supplier;
 import com.mojang.datafixers.util.Pair;
 
 import mod.akkamaddi.arsenic.init.ModBlocks;
+import mod.akkamaddi.arsenic.init.ModItems;
 import mod.alexndr.simplecorelib.datagen.BlockLootTableProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
@@ -31,7 +32,8 @@ public class ArsenicLootTableProvider extends BlockLootTableProvider
         standardDropTable(ModBlocks.arsenide_gold_block.get());
         standardDropTable(ModBlocks.tenebrium_block.get());
         standardDropTable(ModBlocks.arsenic_plate.get());
-        
+        specialDropTable(ModBlocks.arsenic_ore_stone.get(), ModItems.large_arsenic_chunk.get());
+        specialDropTable(ModBlocks.arsenic_ore_deepslate.get(), ModItems.large_arsenic_chunk.get());
         return tables;
     }
 

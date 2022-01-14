@@ -20,12 +20,22 @@ public class ModBlockTags extends MiningBlockTags
     @Override
     protected void addTags()
     {
+        registerOreTags();
         registerStorageBlockTags();
         registerMiningTags();
         registerBeaconTags();
         registerMiscTags();
     } // end registerTags()
     
+    
+    private void registerOreTags()
+    {
+        this.tag(TagUtils.forgeBlockTag( "ores"))
+                .addTag(TagUtils.forgeBlockTag( "ores/arsenic"));
+        this.tag(TagUtils.forgeBlockTag( "ores/arsenic"))
+	        .add(ModBlocks.arsenic_ore_stone.get())
+	        .add(ModBlocks.arsenic_ore_deepslate.get());
+    } 
     
     private void registerMiscTags()
     {
@@ -40,9 +50,11 @@ public class ModBlockTags extends MiningBlockTags
     	this.registerMineableTags(
     			List.of(ModBlocks.arsenic_block.get(), ModBlocks.arsenide_bronze_block.get(),
     					ModBlocks.arsenide_gold_block.get(), ModBlocks.tenebrium_block.get(),
-    					ModBlocks.arsenic_plate.get()), // mineable
+    					ModBlocks.arsenic_plate.get(), ModBlocks.arsenic_ore_stone.get(),
+    					ModBlocks.arsenic_ore_deepslate.get()), // mineable
     			List.of(ModBlocks.arsenic_block.get(), ModBlocks.arsenide_gold_block.get()), // stone
-    			List.of(ModBlocks.arsenide_bronze_block.get()), // iron
+    			List.of(ModBlocks.arsenide_bronze_block.get(),
+    					ModBlocks.arsenic_ore_stone.get(), ModBlocks.arsenic_ore_deepslate.get()), // iron
     			List.of(), // diamond
     			List.of(ModBlocks.tenebrium_block.get()) ); // netherite
     }
