@@ -20,21 +20,21 @@ public class ModBlockTags extends MiningBlockTags
     @Override
     protected void addTags()
     {
-        registerOreTags();
+        super.addTags();
         registerStorageBlockTags();
-        registerMiningTags();
         registerBeaconTags();
         registerMiscTags();
     } // end registerTags()
     
     
-    private void registerOreTags()
+    protected void registerOreTags()
     {
         this.tag(TagUtils.forgeBlockTag( "ores"))
                 .addTag(TagUtils.forgeBlockTag( "ores/arsenic"));
         this.tag(TagUtils.forgeBlockTag( "ores/arsenic"))
 	        .add(ModBlocks.arsenic_ore_stone.get())
 	        .add(ModBlocks.arsenic_ore_deepslate.get());
+        
     } 
     
     private void registerMiscTags()
@@ -44,7 +44,7 @@ public class ModBlockTags extends MiningBlockTags
     	
     }
     
-    private void registerMiningTags()
+    protected void registerMiningTags()
     {			
     	// (mineable, stone, iron, diamond, netherite)
     	this.registerMineableTags(

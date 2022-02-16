@@ -1,13 +1,14 @@
 package mod.akkamaddi.arsenic.datagen;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
+import mod.akkamaddi.arsenic.init.ModBlocks;
 import mod.akkamaddi.arsenic.init.ModItems;
+import mod.alexndr.simplecorelib.datagen.MiningItemTags;
 import mod.alexndr.simplecorelib.helpers.TagUtils;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ModItemTags extends ItemTagsProvider
+public class ModItemTags extends MiningItemTags
 {
 
     public ModItemTags(DataGenerator dataGenerator, ExistingFileHelper existingFileHelper)
@@ -18,11 +19,24 @@ public class ModItemTags extends ItemTagsProvider
     @Override
     protected void addTags()
     {
+        super.addTags();
         registerDustTags();
         registerNuggetTags();
         registerIngotTags();
         registerMiscTags();
     }
+
+    
+    @Override
+    protected void registerOreTags()
+    {
+        this.tag(TagUtils.forgeTag( "ores"))
+            .addTag(TagUtils.forgeTag( "ores/arsenic"));
+        this.tag(TagUtils.forgeTag( "ores/arsenic"))
+            .add(ModBlocks.arsenic_ore_stone.get().asItem())
+            .add(ModBlocks.arsenic_ore_deepslate.get().asItem());
+        
+    } // end registerOreTags()
 
     private void registerNuggetTags()
     {
