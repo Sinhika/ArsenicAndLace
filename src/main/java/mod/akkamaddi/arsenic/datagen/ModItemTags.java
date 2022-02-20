@@ -1,5 +1,7 @@
 package mod.akkamaddi.arsenic.datagen;
 
+import java.util.List;
+
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.init.ModBlocks;
 import mod.akkamaddi.arsenic.init.ModItems;
@@ -35,6 +37,16 @@ public class ModItemTags extends MiningItemTags
         this.tag(TagUtils.forgeTag( "ores/arsenic"))
             .add(ModBlocks.arsenic_ore_stone.get().asItem())
             .add(ModBlocks.arsenic_ore_deepslate.get().asItem());
+        
+        // register forge ore_rates tags.
+        this.registerOreRateTags( List.of(), // sparse 
+                List.of(ModBlocks.arsenic_ore_stone.get(), ModBlocks.arsenic_ore_deepslate.get()), // singular 
+                List.of()); // dense
+        
+        // register forge:ores_in_ground tags
+        this.registerOresInGroundTags( List.of(ModBlocks.arsenic_ore_stone.get()), // stone ores
+                List.of(ModBlocks.arsenic_ore_deepslate.get()), // deepslate ores
+                List.of());  // netherrack ores
         
     } // end registerOreTags()
 

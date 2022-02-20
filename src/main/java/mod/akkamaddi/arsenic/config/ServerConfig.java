@@ -8,6 +8,7 @@ public final class ServerConfig
     final ForgeConfigSpec.BooleanValue serverEnableChestLoot; // load additional chest loot?
     
     final ForgeConfigSpec.BooleanValue serverEnableRecycling; // recipe flag
+    final ForgeConfigSpec.BooleanValue serverGenerateArsenicOre; // recipe flag
     
     final ForgeConfigSpec.BooleanValue serverEnableArsenicMaking; // recipe flag
     final ForgeConfigSpec.BooleanValue serverEnableArsenicTools; // recipe flag
@@ -40,6 +41,9 @@ public final class ServerConfig
         serverEnableArsenicTools = builder.comment("Enable making Arsenic tools")
                 .translation(ArsenicAndLace.MODID + "config.EnableArsenicTools")
                 .define("EnableArsenicTools", true);
+        serverGenerateArsenicOre  = builder.comment("Enable Arsenic Ore generation in the world")
+                .translation(ArsenicAndLace.MODID + "config.GenerateArsenicOre")
+                .define("GenerateArsenicOre", true);
         builder.pop();
 
         builder.push("Arsenide Bronze");

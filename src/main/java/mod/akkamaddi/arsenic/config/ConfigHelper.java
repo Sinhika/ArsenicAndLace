@@ -13,6 +13,9 @@ public final class ConfigHelper
         // not a flag
         ArsenicConfig.enableChestLoot = ConfigHolder.SERVER.serverEnableChestLoot.get();
         
+        // ore generation?
+        ArsenicConfig.generateArsenicOre = ConfigHolder.SERVER.serverGenerateArsenicOre.get();
+        
         // recipe flags.
         ArsenicConfig.INSTANCE.putFlag("recycling_enabled", 
                 ConfigHolder.SERVER.serverEnableRecycling.get());

@@ -8,5 +8,6 @@ public class ArsenicConfig extends SimpleConfig
     public static ArsenicConfig INSTANCE = new ArsenicConfig();
     
     public static boolean enableChestLoot;
+    public static boolean generateArsenicOre;
     
 } // end-class

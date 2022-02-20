@@ -6,7 +6,11 @@ import org.apache.logging.log4j.Logger;
 import mod.akkamaddi.arsenic.config.ArsenicConfig;
 import mod.akkamaddi.arsenic.loot.ArsenicRequiredInjectionLookup;
 import mod.alexndr.simplecorelib.helpers.LootUtils;
+import mod.alexndr.simpleores.generation.OreGeneration;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.event.LootTableLoadEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -31,5 +35,18 @@ public final class ForgeEventSubscriber
         }
         LootUtils.LootLoadHandler(ArsenicAndLace.MODID, event, lootLookupMap);
     } // end LootLoad()
+
+    /**
+     * Biome loading triggers ore generation.
+     */
+    @SubscribeEvent(priority=EventPriority.HIGH)
+    public static void onBiomeLoading(BiomeLoadingEvent evt)
+    {
+        
+        if (evt.getCategory() != Biome.BiomeCategory.THEEND && evt.getCategory() != Biome.BiomeCategory.NETHER)
+        {
+            OreGeneration.generateOverworldOres(evt);
+        }
+    } // end onBiomeLoading()
 
 } // end class

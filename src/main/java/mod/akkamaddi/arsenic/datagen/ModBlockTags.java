@@ -35,7 +35,16 @@ public class ModBlockTags extends MiningBlockTags
 	        .add(ModBlocks.arsenic_ore_stone.get())
 	        .add(ModBlocks.arsenic_ore_deepslate.get());
         
-    } 
+        // register forge ore_rates tags.
+        this.registerOreRateTags( List.of(), // sparse 
+                List.of(ModBlocks.arsenic_ore_stone.get(), ModBlocks.arsenic_ore_deepslate.get()), // singular 
+                List.of()); // dense
+        
+        // register forge:ores_in_ground tags
+        this.registerOresInGroundTags( List.of(ModBlocks.arsenic_ore_stone.get()), // stone ores
+                List.of(ModBlocks.arsenic_ore_deepslate.get()), // deepslate ores
+                List.of());  // netherrack ores
+    } // end registerOreTags()
     
     private void registerMiscTags()
     {
