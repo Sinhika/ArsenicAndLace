@@ -25,6 +25,7 @@ gen_blockstate_jsons.py --type=simple arsenic_ore_deepslate
 gen_blockstate_jsons.py --type=simple tenebrium_block
 gen_blockstate_jsons.py --type=simple arsenide_gold_block
 gen_blockstate_jsons.py --type=simple arsenide_bronze_block
+gen_blockstate_jsons.py --type=simple raw_arsenic_block
 gen_blockstate_jsons.py --type=pressure_plate arsenic_plate
 
 # models
@@ -41,9 +42,13 @@ gen_model_jsons.py --type=block arsenic_ore_deepslate
 gen_model_jsons.py --type=block tenebrium_block 
 gen_model_jsons.py --type=block arsenide_gold_block
 gen_model_jsons.py --type=block arsenide_bronze_block
+gen_model_jsons.py --type=block raw_arsenic_block
 gen_model_jsons.py --type=pressure_plate arsenic_plate
 
 # inventory items
+gen_model_jsons.py --type=inventory --item_only arsenic_toxic_lump
+gen_model_jsons.py --type=inventory --item_only arsenic_toxic_soot
+gen_model_jsons.py --type=inventory --item_only raw_arsenic
 gen_model_jsons.py --type=inventory --item_only realgar
 gen_model_jsons.py --type=inventory --item_only orpiment
 gen_model_jsons.py --type=inventory --item_only arsenide_salt

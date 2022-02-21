@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "arsenic:block/raw_arsenic_block"
+        }
+    }
+}
