@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "arsenic:block/blast_furnace_top_arsenic",
+        "front": "arsenic:block/blast_furnace_front_on_arsenic",
+        "side": "arsenic:block/blast_furnace_side_arsenic"
+    }
+}
