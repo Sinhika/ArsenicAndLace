@@ -50,7 +50,15 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.arsenide_salt.get()),
                 ModItems.medium_arsenic_chunk.get(), has(ModItems.arsenide_salt.get()), 4.0F, 200);
         
-        // large chunks
+        // arsenic ore & friends
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.arsenic_ore_stone.get().asItem()),
+                ModItems.arsenic_ingot.get(), has(ModBlocks.arsenic_ore_stone.get().asItem()), 4.0F, 200,
+                "from_ore");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.arsenic_ore_deepslate.get().asItem()),
+                ModItems.arsenic_ingot.get(), has(ModBlocks.arsenic_ore_deepslate.get().asItem()), 4.0F, 200,
+                "from_deepslate_ore");
+
+        // large chunks & raw metal
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_arsenic.get()),
                 ModItems.arsenic_ingot.get(), has(ModItems.raw_arsenic.get()), 4.0F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_arsenic_chunk.get()),
@@ -165,12 +173,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
             .unlockedBy("has_item", has(ModItems.arsenic_toxic_soot.get()))
             .save(consumer);
         
-        // convert raw_arsenic <=> large_arsenic_chunk
-        ShapelessRecipeBuilder.shapeless(ModItems.raw_arsenic.get())
-            .requires(ModItems.large_arsenic_chunk.get())
-            .unlockedBy("has_item", has(ModItems.large_arsenic_chunk.get()))
-            .save(consumer, "arsenic:convert_chunk_to_raw");
-        
+        // convert raw_arsenic to large_arsenic_chunk
         ShapelessRecipeBuilder.shapeless(ModItems.large_arsenic_chunk.get())
             .requires(ModItems.raw_arsenic.get())
             .unlockedBy("has_item", has(ModItems.raw_arsenic.get()))

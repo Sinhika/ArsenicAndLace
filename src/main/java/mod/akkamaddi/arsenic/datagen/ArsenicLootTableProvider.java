@@ -28,6 +28,7 @@ public class ArsenicLootTableProvider extends BlockLootTableProvider
     {
         tables.clear();
         standardDropTable(ModBlocks.arsenic_block.get());
+        standardDropTable(ModBlocks.raw_arsenic_block.get());
         standardDropTable(ModBlocks.arsenide_bronze_block.get());
         standardDropTable(ModBlocks.arsenide_gold_block.get());
         standardDropTable(ModBlocks.tenebrium_block.get());
