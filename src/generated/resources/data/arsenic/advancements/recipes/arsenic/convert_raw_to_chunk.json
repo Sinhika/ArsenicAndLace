@@ -2,11 +2,11 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "arsenic:arsenic_ingot_from_smelting"
+      "arsenic:convert_raw_to_chunk"
     ]
   },
   "criteria": {
-    "arsenic_ingot_from_smelting": {
+    "has_item": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "arsenic:arsenic_ingot_from_smelting"
+        "recipe": "arsenic:convert_raw_to_chunk"
       }
     }
   },
   "requirements": [
     [
-      "arsenic_ingot_from_smelting",
+      "has_item",
       "has_the_recipe"
     ]
   ]

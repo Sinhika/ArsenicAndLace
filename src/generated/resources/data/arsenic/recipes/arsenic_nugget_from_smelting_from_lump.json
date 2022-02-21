@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "arsenic:arsenic_toxic_lump"
+  },
+  "result": "arsenic:arsenic_nugget",
+  "experience": 2.0,
+  "cookingtime": 200
+}

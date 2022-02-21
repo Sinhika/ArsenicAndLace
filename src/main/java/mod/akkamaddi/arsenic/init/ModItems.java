@@ -34,7 +34,14 @@ public final class ModItems
     // ingots, chunks, and dusts
     public static final RegistryObject<Item> arsenic_ingot = ITEMS.register("arsenic_ingot", 
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<Item> arsenic_nugget = ITEMS.register("arsenic_nugget", 
+    public static final RegistryObject<Item> raw_arsenic = ITEMS.register("raw_arsenic", 
+            ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> arsenic_toxic_lump = ITEMS.register("arsenic_toxic_lump", 
+            ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> arsenic_toxic_soot = ITEMS.register("arsenic_toxic_soot", 
+            ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
+    
+   public static final RegistryObject<Item> arsenic_nugget = ITEMS.register("arsenic_nugget", 
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> arsenic_dust = ITEMS.register("arsenic_dust", 
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
@@ -44,6 +51,7 @@ public final class ModItems
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> arsenide_salt = ITEMS.register("arsenide_salt", 
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
+    
     public static final RegistryObject<Item> medium_arsenic_chunk = ITEMS.register("medium_arsenic_chunk", 
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> large_arsenic_chunk = ITEMS.register("large_arsenic_chunk", 

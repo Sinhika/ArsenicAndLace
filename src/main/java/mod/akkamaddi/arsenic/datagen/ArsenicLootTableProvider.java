@@ -32,8 +32,8 @@ public class ArsenicLootTableProvider extends BlockLootTableProvider
         standardDropTable(ModBlocks.arsenide_gold_block.get());
         standardDropTable(ModBlocks.tenebrium_block.get());
         standardDropTable(ModBlocks.arsenic_plate.get());
-        specialDropTable(ModBlocks.arsenic_ore_stone.get(), ModItems.large_arsenic_chunk.get());
-        specialDropTable(ModBlocks.arsenic_ore_deepslate.get(), ModItems.large_arsenic_chunk.get());
+        specialDropTable(ModBlocks.arsenic_ore_stone.get(), ModItems.raw_arsenic.get());
+        specialDropTable(ModBlocks.arsenic_ore_deepslate.get(), ModItems.raw_arsenic.get());
         return tables;
     }
 

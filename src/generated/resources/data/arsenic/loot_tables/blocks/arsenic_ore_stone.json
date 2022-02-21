@@ -39,7 +39,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "arsenic:large_arsenic_chunk"
+              "name": "arsenic:raw_arsenic"
             }
           ]
         }

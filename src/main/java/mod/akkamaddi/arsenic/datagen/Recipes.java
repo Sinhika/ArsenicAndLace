@@ -45,12 +45,17 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 ModItems.arsenic_nugget.get(), has(ModItems.realgar.get()), 2.0F, 200, "_from_realgar");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.orpiment.get()),
                 ModItems.arsenic_nugget.get(), has(ModItems.realgar.get()), 2.0F, 200, "_from_orpiment");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.arsenic_toxic_lump.get()),
+                ModItems.arsenic_nugget.get(), has(ModItems.arsenic_toxic_lump.get()), 2.0F, 200, "_from_lump");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.arsenide_salt.get()),
                 ModItems.medium_arsenic_chunk.get(), has(ModItems.arsenide_salt.get()), 4.0F, 200);
-                
+        
         // large chunks
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_arsenic.get()),
+                ModItems.arsenic_ingot.get(), has(ModItems.raw_arsenic.get()), 4.0F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_arsenic_chunk.get()),
-                ModItems.arsenic_ingot.get(), has(ModItems.large_arsenic_chunk.get()), 4.0F, 200);
+                ModItems.arsenic_ingot.get(), has(ModItems.large_arsenic_chunk.get()), 4.0F, 200,
+                "_from_chunk");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_arsenide_bronze_chunk.get()),
                 ModItems.arsenide_bronze_ingot.get(), has(ModItems.large_arsenide_bronze_chunk.get()), 5.0F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_arsenide_gold_chunk.get()),
@@ -154,6 +159,23 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
             .unlockedBy("has_item", has(Items.ROTTEN_FLESH))
             .save(consumer);
         
+        // toxic lump
+        ShapelessRecipeBuilder.shapeless(ModItems.arsenic_toxic_lump.get())
+            .requires(ModItems.arsenic_toxic_soot.get(), 9)
+            .unlockedBy("has_item", has(ModItems.arsenic_toxic_soot.get()))
+            .save(consumer);
+        
+        // convert raw_arsenic <=> large_arsenic_chunk
+        ShapelessRecipeBuilder.shapeless(ModItems.raw_arsenic.get())
+            .requires(ModItems.large_arsenic_chunk.get())
+            .unlockedBy("has_item", has(ModItems.large_arsenic_chunk.get()))
+            .save(consumer, "arsenic:convert_chunk_to_raw");
+        
+        ShapelessRecipeBuilder.shapeless(ModItems.large_arsenic_chunk.get())
+            .requires(ModItems.raw_arsenic.get())
+            .unlockedBy("has_item", has(ModItems.raw_arsenic.get()))
+            .save(consumer, "arsenic:convert_raw_to_chunk");
+        
         // arsenic pressure plate
         ShapedRecipeBuilder.shaped(ModBlocks.arsenic_plate.get())
             .define('A', ModItems.arsenic_ingot.get())
@@ -165,6 +187,9 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 
     private void registerStorageRecipes(Consumer<FinishedRecipe> consumer)
     {
+        setbuilder.buildSimpleStorageRecipes(consumer, ModItems.raw_arsenic.get(), 
+                ModBlocks.raw_arsenic_block.get(), null, has(ModItems.raw_arsenic.get()));
+
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.arsenic_ingot.get(), ModBlocks.arsenic_block.get(), 
                 ModItems.arsenic_nugget.get(), has(ModItems.arsenic_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.arsenide_bronze_ingot.get(), ModBlocks.arsenide_bronze_block.get(), 

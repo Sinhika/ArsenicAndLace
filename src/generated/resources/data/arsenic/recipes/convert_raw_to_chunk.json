@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arsenic:raw_arsenic"
+    }
+  ],
+  "result": {
+    "item": "arsenic:large_arsenic_chunk"
+  }
+}

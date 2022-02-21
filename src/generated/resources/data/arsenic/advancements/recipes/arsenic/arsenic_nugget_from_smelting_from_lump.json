@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "arsenic:arsenic_ingot_from_smelting"
+      "arsenic:arsenic_nugget_from_smelting_from_lump"
     ]
   },
   "criteria": {
-    "arsenic_ingot_from_smelting": {
+    "arsenic_nugget_from_smelting_from_lump": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "arsenic:raw_arsenic"
+              "arsenic:arsenic_toxic_lump"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "arsenic:arsenic_ingot_from_smelting"
+        "recipe": "arsenic:arsenic_nugget_from_smelting_from_lump"
       }
     }
   },
   "requirements": [
     [
-      "arsenic_ingot_from_smelting",
+      "arsenic_nugget_from_smelting_from_lump",
       "has_the_recipe"
     ]
   ]

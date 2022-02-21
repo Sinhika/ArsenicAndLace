@@ -41,6 +41,9 @@ public final class ModBlocks
     public static final RegistryObject<Block> arsenic_block = BLOCKS.register("arsenic_block",
             () -> new Block(Block.Properties.of(Material.METAL)
                     .strength(3.0F, 10.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()));    
+    public static final RegistryObject<Block> raw_arsenic_block = BLOCKS.register("raw_arsenic_block",
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(3.0F, 10.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> arsenide_bronze_block = BLOCKS.register("arsenide_bronze_block",
             () -> new Block(Block.Properties.of(Material.METAL)
                     .strength(5.0F, 20.0F).sound(SoundType.METAL)

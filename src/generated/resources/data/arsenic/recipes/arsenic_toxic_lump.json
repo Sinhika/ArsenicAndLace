@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "arsenic:arsenic_toxic_soot"
+    },
+    {
+      "item": "arsenic:arsenic_toxic_soot"
+    },
+    {
+      "item": "arsenic:arsenic_toxic_soot"
+    },
+    {
+      "item": "arsenic:arsenic_toxic_soot"
+    },
+    {
+      "item": "arsenic:arsenic_toxic_soot"
+    },
+    {
+      "item": "arsenic:arsenic_toxic_soot"
+    },
+    {
+      "item": "arsenic:arsenic_toxic_soot"
+    },
+    {
+      "item": "arsenic:arsenic_toxic_soot"
+    },
+    {
+      "item": "arsenic:arsenic_toxic_soot"
+    }
+  ],
+  "result": {
+    "item": "arsenic:arsenic_toxic_lump"
+  }
+}

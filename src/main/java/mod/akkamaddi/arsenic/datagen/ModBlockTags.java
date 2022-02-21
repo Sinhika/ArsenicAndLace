@@ -60,8 +60,9 @@ public class ModBlockTags extends MiningBlockTags
     			List.of(ModBlocks.arsenic_block.get(), ModBlocks.arsenide_bronze_block.get(),
     					ModBlocks.arsenide_gold_block.get(), ModBlocks.tenebrium_block.get(),
     					ModBlocks.arsenic_plate.get(), ModBlocks.arsenic_ore_stone.get(),
-    					ModBlocks.arsenic_ore_deepslate.get()), // mineable
-    			List.of(ModBlocks.arsenic_block.get(), ModBlocks.arsenide_gold_block.get()), // stone
+    					ModBlocks.arsenic_ore_deepslate.get(), ModBlocks.raw_arsenic_block.get()), // mineable
+    			List.of(ModBlocks.arsenic_block.get(), ModBlocks.arsenide_gold_block.get(), 
+    			        ModBlocks.raw_arsenic_block.get()), // stone
     			List.of(ModBlocks.arsenide_bronze_block.get(),
     					ModBlocks.arsenic_ore_stone.get(), ModBlocks.arsenic_ore_deepslate.get()), // iron
     			List.of(), // diamond
@@ -84,10 +85,13 @@ public class ModBlockTags extends MiningBlockTags
             .addTag(TagUtils.forgeBlockTag("storage_blocks/arsenic"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/arsenide_bronze"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/arsenide_gold"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/tenebrium"));
+            .addTag(TagUtils.forgeBlockTag("storage_blocks/tenebrium"))
+            .addTag(TagUtils.forgeBlockTag("storage_blocks/raw_arsenic"));
         
         this.tag(TagUtils.forgeBlockTag("storage_blocks/arsenic"))
             .add(ModBlocks.arsenic_block.get());
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/raw_arsenic"))
+            .add(ModBlocks.raw_arsenic_block.get());
         this.tag(TagUtils.forgeBlockTag("storage_blocks/arsenide_bronze"))
             .add(ModBlocks.arsenide_bronze_block.get());
         this.tag(TagUtils.forgeBlockTag("storage_blocks/arsenide_gold"))
