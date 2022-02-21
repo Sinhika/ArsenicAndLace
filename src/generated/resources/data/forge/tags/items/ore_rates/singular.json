@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "arsenic:arsenic_ore_stone",
+    "arsenic:arsenic_ore_deepslate"
+  ]
+}
