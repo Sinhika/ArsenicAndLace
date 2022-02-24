@@ -1,6 +1,7 @@
 package mod.akkamaddi.arsenic.init;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
+import mod.akkamaddi.arsenic.content.TaintedFurnaceBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -65,8 +66,8 @@ public final class ModBlocks
                                           .noCollission().strength(0.5F).sound(SoundType.METAL)));
     
     // ovens - TEMPORARY
-//    public static final RegistryObject<Block> tainted_furnace = BLOCKS.register("tainted_furnace",
-//            () -> new Block(Block.Properties.of(Material.METAL).strength(2.0F, 1.0F).sound(SoundType.METAL)
-//                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<TaintedFurnaceBlock> tainted_furnace = BLOCKS.register("tainted_furnace",
+            () -> new TaintedFurnaceBlock(Block.Properties.of(Material.METAL).strength(2.0F, 1.0F).sound(SoundType.METAL)
+                    .requiresCorrectToolForDrops()));
     
 } // end class
