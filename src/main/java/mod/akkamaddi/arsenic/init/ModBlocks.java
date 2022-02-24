@@ -64,4 +64,9 @@ public final class ModBlocks
                                                   ModBlocks.arsenic_block.get().defaultMaterialColor())
                                           .noCollission().strength(0.5F).sound(SoundType.METAL)));
     
+    // ovens - TEMPORARY
+//    public static final RegistryObject<Block> tainted_furnace = BLOCKS.register("tainted_furnace",
+//            () -> new Block(Block.Properties.of(Material.METAL).strength(2.0F, 1.0F).sound(SoundType.METAL)
+//                    .requiresCorrectToolForDrops()));
+    
 } // end class

@@ -6,7 +6,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public final class ServerConfig
 {
     final ForgeConfigSpec.BooleanValue serverEnableChestLoot; // load additional chest loot?
-    
+    final ForgeConfigSpec.DoubleValue serverToxicSootChance;    // 0 to 1.0 chance of generating toxic soot
     final ForgeConfigSpec.BooleanValue serverEnableRecycling; // recipe flag
     final ForgeConfigSpec.BooleanValue serverGenerateArsenicOre; // recipe flag
     
@@ -31,6 +31,12 @@ public final class ServerConfig
                 builder.comment("Enable fusion furnace recycling of arsenide and tenebrium items")
                 .translation(ArsenicAndLace.MODID + "config.EnableRecycling")
                 .define("EnableRecycling", true);
+        
+        serverToxicSootChance = 
+                builder.comment("Chance of generating toxic soot per item cooked in Necrotic furnace")
+                .translation(ArsenicAndLace.MODID + "config.ToxicSootChance")
+                .defineInRange("ToxicSootChance", 0.25, 0.0, 1.0);
+        
         builder.pop();
         
         builder.push("Arsenic");

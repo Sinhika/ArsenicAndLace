@@ -16,6 +16,9 @@ public final class ConfigHelper
         // ore generation?
         ArsenicConfig.generateArsenicOre = ConfigHolder.SERVER.serverGenerateArsenicOre.get();
         
+        // Necrotic furnace chance of generating toxic soot per smelt op.
+        ArsenicConfig.toxicSootChance = ConfigHolder.SERVER.serverToxicSootChance.get();
+        
         // recipe flags.
         ArsenicConfig.INSTANCE.putFlag("recycling_enabled", 
                 ConfigHolder.SERVER.serverEnableRecycling.get());
