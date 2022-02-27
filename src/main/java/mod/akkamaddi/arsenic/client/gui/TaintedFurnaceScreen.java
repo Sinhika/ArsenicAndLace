@@ -13,7 +13,7 @@ public class TaintedFurnaceScreen extends AbstractTaintedFurnaceScreen<TaintedFu
 
     public TaintedFurnaceScreen(TaintedFurnaceContainerMenu screenMenu, Inventory inv, Component titleIn)
     {
-        super(screenMenu, inv, new ResourceLocation(ArsenicAndLace.MODID, "textures/gui/container/arsenic_furnace_gui"), 
+        super(screenMenu, inv, new ResourceLocation(ArsenicAndLace.MODID, "textures/gui/arsenic_furnace_gui"), 
                 titleIn, name_color);
     }
 
