@@ -2,7 +2,6 @@ package mod.akkamaddi.arsenic.api.content;
 
 import javax.annotation.Nonnull;
 
-import mod.alexndr.fusion.api.content.AbstractAlloyFurnaceTileEntity;
 import mod.alexndr.simplecorelib.helpers.FurnaceResultSlotItemHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.Container;
@@ -52,10 +51,10 @@ public abstract class AbstractTaintedFurnaceContainer extends AbstractContainerM
         this.playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
 
-        if (blockEntity != null && blockEntity instanceof AbstractAlloyFurnaceTileEntity)
+        if (blockEntity != null && blockEntity instanceof AbstractTaintedFurnaceBlockEntity)
         {
-            this.recipeInv = new RecipeWrapper(((AbstractAlloyFurnaceTileEntity) this.blockEntity).inventory);
-            this.data = ((AbstractAlloyFurnaceTileEntity) this.blockEntity).dataAccess;
+            this.recipeInv = new RecipeWrapper(((AbstractTaintedFurnaceBlockEntity) this.blockEntity).inventory);
+            this.data = ((AbstractTaintedFurnaceBlockEntity) this.blockEntity).dataAccess;
 
             // Add tracking for data (Syncs to client/updates value when it changes)
             this.addDataSlots(data);
@@ -74,6 +73,7 @@ public abstract class AbstractTaintedFurnaceContainer extends AbstractContainerM
         final int playerInventoryStartY = 84;
         layoutPlayerInventorySlots(playerInventoryStartX, playerInventoryStartY);
    }
+    
     protected int addSlotRange(IItemHandler handler, int index, int x, int y, int amount, int dx)
     {
         for (int i = 0; i < amount; i++)

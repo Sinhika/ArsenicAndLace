@@ -13,8 +13,8 @@ import net.minecraft.world.entity.player.Inventory;
 public abstract class AbstractTaintedFurnaceScreen<T extends AbstractTaintedFurnaceContainer>
         extends AbstractContainerScreen<T>
 {
-    private final ResourceLocation BACKGROUND_TEXTURE;
-    private int displayNameColor;
+    protected ResourceLocation BACKGROUND_TEXTURE;
+    protected int displayNameColor;
 
     public AbstractTaintedFurnaceScreen(T screenMenu, Inventory inv, ResourceLocation texture, Component titleIn,
             int nameColor)
