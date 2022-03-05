@@ -186,6 +186,17 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
             .unlockedBy("has_item", has(ModItems.arsenic_ingot.get()))
             .save(consumer);
         
+        // necrotic/tainted furnace
+        ShapedRecipeBuilder.shaped(ModBlocks.tainted_furnace.get())
+            .define('A', ModItems.arsenic_ingot.get())
+            .define('S', Items.BONE)
+            .define('R', Items.ROTTEN_FLESH)
+            .pattern("ASA")
+            .pattern("SRS")
+            .pattern("ASA")
+            .unlockedBy("has_item", has(ModItems.arsenic_ingot.get()))
+            .save(consumer);
+            
     } // end registerMiscRecipes()
 
     private void registerStorageRecipes(Consumer<FinishedRecipe> consumer)

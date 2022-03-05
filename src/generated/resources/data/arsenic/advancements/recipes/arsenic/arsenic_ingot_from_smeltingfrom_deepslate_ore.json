@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "arsenic:convert_chunk_to_raw"
+      "arsenic:arsenic_ingot_from_smeltingfrom_deepslate_ore"
     ]
   },
   "criteria": {
-    "has_item": {
+    "arsenic_ingot_from_smeltingfrom_deepslate_ore": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "arsenic:large_arsenic_chunk"
+              "arsenic:arsenic_ore_deepslate"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "arsenic:convert_chunk_to_raw"
+        "recipe": "arsenic:arsenic_ingot_from_smeltingfrom_deepslate_ore"
       }
     }
   },
   "requirements": [
     [
-      "has_item",
+      "arsenic_ingot_from_smeltingfrom_deepslate_ore",
       "has_the_recipe"
     ]
   ]

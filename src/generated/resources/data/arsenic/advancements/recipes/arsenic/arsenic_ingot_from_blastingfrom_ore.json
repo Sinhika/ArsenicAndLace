@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "arsenic:arsenic_ingot_from_blastingfrom_ore"
+    ]
+  },
+  "criteria": {
+    "arsenic_ingot_from_blastingfrom_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arsenic:arsenic_ore_stone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "arsenic:arsenic_ingot_from_blastingfrom_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "arsenic_ingot_from_blastingfrom_ore",
+      "has_the_recipe"
+    ]
+  ]
+}
