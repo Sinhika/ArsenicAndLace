@@ -57,7 +57,7 @@ import net.minecraftforge.items.ItemStackHandler;
 
 public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
 {
-   protected static final Logger LOGGER = LogManager.getLogger();
+   //protected static final Logger LOGGER = LogManager.getLogger();
     
    public static final int INPUT_SLOT = 0;
    public static final int OUTPUT_SLOT1 = 1;
@@ -578,8 +578,8 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
         ItemStack secondaryResult = ItemStack.EMPTY;
         if (generator.nextInt(100) < ArsenicConfig.toxicSootChance)
         {
-            secondaryResult = defaultSecondaryResult.copy();
-            LOGGER.debug(ArsenicAndLace.MODID + ": Secondary output created");
+            secondaryResult = defaultSecondaryResult;
+            // System.out.println(ArsenicAndLace.MODID + ": Secondary output (" + secondaryResult.toString() +") created");
         }
         
         if (this.canSmelt(result) && this.canSmeltSecondary(secondaryResult))
@@ -599,8 +599,9 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
                 inventory.setStackInSlot(OUTPUT_SLOT1, outstack);
             }
             // secondary output
-            if (secondstack.isEmpty() && ! secondaryResult.isEmpty()) {
-                inventory.setStackInSlot(OUTPUT_SLOT2, secondstack);
+            if (secondstack.isEmpty() && ! secondaryResult.isEmpty()) 
+            {
+                inventory.setStackInSlot(OUTPUT_SLOT2, secondaryResult.copy());
             }
             else if (! secondaryResult.isEmpty())
             {
@@ -619,7 +620,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
             }
             inputStack.shrink(1);
             inventory.setStackInSlot(INPUT_SLOT, inputStack);
-            LOGGER.debug(ArsenicAndLace.MODID + ": primary output created");
+            // System.out.println(ArsenicAndLace.MODID + ": primary output (" + result.toString() + ") created");
         } // end-if canSmelt result
     } // end smelt()
     
@@ -631,7 +632,8 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
         
         if (defaultSecondaryResult.isEmpty()) {
             defaultSecondaryResult = new ItemStack(ModItems.arsenic_toxic_soot.get());
-            LOGGER.debug(ArsenicAndLace.MODID + ": defaultSecondaryResult initialized");
+//            System.out.println(ArsenicAndLace.MODID + ": defaultSecondaryResult initialized to "
+//                               + defaultSecondaryResult.toString());
         }
         if (tile.isBurning())
         {
