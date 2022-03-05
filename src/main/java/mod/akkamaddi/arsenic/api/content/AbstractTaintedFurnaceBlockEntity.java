@@ -17,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.config.ArsenicConfig;
 import mod.akkamaddi.arsenic.init.ModItems;
 import mod.akkamaddi.arsenic.init.ModTags;
@@ -574,9 +575,12 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
     {
         if (result.isEmpty()) { return; }
         
-        ItemStack secondaryResult = (generator.nextInt(100) < ArsenicConfig.toxicSootChance)
-                ? defaultSecondaryResult.copy()
-                : ItemStack.EMPTY;
+        ItemStack secondaryResult = ItemStack.EMPTY;
+        if (generator.nextInt(100) < ArsenicConfig.toxicSootChance)
+        {
+            secondaryResult = defaultSecondaryResult.copy();
+            LOGGER.debug(ArsenicAndLace.MODID + ": Secondary output created");
+        }
         
         if (this.canSmelt(result) && this.canSmeltSecondary(secondaryResult))
         {
@@ -615,6 +619,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
             }
             inputStack.shrink(1);
             inventory.setStackInSlot(INPUT_SLOT, inputStack);
+            LOGGER.debug(ArsenicAndLace.MODID + ": primary output created");
         } // end-if canSmelt result
     } // end smelt()
     
@@ -626,6 +631,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
         
         if (defaultSecondaryResult.isEmpty()) {
             defaultSecondaryResult = new ItemStack(ModItems.arsenic_toxic_soot.get());
+            LOGGER.debug(ArsenicAndLace.MODID + ": defaultSecondaryResult initialized");
         }
         if (tile.isBurning())
         {
