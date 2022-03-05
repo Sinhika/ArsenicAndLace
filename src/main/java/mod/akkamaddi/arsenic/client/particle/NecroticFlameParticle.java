@@ -7,27 +7,24 @@ import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleEngine;
 import net.minecraft.client.particle.ParticleProvider;
 import net.minecraft.client.particle.ParticleRenderType;
+import net.minecraft.client.particle.RisingParticle;
 import net.minecraft.client.particle.SpriteSet;
-import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.util.Mth;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class NecroticFlameParticle extends TextureSheetParticle
+public class NecroticFlameParticle extends RisingParticle
 {
-    private final SpriteSet sprites;
-
     public NecroticFlameParticle(ClientLevel level, double xOrigin, double yOrigin, double zOrigin,
-            double xVelocity, double yVelocity, double zVelocity, final SpriteSet sprites)
+            double xVelocity, double yVelocity, double zVelocity)
     {
         super(level, xOrigin, yOrigin, zOrigin, xVelocity, yVelocity, zVelocity);
-        
-        // Set some basic params
-        this.setSize(0.01f, 0.01f);
-        this.gravity = 0.4f;
-        this.sprites = sprites;
 
         // Set this here otherwise NPE will be thrown since rendering happens before initial tick
-        this.setSpriteFromAge(this.sprites);    }
+//        this.setSpriteFromAge(this.sprites);    
+    }
 
     @Override
     public ParticleRenderType getRenderType()
@@ -36,16 +33,38 @@ public class NecroticFlameParticle extends TextureSheetParticle
     }
 
     @Override
-    public void tick()
+    public void move(double pX, double pY, double pZ) 
     {
-        super.tick();
-        // Call every tick to change the particle over time
-        this.setSpriteFromAge(this.sprites);
+        this.setBoundingBox(this.getBoundingBox().move(pX, pY, pZ));
+        this.setLocationFromBoundingbox();
     }
+
+    @Override
+    public float getQuadSize(float pScaleFactor) 
+    {
+        float f = ((float)this.age + pScaleFactor) / (float)this.lifetime;
+        return this.quadSize * (1.0F - f * f * 0.5F);
+    }
+
+    @Override
+    public int getLightColor(float pPartialTick) {
+        float f = ((float)this.age + pPartialTick) / (float)this.lifetime;
+        f = Mth.clamp(f, 0.0F, 1.0F);
+        int i = super.getLightColor(pPartialTick);
+        int j = i & 255;
+        int k = i >> 16 & 255;
+        j += (int)(f * 15.0F * 16.0F);
+        if (j > 240) {
+           j = 240;
+        }
+
+        return j | k << 16;
+     }
 
     /**
      * The provider used to register the factory to create the rendered {@link DrippingAshParticle} instance.
      */
+    @OnlyIn(Dist.CLIENT)
     public static class NecroticFlameParticleProvider implements ParticleProvider<SimpleParticleType>
     {
         private final SpriteSet sprites;
@@ -67,7 +86,11 @@ public class NecroticFlameParticle extends TextureSheetParticle
                                         final double pX, final double pY, final double pZ,
                                         final double pXSpeed, final double pYSpeed, final double pZSpeed)
         {
-            return new NecroticFlameParticle(pLevel, pX, pY, pZ, pXSpeed, pYSpeed, pZSpeed, this.sprites);
+            NecroticFlameParticle my_particle = 
+                    new NecroticFlameParticle(pLevel, pX, pY, pZ, pXSpeed, pYSpeed, pZSpeed);
+            my_particle.pickSprite(this.sprites);
+            my_particle.scale(0.5F);
+            return my_particle;
         }
 
         

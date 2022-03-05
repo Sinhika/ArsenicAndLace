@@ -381,7 +381,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
 // END FUEL STUFF
     
     /**
-     * @return If the stack is not empty and has a smelting recipe associated with it AND is not food.
+     * @return If the stack is not empty and has a smelting recipe associated with it.
      */
     protected boolean isInput(final ItemStack stack)
     {
@@ -530,7 +530,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
     {
         // result cannot ever be other than specified item (elsewhere).
         
-        if (!this.inventory.getStackInSlot(INPUT_SLOT).isEmpty())
+        if (!this.inventory.getStackInSlot(INPUT_SLOT).isEmpty() && !result.isEmpty())
         {
             ItemStack outstack = inventory.getStackInSlot(OUTPUT_SLOT2);
             if (outstack.isEmpty())
@@ -575,7 +575,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
         if (result.isEmpty()) { return; }
         
         ItemStack secondaryResult = (generator.nextInt(100) < ArsenicConfig.toxicSootChance)
-                ? defaultSecondaryResult
+                ? defaultSecondaryResult.copy()
                 : ItemStack.EMPTY;
         
         if (this.canSmelt(result) && this.canSmeltSecondary(secondaryResult))

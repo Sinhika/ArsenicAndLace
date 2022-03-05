@@ -4,6 +4,7 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import mod.akkamaddi.arsenic.init.ModParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -170,7 +171,7 @@ public abstract class AbstractTaintedFurnaceBlock extends BaseEntityBlock
              double d6 = rand.nextDouble() * 6.0D / 16.0D;
              double d7 = direction$axis == Direction.Axis.Z ? (double) direction.getStepZ() * 0.52D : d4;
              worldIn.addParticle(ParticleTypes.SMOKE, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
-             worldIn.addParticle(ParticleTypes.FLAME, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
+             worldIn.addParticle(ModParticleTypes.necrotic_flame.get(), d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
          }
      } // end animateTick()
     
