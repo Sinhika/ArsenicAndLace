@@ -8,6 +8,7 @@ import mod.akkamaddi.arsenic.init.ModBlockEntityTypes;
 import mod.akkamaddi.arsenic.init.ModBlocks;
 import mod.akkamaddi.arsenic.init.ModItems;
 import mod.akkamaddi.arsenic.init.ModMenuTypes;
+import mod.akkamaddi.arsenic.init.ModParticleTypes;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -32,6 +33,7 @@ public class ArsenicAndLace
         ModItems.ITEMS.register(modEventBus);
         ModMenuTypes.CONTAINER_TYPES.register(modEventBus);
         ModBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
+        ModParticleTypes.PARTICLETYPES.register(modEventBus);
 
         // Register Configs
         modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);

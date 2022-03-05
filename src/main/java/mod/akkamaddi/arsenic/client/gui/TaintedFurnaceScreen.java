@@ -9,7 +9,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class TaintedFurnaceScreen extends AbstractTaintedFurnaceScreen<TaintedFurnaceContainerMenu>
 {
-    private final static int name_color =  0x0ffffff;
+    private final static int name_color =  0x0000000;
     private final static ResourceLocation GUI_TEXTURE 
         = new ResourceLocation(ArsenicAndLace.MODID, "textures/gui/arsenic_furnace_gui.png");
     
