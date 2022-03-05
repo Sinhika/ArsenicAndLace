@@ -82,6 +82,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
     // implement recipe-caching like all the cool kids.
     protected AbstractCookingRecipe cachedRecipe;
     protected ItemStack failedMatch = ItemStack.EMPTY;
+    protected static ItemStack defaultSecondaryResult = ItemStack.EMPTY;
     
     protected double fuelMultiplier = 1.0;
     protected boolean hasFuelMultiplier = false;
@@ -400,7 +401,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
 
     protected boolean isSecondaryOutput(final ItemStack stack)
     {
-        return stack.is(ModItems.arsenic_toxic_soot.get());
+        return stack.is(defaultSecondaryResult.getItem());
     }
     
     protected int getBurnDuration(ItemStack fuelstack)
@@ -527,16 +528,14 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
      */
     protected boolean canSmeltSecondary(ItemStack result)
     {
-        if (!this.inventory.getStackInSlot(INPUT_SLOT).isEmpty() && !result.isEmpty())
+        // result cannot ever be other than specified item (elsewhere).
+        
+        if (!this.inventory.getStackInSlot(INPUT_SLOT).isEmpty())
         {
             ItemStack outstack = inventory.getStackInSlot(OUTPUT_SLOT2);
             if (outstack.isEmpty())
             {
                 return true;
-            }
-            else if (!outstack.sameItem(result))
-            {
-                return false;
             }
             else
             { // Forge fix: make furnace respect stack sizes in furnace recipes
@@ -575,8 +574,8 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
     {
         if (result.isEmpty()) { return; }
         
-        ItemStack secondaryResult = (generator.nextDouble() < ArsenicConfig.toxicSootChance)
-                ? new ItemStack(ModItems.arsenic_toxic_soot.get())
+        ItemStack secondaryResult = (generator.nextInt(100) < ArsenicConfig.toxicSootChance)
+                ? defaultSecondaryResult
                 : ItemStack.EMPTY;
         
         if (this.canSmelt(result) && this.canSmeltSecondary(secondaryResult))
@@ -599,7 +598,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
             if (secondstack.isEmpty() && ! secondaryResult.isEmpty()) {
                 inventory.setStackInSlot(OUTPUT_SLOT2, secondstack);
             }
-            else if (! secondaryResult.isEmpty() && secondstack.getItem() == secondaryResult.getItem())
+            else if (! secondaryResult.isEmpty())
             {
                 secondstack.grow(secondaryResult.getCount());
                 inventory.setStackInSlot(OUTPUT_SLOT2, secondstack);
@@ -624,6 +623,10 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
     {
         boolean hasFuel = tile.isBurning();
         boolean flag1 = false;
+        
+        if (defaultSecondaryResult.isEmpty()) {
+            defaultSecondaryResult = new ItemStack(ModItems.arsenic_toxic_soot.get());
+        }
         if (tile.isBurning())
         {
             --tile.fuelBurnTimeLeft;
@@ -658,7 +661,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
                 } // end-if isBurning
             } // end-if !isBurning but canSmelt
             
-            if (tile.isBurning() && tile.canSmelt(result))
+            if (tile.isBurning() && tile.canSmelt(result) && tile.canSmeltSecondary(defaultSecondaryResult))
             {
                 if (tile.smeltTimeProgress <= 0) // never smelted before
                 {

@@ -9,6 +9,6 @@ public class ArsenicConfig extends SimpleConfig
     
     public static boolean enableChestLoot;
     public static boolean generateArsenicOre;
-    public static double toxicSootChance;
+    public static int toxicSootChance;
     
 } // end-class
