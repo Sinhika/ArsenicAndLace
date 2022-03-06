@@ -11,13 +11,9 @@ import java.util.Random;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.config.ArsenicConfig;
 import mod.akkamaddi.arsenic.init.ModItems;
 import mod.akkamaddi.arsenic.init.ModTags;
