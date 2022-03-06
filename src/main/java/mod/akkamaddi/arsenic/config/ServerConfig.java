@@ -6,10 +6,10 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public final class ServerConfig
 {
     final ForgeConfigSpec.BooleanValue serverEnableChestLoot; // load additional chest loot?
-    final ForgeConfigSpec.IntValue serverToxicSootChance;    // 0 to 1.0 chance of generating toxic soot
+    final ForgeConfigSpec.IntValue serverToxicSootChance;    // 0 to 100 chance of generating toxic soot
+    final ForgeConfigSpec.BooleanValue serverGenerateArsenicOre; // world generation
+    final ForgeConfigSpec.BooleanValue serverNecroticFurnacePoisonsFood;
     final ForgeConfigSpec.BooleanValue serverEnableRecycling; // recipe flag
-    final ForgeConfigSpec.BooleanValue serverGenerateArsenicOre; // recipe flag
-    
     final ForgeConfigSpec.BooleanValue serverEnableArsenicMaking; // recipe flag
     final ForgeConfigSpec.BooleanValue serverEnableArsenicTools; // recipe flag
     final ForgeConfigSpec.BooleanValue serverEnableArsenideBronzeMaking; // recipe flag
@@ -37,6 +37,11 @@ public final class ServerConfig
                 .translation(ArsenicAndLace.MODID + "config.ToxicSootChance")
                 .defineInRange("ToxicSootChance", 25, 0, 100);
         
+        serverNecroticFurnacePoisonsFood = 
+                builder.comment("Necrotic Furnace poisons food; e.g. turns meats into rotten meat, "
+                        + "vegtables into poisonous potatoes")
+                .translation(ArsenicAndLace.MODID + ".config.NecroticFurnacePoisonsFood")
+                .define("NecroticFurnacePoisonsFood", true);
         builder.pop();
         
         builder.push("Arsenic");

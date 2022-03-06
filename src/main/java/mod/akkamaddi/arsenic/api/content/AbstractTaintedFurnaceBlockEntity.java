@@ -478,10 +478,14 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
         // we do bad things to food here...
         if (maybe_result.isPresent() && maybe_result.get().isEdible()) 
         {
-            if (ModTags.getMeats().contains(maybe_result.get().getItem())) {
+            if (ArsenicConfig.necroticFurnacePoisonsFood 
+                    && ModTags.getMeats().contains(maybe_result.get().getItem())) 
+            {
                 maybe_result = Optional.of(new ItemStack(Items.ROTTEN_FLESH));
             }
-            else if (ModTags.getVegetables().contains(maybe_result.get().getItem())) {
+            else if (ArsenicConfig.necroticFurnacePoisonsFood 
+                    && ModTags.getVegetables().contains(maybe_result.get().getItem())) 
+            {
                 maybe_result = Optional.of(new ItemStack(Items.POISONOUS_POTATO));
             }
         }

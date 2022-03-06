@@ -19,6 +19,9 @@ public final class ConfigHelper
         // Necrotic furnace chance of generating toxic soot per smelt op.
         ArsenicConfig.toxicSootChance = ConfigHolder.SERVER.serverToxicSootChance.get();
         
+        // Does necrotic furnace poison food?
+        ArsenicConfig.necroticFurnacePoisonsFood = ConfigHolder.SERVER.serverNecroticFurnacePoisonsFood.get();
+        
         // recipe flags.
         ArsenicConfig.INSTANCE.putFlag("recycling_enabled", 
                 ConfigHolder.SERVER.serverEnableRecycling.get());
