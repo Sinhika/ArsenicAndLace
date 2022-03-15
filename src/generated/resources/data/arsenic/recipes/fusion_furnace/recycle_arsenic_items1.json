@@ -39,7 +39,7 @@
           "item": "minecraft:rotten_flesh"
         },
         "output": {
-          "item": "arsenic:large_arsenic_chunk"
+          "item": "arsenic:raw_arsenic"
         },
         "cookingtime": 600,
         "experience": 10.0
