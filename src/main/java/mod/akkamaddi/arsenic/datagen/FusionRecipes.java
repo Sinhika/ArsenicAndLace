@@ -70,7 +70,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                         ModItems.arsenic_pickaxe.get(), ModItems.arsenic_shovel.get(), 
                         ModItems.arsenic_sword.get(), ModBlocks.arsenic_plate.get().asItem()),
                 null, Ingredient.of(Items.GRAVEL), Ingredient.of(Items.ROTTEN_FLESH),
-                ModItems.large_arsenic_chunk.get(), 10.0F, 600, flag("recycling_enabled"), "recycle_arsenic_items");
+                ModItems.raw_arsenic.get(), 10.0F, 600, flag("recycling_enabled"), "recycle_arsenic_items");
         
     } // end registerArsenicRecipes
 
