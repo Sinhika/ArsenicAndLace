@@ -49,6 +49,7 @@ public final class ClientModEventSubscriber
      * 
      * @param event an event instance used to register particle factories.
      */
+    @SuppressWarnings("resource")
     @SubscribeEvent
     public static void onRegisterParticleFactories(final ParticleFactoryRegisterEvent event)
     {

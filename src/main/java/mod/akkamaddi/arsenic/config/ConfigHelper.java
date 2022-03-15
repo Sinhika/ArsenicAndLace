@@ -1,5 +1,7 @@
 package mod.akkamaddi.arsenic.config;
 
+import mod.alexndr.simplecorelib.config.ModOreConfig;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraftforge.fml.config.ModConfig;
 
 public final class ConfigHelper
@@ -15,6 +17,11 @@ public final class ConfigHelper
         
         // ore generation?
         ArsenicConfig.generateArsenicOre = ConfigHolder.SERVER.serverGenerateArsenicOre.get();
+
+        ArsenicConfig.arsenic_cfg = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverArsenicVeinSize.get(), 
+                ConfigHolder.SERVER.serverArsenicVeinCount.get(), true, 
+                VerticalAnchor.absolute(ConfigHolder.SERVER.serverArsenicBottomHeight.get()), 
+                VerticalAnchor.absolute(ConfigHolder.SERVER.serverArsenicMaxHeight.get()));
         
         // Necrotic furnace chance of generating toxic soot per smelt op.
         ArsenicConfig.toxicSootChance = ConfigHolder.SERVER.serverToxicSootChance.get();

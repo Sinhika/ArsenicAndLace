@@ -25,6 +25,7 @@ public class ModItemTags extends MiningItemTags
         registerDustTags();
         registerNuggetTags();
         registerIngotTags();
+        registerStorageBlockTags();
         registerMiscTags();
     }
 
@@ -108,4 +109,26 @@ public class ModItemTags extends MiningItemTags
         this.tag(TagUtils.forgeTag("reagents/old_lace")).add(ModItems.old_lace_chest.get());
         
     } // registerMiscTags()
+    
+    private void registerStorageBlockTags()
+    {
+        this.tag(TagUtils.forgeTag("storage_blocks"))
+            .addTag(TagUtils.forgeTag("storage_blocks/arsenic"))
+            .addTag(TagUtils.forgeTag("storage_blocks/arsenide_bronze"))
+            .addTag(TagUtils.forgeTag("storage_blocks/arsenide_gold"))
+            .addTag(TagUtils.forgeTag("storage_blocks/tenebrium"))
+            .addTag(TagUtils.forgeTag("storage_blocks/raw_arsenic"));
+        
+        this.tag(TagUtils.forgeTag("storage_blocks/arsenic"))
+            .add(ModBlocks.arsenic_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/raw_arsenic"))
+            .add(ModBlocks.raw_arsenic_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/arsenide_bronze"))
+            .add(ModBlocks.arsenide_bronze_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/arsenide_gold"))
+            .add(ModBlocks.arsenide_gold_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/tenebrium"))
+            .add(ModBlocks.tenebrium_block.get().asItem());
+    } // end registerStorageBlockTags()
+ 
 } // end class
