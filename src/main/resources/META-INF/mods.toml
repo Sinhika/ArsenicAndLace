@@ -14,7 +14,7 @@ version="${file.jarVersion}"
 displayName="akkamaddi's Arsenic and Lace"
 updateJSONURL="https://raw.githubusercontent.com/Sinhika/ArsenicAndLace/1.18/update.json"
 displayURL="http://minecraft.curseforge.com/projects/akkamaddis-arsenic-and-lace"
-credits="Thanks to akkamaddi for creating the original mod (with help from AleXndrTheGr8st) and to Sinhika for porting and maintaining it."
+credits="Thanks to akkamaddi for creating the original mod (with help from AleXndrTheGr8st) and to Sinhika for porting and maintaining it. Credit for the Necrotic Furnace idea and texture belongs to akkamaddi."
 authors="akkamaddi, Sinhika"
 description='''Addition of Arsenic, Arsenide Bronze, Arsenide Gold and Tenebrium, as well as Lace Shrouds. Fusion Furnace and Simple Ores add-on.
 '''
