@@ -1,6 +1,6 @@
 package mod.akkamaddi.arsenic.loot;
 
-import mod.alexndr.simplecorelib.helpers.InjectionTableLookup;
+import mod.alexndr.simplecorelib.api.helpers.InjectionTableLookup;
 
 @SuppressWarnings("serial")
 public class ArsenicRequiredInjectionLookup extends InjectionTableLookup

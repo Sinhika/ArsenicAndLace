@@ -5,8 +5,8 @@ import java.util.List;
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.init.ModBlocks;
 import mod.akkamaddi.arsenic.init.ModItems;
-import mod.alexndr.simplecorelib.datagen.MiningItemTags;
-import mod.alexndr.simplecorelib.helpers.TagUtils;
+import mod.alexndr.simplecorelib.api.datagen.MiningItemTags;
+import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 

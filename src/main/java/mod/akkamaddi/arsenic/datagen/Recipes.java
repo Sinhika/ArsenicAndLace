@@ -6,8 +6,8 @@ import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.config.ArsenicConfig;
 import mod.akkamaddi.arsenic.init.ModBlocks;
 import mod.akkamaddi.arsenic.init.ModItems;
-import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
-import mod.alexndr.simplecorelib.datagen.RecipeSetBuilder;
+import mod.alexndr.simplecorelib.api.datagen.ISimpleConditionBuilder;
+import mod.alexndr.simplecorelib.api.datagen.RecipeSetBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -28,6 +28,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         setbuilder = new RecipeSetBuilder(ArsenicAndLace.MODID);
     }
 
+    @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);

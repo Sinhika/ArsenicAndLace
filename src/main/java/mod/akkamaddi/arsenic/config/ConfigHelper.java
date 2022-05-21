@@ -1,6 +1,6 @@
 package mod.akkamaddi.arsenic.config;
 
-import mod.alexndr.simplecorelib.config.ModOreConfig;
+import mod.alexndr.simplecorelib.api.config.ModOreConfig;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraftforge.fml.config.ModConfig;
 

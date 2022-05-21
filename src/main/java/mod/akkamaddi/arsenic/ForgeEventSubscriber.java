@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 import mod.akkamaddi.arsenic.config.ArsenicConfig;
 import mod.akkamaddi.arsenic.loot.ArsenicRequiredInjectionLookup;
 import mod.akkamaddi.arsenic.worldgen.OreGeneration;
-import mod.alexndr.simplecorelib.helpers.LootUtils;
+import mod.alexndr.simplecorelib.api.helpers.LootUtils;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;

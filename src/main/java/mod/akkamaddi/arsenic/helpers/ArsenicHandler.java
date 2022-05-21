@@ -1,11 +1,11 @@
 package mod.akkamaddi.arsenic.helpers;
 
 import mod.akkamaddi.arsenic.init.ModItems;
-import mod.alexndr.simplecorelib.helpers.IWeaponEffectHelper;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
+import mod.alexndr.simplecorelib.api.helpers.IWeaponEffectHelper;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 
 public class ArsenicHandler implements IWeaponEffectHelper
 {

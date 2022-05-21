@@ -17,7 +17,7 @@ import com.google.common.collect.Maps;
 import mod.akkamaddi.arsenic.config.ArsenicConfig;
 import mod.akkamaddi.arsenic.init.ModItems;
 import mod.akkamaddi.arsenic.init.ModTags;
-import mod.alexndr.simplecorelib.helpers.SidedWrapper;
+import mod.alexndr.simplecorelib.api.helpers.SidedWrapper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;

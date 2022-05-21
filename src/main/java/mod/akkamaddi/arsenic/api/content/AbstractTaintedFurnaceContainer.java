@@ -2,7 +2,7 @@ package mod.akkamaddi.arsenic.api.content;
 
 import javax.annotation.Nonnull;
 
-import mod.alexndr.simplecorelib.helpers.FurnaceResultSlotItemHandler;
+import mod.alexndr.simplecorelib.api.helpers.FurnaceResultSlotItemHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;

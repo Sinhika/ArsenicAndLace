@@ -11,7 +11,7 @@ import mod.akkamaddi.arsenic.config.ConfigHolder;
 import mod.akkamaddi.arsenic.init.ModBlocks;
 import mod.akkamaddi.arsenic.init.ModTabGroups;
 import mod.akkamaddi.arsenic.worldgen.OreGeneration;
-import mod.alexndr.simplecorelib.config.FlagCondition;
+import mod.alexndr.simplecorelib.api.config.FlagCondition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

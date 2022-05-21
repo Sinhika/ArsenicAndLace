@@ -1,7 +1,7 @@
 package mod.akkamaddi.arsenic.config;
 
-import mod.alexndr.simplecorelib.config.ModOreConfig;
-import mod.alexndr.simplecorelib.config.SimpleConfig;
+import mod.alexndr.simplecorelib.api.config.ModOreConfig;
+import mod.alexndr.simplecorelib.api.config.SimpleConfig;
 
 public class ArsenicConfig extends SimpleConfig
 {

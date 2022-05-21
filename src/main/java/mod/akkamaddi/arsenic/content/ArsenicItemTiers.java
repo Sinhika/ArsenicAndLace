@@ -7,7 +7,7 @@ import mod.akkamaddi.arsenic.init.ModItems;
 import mod.alexndr.fusion.content.FusionItemTiers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -17,14 +17,14 @@ import net.minecraftforge.common.TierSortingRegistry;
 
 public final class ArsenicItemTiers
 {
-	public static final Tag.Named<Block> ARSENIC_TAG = 
-			BlockTags.createOptional(new ResourceLocation(ArsenicAndLace.MODID, "needs_arsenic_tool"));
-	public static final Tag.Named<Block> ARSENIDE_BRONZE_TAG = 
-			BlockTags.createOptional(new ResourceLocation(ArsenicAndLace.MODID, "needs_arsenide_bronze_tool"));
-	public static final Tag.Named<Block> ARSENIDE_GOLD_TAG = 
-			BlockTags.createOptional(new ResourceLocation(ArsenicAndLace.MODID, "needs_arsenide_gold_tool"));
-	public static final Tag.Named<Block> TENEBRIUM_TAG = 
-			BlockTags.createOptional(new ResourceLocation(ArsenicAndLace.MODID, "needs_tenebrium_tool"));
+	public static final TagKey<Block> ARSENIC_TAG = 
+			BlockTags.create(new ResourceLocation(ArsenicAndLace.MODID, "needs_arsenic_tool"));
+	public static final TagKey<Block> ARSENIDE_BRONZE_TAG = 
+			BlockTags.create(new ResourceLocation(ArsenicAndLace.MODID, "needs_arsenide_bronze_tool"));
+	public static final TagKey<Block> ARSENIDE_GOLD_TAG = 
+			BlockTags.create(new ResourceLocation(ArsenicAndLace.MODID, "needs_arsenide_gold_tool"));
+	public static final TagKey<Block> TENEBRIUM_TAG = 
+			BlockTags.create(new ResourceLocation(ArsenicAndLace.MODID, "needs_tenebrium_tool"));
 
 	public static final Tier ARSENIC = TierSortingRegistry.registerTier(
 			new ForgeTier(Tiers.STONE.getLevel(), 62, 2.0F, 2.0F, 10, ARSENIC_TAG,
