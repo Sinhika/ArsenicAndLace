@@ -10,7 +10,6 @@ import mod.akkamaddi.arsenic.config.ConfigHelper;
 import mod.akkamaddi.arsenic.config.ConfigHolder;
 import mod.akkamaddi.arsenic.init.ModBlocks;
 import mod.akkamaddi.arsenic.init.ModTabGroups;
-import mod.akkamaddi.arsenic.worldgen.OreGeneration;
 import mod.alexndr.simplecorelib.api.config.FlagCondition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -38,9 +37,6 @@ public final class ModEventSubscriber
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
-        event.enqueueWork(() -> {
-            OreGeneration.initOverworldFeatures();
-        });
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 

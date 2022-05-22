@@ -93,6 +93,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
     
     public final ContainerData dataAccess = new ContainerData() 
     {
+        @Override
         public int get(int index) {
             switch (index)
             {
@@ -109,6 +110,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
             }
         } // end get()
 
+        @Override
         public void set(int index, int value) {
             switch (index)
             {
@@ -126,6 +128,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
             }
         } // end set()
 
+        @Override
         public int getCount() {
             return NUM_DATA_VALUES;
         }
@@ -419,18 +422,18 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
      * @return The smelting recipe for the inventory; implements recipe caching.
      */
     @SuppressWarnings("unchecked")
-    protected Optional<AbstractCookingRecipe> getRecipe(final Container inventory)
+    protected Optional<AbstractCookingRecipe> getRecipe(final Container inv)
     {
-        if (cachedRecipe != null && cachedRecipe.matches(inventory, level))
+        if (cachedRecipe != null && cachedRecipe.matches(inv, level))
         {
             return Optional.of(cachedRecipe);
         }
         else
         {
             AbstractCookingRecipe rec 
-                = level.getRecipeManager().getRecipeFor((RecipeType<AbstractCookingRecipe>) recipeType, inventory, level).orElse(null);
+                = level.getRecipeManager().getRecipeFor((RecipeType<AbstractCookingRecipe>) recipeType, inv, level).orElse(null);
             if (rec == null) {
-                failedMatch = inventory.getItem(0); // i.e., input.
+                failedMatch = inv.getItem(0); // i.e., input.
             }
             else {
                 failedMatch = ItemStack.EMPTY;
@@ -792,6 +795,7 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
      * The default implementation ({@link TileEntity#handleUpdateTag}) calls {@link #writeInternal)}
      * which doesn't save any of our extra data so we override it to call {@link #write} instead
      */
+    @Override
     @Nonnull
     public CompoundTag getUpdateTag()
     {
