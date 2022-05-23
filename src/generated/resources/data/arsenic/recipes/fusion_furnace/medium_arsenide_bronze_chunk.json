@@ -9,7 +9,7 @@
         }
       ],
       "recipe": {
-        "type": "fusion:alloyiung",
+        "type": "fusion:alloying",
         "inputs": [
           {
             "tag": "forge:ingots/copper"
