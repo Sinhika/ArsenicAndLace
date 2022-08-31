@@ -15,7 +15,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
@@ -61,7 +61,7 @@ public abstract class AbstractTaintedFurnaceContainer extends AbstractContainerM
 
             // Add all the slots for the tileEntity's inventory and the playerInventory to
             // this container
-            blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
+            blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(h -> {
                 addSlot(new SlotItemHandler(h, INPUT_SLOT, 56, 17));
                 addSlot(new SlotItemHandler(h, FUEL_SLOT, 56, 53));
                 addSlot(new FurnaceResultSlotItemHandler(player, h, blockEntity, OUTPUT_SLOT1, 112, 31));

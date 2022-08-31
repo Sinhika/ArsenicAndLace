@@ -29,7 +29,7 @@ description='''Addition of Arsenic, Arsenide Bronze, Arsenide Gold and Tenebrium
 [[dependencies.arsenic]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2, 1,19.3)"
+    versionRange="[1.19.2, 1.19.3)"
     ordering="NONE"
     side="BOTH"
 
