@@ -13,10 +13,7 @@ public final class ConfigHelper
         // not a flag
         ArsenicConfig.enableChestLoot = ConfigHolder.SERVER.serverEnableChestLoot.get();
         
-        // ore generation?
-        ArsenicConfig.generateArsenicOre = ConfigHolder.SERVER.serverGenerateArsenicOre.get();
-
-         // Necrotic furnace chance of generating toxic soot per smelt op.
+          // Necrotic furnace chance of generating toxic soot per smelt op.
         ArsenicConfig.toxicSootChance = ConfigHolder.SERVER.serverToxicSootChance.get();
         
         // Does necrotic furnace poison food?

@@ -6,7 +6,6 @@ import mod.akkamaddi.arsenic.client.particle.NecroticFlameParticle;
 import mod.akkamaddi.arsenic.content.TaintedFurnaceContainerMenu;
 import mod.akkamaddi.arsenic.init.ModMenuTypes;
 import mod.akkamaddi.arsenic.init.ModParticleTypes;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -49,11 +48,10 @@ public final class ClientModEventSubscriber
      * 
      * @param event an event instance used to register particle factories.
      */
-    @SuppressWarnings("resource")
     @SubscribeEvent
     public static void onRegisterParticleFactories(final RegisterParticleProvidersEvent event)
     {
-        Minecraft.getInstance().particleEngine.register(ModParticleTypes.necrotic_flame.get(), 
-                                                        NecroticFlameParticle.NecroticFlameParticleProvider::new);
+        event.register(ModParticleTypes.necrotic_flame.get(), 
+                       NecroticFlameParticle.NecroticFlameParticleProvider::new);
     }
 } // end class

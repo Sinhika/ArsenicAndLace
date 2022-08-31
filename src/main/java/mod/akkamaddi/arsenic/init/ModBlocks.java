@@ -3,7 +3,7 @@ package mod.akkamaddi.arsenic.init;
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.content.TaintedFurnaceBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -29,12 +29,12 @@ public final class ModBlocks
             DeferredRegister.create(ForgeRegistries.BLOCKS, ArsenicAndLace.MODID);
 
     // ore blocks - hard (requires iron tools to mine), but brittle (low strength & blast resistance)
-    public static final RegistryObject<OreBlock> arsenic_ore_stone =  BLOCKS.register("arsenic_ore_stone",
-    		() -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> arsenic_ore_stone =  BLOCKS.register("arsenic_ore_stone",
+    		() -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 2.0F, 1.0F)
                     .requiresCorrectToolForDrops()));
-    public static final RegistryObject<OreBlock> arsenic_ore_deepslate =  BLOCKS.register("arsenic_ore_deepslate",
-    		() -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> arsenic_ore_deepslate =  BLOCKS.register("arsenic_ore_deepslate",
+    		() -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 2.0F, 1.0F)
                     .requiresCorrectToolForDrops()));
     

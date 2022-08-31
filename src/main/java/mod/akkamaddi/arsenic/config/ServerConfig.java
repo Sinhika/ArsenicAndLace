@@ -7,11 +7,6 @@ public final class ServerConfig
 {
     final ForgeConfigSpec.BooleanValue serverEnableChestLoot; // load additional chest loot?
     final ForgeConfigSpec.IntValue serverToxicSootChance;    // 0 to 100 chance of generating toxic soot
-    final ForgeConfigSpec.BooleanValue serverGenerateArsenicOre; // world generation
-    final ForgeConfigSpec.IntValue serverArsenicVeinSize;
-    final ForgeConfigSpec.IntValue serverArsenicVeinCount;
-    final ForgeConfigSpec.IntValue serverArsenicBottomHeight;
-    final ForgeConfigSpec.IntValue serverArsenicMaxHeight;
 
     final ForgeConfigSpec.BooleanValue serverNecroticFurnacePoisonsFood;
     final ForgeConfigSpec.BooleanValue serverEnableRecycling; // recipe flag
@@ -57,26 +52,6 @@ public final class ServerConfig
         serverEnableArsenicTools = builder.comment("Enable making Arsenic tools")
                 .translation(ArsenicAndLace.MODID + "config.EnableArsenicTools")
                 .define("EnableArsenicTools", true);
-        serverGenerateArsenicOre  = builder.comment("Enable Arsenic Ore generation in the world")
-                .translation(ArsenicAndLace.MODID + "config.GenerateArsenicOre")
-                .define("GenerateArsenicOre", true);
-        serverArsenicVeinSize = builder
-                .comment("Arsenic ore vein size")
-                .translation(ArsenicAndLace.MODID + ".config.serverArsenicVeinSize")
-                .defineInRange("ArsenicVeinSize", 3, 1, Integer.MAX_VALUE);
-        serverArsenicVeinCount = builder
-                .comment("Arsenic ore vein count per chunk")
-                .translation(ArsenicAndLace.MODID + ".config.serverArsenicVeinCount")
-                .defineInRange("ArsenicVeinCount", 4, 1, Integer.MAX_VALUE);
-        serverArsenicBottomHeight = builder
-                .comment("Arsenic ore minimum height")
-                .translation(ArsenicAndLace.MODID + ".config.serverArsenicBottomHeight")
-                .defineInRange("ArsenicBottomHeight", -16, -63, 254);
-        serverArsenicMaxHeight = builder
-                .comment("Arsenic ore maximum height")
-                .translation(ArsenicAndLace.MODID + ".config.serverArsenicMaxHeight")
-                .defineInRange("ArsenicMaxHeight", 16, -63, 255);
-
         builder.pop();
 
         builder.push("Arsenide Bronze");

@@ -24,7 +24,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
@@ -50,6 +50,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
 {
@@ -349,11 +350,9 @@ public abstract class AbstractTaintedFurnaceBlockEntity extends BlockEntity
         map.put(itemProvider.asItem(), burnTimeIn);
     }
 
-    protected static void addItemTagBurnTime(Map<Item, Integer> map, Tag<Item> iTag, int burnTimeIn)
+    protected static void addItemTagBurnTime(Map<Item, Integer> map, TagKey<Item> iTag, int burnTimeIn)
     {
-        for(Item item : iTag.getValues()) {
-            map.put(item, burnTimeIn);
-        }
+        ForgeRegistries.ITEMS.tags().getTag(iTag).forEach(item -> map.put(item, burnTimeIn)); 
     } // end ()
 
     /**
