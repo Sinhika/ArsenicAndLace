@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public final class ModBlockEntityTypes
 {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = 
-            DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, ArsenicAndLace.MODID);
+            DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ArsenicAndLace.MODID);
     
     public static RegistryObject<BlockEntityType<TaintedFurnaceBlockEntity>> tainted_furnace
         = BLOCK_ENTITY_TYPES.register("tainted_furnace", 

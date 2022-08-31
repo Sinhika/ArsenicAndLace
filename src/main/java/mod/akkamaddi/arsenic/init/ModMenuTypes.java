@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 public final class ModMenuTypes
 {
     public static final DeferredRegister<MenuType<?>> CONTAINER_TYPES = 
-            DeferredRegister.create(ForgeRegistries.CONTAINERS, ArsenicAndLace.MODID);
+            DeferredRegister.create(ForgeRegistries.MENU_TYPES, ArsenicAndLace.MODID);
     
     public static final RegistryObject<MenuType<TaintedFurnaceContainerMenu>> tainted_furnace =
             CONTAINER_TYPES.register("tainted_furnace", 

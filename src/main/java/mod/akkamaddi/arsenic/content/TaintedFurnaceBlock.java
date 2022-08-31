@@ -20,6 +20,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class TaintedFurnaceBlock extends AbstractTaintedFurnaceBlock
 {
     private static final String DISPLAY_NAME = "block.arsenic.tainted_furnace";
@@ -84,7 +86,7 @@ public class TaintedFurnaceBlock extends AbstractTaintedFurnaceBlock
                     return new TaintedFurnaceContainerMenu(windowId, bpos, playerInventory, playerEntity);
                 }
             }; // end anonymous-class
-            NetworkHooks.openGui((ServerPlayer) player, containerProvider, be.getBlockPos());
+            NetworkHooks.openScreen((ServerPlayer) player, containerProvider, be.getBlockPos());
             player.awardStat(Stats.INTERACT_WITH_FURNACE);
         } // end-if
         else {

@@ -10,7 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -51,7 +51,7 @@ public final class ClientModEventSubscriber
      */
     @SuppressWarnings("resource")
     @SubscribeEvent
-    public static void onRegisterParticleFactories(final ParticleFactoryRegisterEvent event)
+    public static void onRegisterParticleFactories(final RegisterParticleProvidersEvent event)
     {
         Minecraft.getInstance().particleEngine.register(ModParticleTypes.necrotic_flame.get(), 
                                                         NecroticFlameParticle.NecroticFlameParticleProvider::new);
