@@ -2,34 +2,34 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "name": "main",
-      "rolls": {
-        "type": "minecraft:uniform",
-        "min": 1.0,
-        "max": 2.0
-      },
       "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.75,
+          "condition": "minecraft:random_chance"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 10,
-          "name": "arsenic:old_lace_chest"
+          "name": "arsenic:old_lace_chest",
+          "weight": 10
         },
         {
           "type": "minecraft:item",
-          "weight": 10,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "min": 2.0,
-                "max": 4.0
+                "max": 4.0,
+                "min": 2.0
               },
-              "add": false
+              "function": "minecraft:set_count"
             }
           ],
-          "name": "arsenic:arsenide_salt"
+          "name": "arsenic:arsenide_salt",
+          "weight": 10
         },
         {
           "type": "minecraft:item",
@@ -40,12 +40,12 @@
           "name": "arsenic:arsenide_gold_chestplate"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:random_chance",
-          "chance": 0.75
-        }
-      ]
+      "name": "main",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 2.0,
+        "min": 1.0
+      }
     }
   ]
 }

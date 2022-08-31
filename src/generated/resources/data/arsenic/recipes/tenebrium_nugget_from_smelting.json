@@ -1,5 +1,7 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 6.0,
   "ingredient": [
     {
       "item": "arsenic:tenebrium_axe"
@@ -29,7 +31,5 @@
       "item": "arsenic:tenebrium_leggings"
     }
   ],
-  "result": "arsenic:tenebrium_nugget",
-  "experience": 6.0,
-  "cookingtime": 200
+  "result": "arsenic:tenebrium_nugget"
 }

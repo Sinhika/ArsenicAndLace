@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 4.0,
   "ingredient": {
     "item": "arsenic:raw_arsenic"
   },
-  "result": "arsenic:arsenic_ingot",
-  "experience": 4.0,
-  "cookingtime": 200
+  "result": "arsenic:arsenic_ingot"
 }

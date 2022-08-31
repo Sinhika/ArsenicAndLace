@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "arsenic_making_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "arsenic_making_enabled"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:poisonous_potato"
+        },
+        "cookingtime": 600,
+        "experience": 20.0,
         "inputs": [
           {
             "item": "arsenic:realgar"
@@ -18,14 +23,9 @@
             "item": "arsenic:orpiment"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:poisonous_potato"
-        },
         "output": {
           "item": "arsenic:large_arsenic_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 20.0
+        }
       }
     }
   ]

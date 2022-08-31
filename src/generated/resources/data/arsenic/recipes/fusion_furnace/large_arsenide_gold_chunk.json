@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "arsenide_gold_making_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "arsenide_gold_making_enabled"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:redstone"
+        },
+        "cookingtime": 600,
+        "experience": 20.0,
         "inputs": [
           {
             "item": "minecraft:gold_ingot"
@@ -18,14 +23,9 @@
             "tag": "forge:ingots/arsenic"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:redstone"
-        },
         "output": {
           "item": "arsenic:large_arsenide_gold_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 20.0
+        }
       }
     }
   ]

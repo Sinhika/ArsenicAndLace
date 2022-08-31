@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "tenebrium_tools_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "tenebrium_tools_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " S ",
-          " T ",
-          " T "
-        ],
         "key": {
           "S": {
             "item": "arsenic:tenebrium_ingot"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          " S ",
+          " T ",
+          " T "
+        ],
         "result": {
           "item": "arsenic:tenebrium_shovel"
         }

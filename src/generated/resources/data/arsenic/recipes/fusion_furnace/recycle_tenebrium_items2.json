@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "recycling_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "recycling_enabled"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:rotten_flesh"
+        },
+        "cookingtime": 600,
+        "experience": 40.0,
         "inputs": [
           [
             {
@@ -23,15 +28,10 @@
             "item": "minecraft:quartz"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:rotten_flesh"
-        },
         "output": {
-          "item": "arsenic:large_tenebrium_chunk",
-          "count": 2
-        },
-        "cookingtime": 600,
-        "experience": 40.0
+          "count": 2,
+          "item": "arsenic:large_tenebrium_chunk"
+        }
       }
     }
   ]

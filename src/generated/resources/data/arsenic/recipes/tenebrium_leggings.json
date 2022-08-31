@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "tenebrium_tools_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "tenebrium_tools_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          "S S",
-          "S S"
-        ],
         "key": {
           "S": {
             "item": "arsenic:tenebrium_ingot"
           }
         },
+        "pattern": [
+          "SSS",
+          "S S",
+          "S S"
+        ],
         "result": {
           "item": "arsenic:tenebrium_leggings"
         }

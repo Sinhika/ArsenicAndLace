@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 5.0,
   "ingredient": {
     "item": "arsenic:large_arsenide_bronze_chunk"
   },
-  "result": "arsenic:arsenide_bronze_ingot",
-  "experience": 5.0,
-  "cookingtime": 200
+  "result": "arsenic:arsenide_bronze_ingot"
 }

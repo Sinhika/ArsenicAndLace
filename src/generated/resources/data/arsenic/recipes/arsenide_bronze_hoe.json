@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "arsenide_bronze_tools_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "arsenide_bronze_tools_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SS ",
-          " T ",
-          " T "
-        ],
         "key": {
           "S": {
             "item": "arsenic:arsenide_bronze_ingot"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SS ",
+          " T ",
+          " T "
+        ],
         "result": {
           "item": "arsenic:arsenide_bronze_hoe"
         }

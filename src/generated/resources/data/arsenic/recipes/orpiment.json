@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:slime_ball"
+    },
+    "Z": {
+      "item": "minecraft:rotten_flesh"
+    }
+  },
   "pattern": [
     "ZZZ",
     "ZZZ",
     "ZSZ"
   ],
-  "key": {
-    "Z": {
-      "item": "minecraft:rotten_flesh"
-    },
-    "S": {
-      "item": "minecraft:slime_ball"
-    }
-  },
   "result": {
     "item": "arsenic:orpiment"
   }

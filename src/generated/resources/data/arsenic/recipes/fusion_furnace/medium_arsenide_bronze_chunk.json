@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "arsenide_bronze_making_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "arsenide_bronze_making_enabled"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:rotten_flesh"
+        },
+        "cookingtime": 600,
+        "experience": 8.0,
         "inputs": [
           {
             "tag": "forge:ingots/copper"
@@ -18,14 +23,9 @@
             "tag": "forge:ingots/arsenic"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:rotten_flesh"
-        },
         "output": {
           "item": "arsenic:medium_arsenide_bronze_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 8.0
+        }
       }
     }
   ]

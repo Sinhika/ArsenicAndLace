@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 6.0,
   "ingredient": {
     "item": "arsenic:tenebrium_dust"
   },
-  "result": "arsenic:tenebrium_ingot",
-  "experience": 6.0,
-  "cookingtime": 200
+  "result": "arsenic:tenebrium_ingot"
 }

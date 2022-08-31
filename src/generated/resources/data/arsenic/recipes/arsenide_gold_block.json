@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "SSS",
-    "SSS",
-    "SSS"
-  ],
   "key": {
     "S": {
       "item": "arsenic:arsenide_gold_ingot"
     }
   },
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
   "result": {
     "item": "arsenic:arsenide_gold_block"
   }

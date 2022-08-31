@@ -2,47 +2,47 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "name": "main",
-      "rolls": {
-        "type": "minecraft:uniform",
-        "min": 1.0,
-        "max": 1.0
-      },
       "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.1,
+          "condition": "minecraft:random_chance"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "arsenic:arsenide_bronze_pickaxe"
+          "name": "arsenic:arsenide_bronze_pickaxe",
+          "weight": 5
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "arsenic:arsenide_bronze_shovel"
+          "name": "arsenic:arsenide_bronze_shovel",
+          "weight": 5
         },
         {
           "type": "minecraft:item",
-          "weight": 3,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "min": 1.0,
-                "max": 3.0
+                "max": 3.0,
+                "min": 1.0
               },
-              "add": false
+              "function": "minecraft:set_count"
             }
           ],
-          "name": "arsenic:arsenide_bronze_ingot"
+          "name": "arsenic:arsenide_bronze_ingot",
+          "weight": 3
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:random_chance",
-          "chance": 0.1
-        }
-      ]
+      "name": "main",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
     }
   ]
 }

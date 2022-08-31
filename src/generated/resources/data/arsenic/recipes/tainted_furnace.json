@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "arsenic:arsenic_ingot"
+    },
+    "R": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "S": {
+      "item": "minecraft:bone"
+    }
+  },
   "pattern": [
     "ASA",
     "SRS",
     "ASA"
   ],
-  "key": {
-    "A": {
-      "item": "arsenic:arsenic_ingot"
-    },
-    "S": {
-      "item": "minecraft:bone"
-    },
-    "R": {
-      "item": "minecraft:rotten_flesh"
-    }
-  },
   "result": {
     "item": "arsenic:tainted_furnace"
   }

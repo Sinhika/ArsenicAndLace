@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "arsenide_bronze_tools_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "arsenide_bronze_tools_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          "S S",
-          "S S"
-        ],
         "key": {
           "S": {
             "item": "arsenic:arsenide_bronze_ingot"
           }
         },
+        "pattern": [
+          "SSS",
+          "S S",
+          "S S"
+        ],
         "result": {
           "item": "arsenic:arsenide_bronze_leggings"
         }

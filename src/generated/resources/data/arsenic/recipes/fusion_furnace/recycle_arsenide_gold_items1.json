@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "recycling_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "recycling_enabled"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:rotten_flesh"
+        },
+        "cookingtime": 600,
+        "experience": 15.0,
         "inputs": [
           [
             {
@@ -38,14 +43,9 @@
             "item": "minecraft:gravel"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:rotten_flesh"
-        },
         "output": {
           "item": "arsenic:large_arsenide_gold_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 15.0
+        }
       }
     }
   ]

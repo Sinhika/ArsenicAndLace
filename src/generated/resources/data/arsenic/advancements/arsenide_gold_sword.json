@@ -1,22 +1,10 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "flag": "arsenide_gold_tools_enabled",
-          "type": "arsenic:flag"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "arsenic:arsenide_gold_sword"
-          ]
-        },
         "criteria": {
           "has_item": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -25,15 +13,27 @@
                   ]
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           }
         },
         "requirements": [
           [
             "has_item"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "arsenic:arsenide_gold_sword"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "arsenic:flag",
+          "flag": "arsenide_gold_tools_enabled"
+        }
+      ]
     }
   ]
 }

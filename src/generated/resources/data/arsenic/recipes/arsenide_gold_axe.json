@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "arsenide_gold_tools_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "arsenide_gold_tools_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SS ",
-          "ST ",
-          " T "
-        ],
         "key": {
           "S": {
             "item": "arsenic:arsenide_gold_ingot"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SS ",
+          "ST ",
+          " T "
+        ],
         "result": {
           "item": "arsenic:arsenide_gold_axe"
         }

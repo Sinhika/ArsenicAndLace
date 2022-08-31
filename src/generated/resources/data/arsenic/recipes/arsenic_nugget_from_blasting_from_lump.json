@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 2.0,
   "ingredient": {
     "item": "arsenic:arsenic_toxic_lump"
   },
-  "result": "arsenic:arsenic_nugget",
-  "experience": 2.0,
-  "cookingtime": 100
+  "result": "arsenic:arsenic_nugget"
 }

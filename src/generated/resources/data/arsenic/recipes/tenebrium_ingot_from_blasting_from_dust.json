@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 6.0,
   "ingredient": {
     "item": "arsenic:tenebrium_dust"
   },
-  "result": "arsenic:tenebrium_ingot",
-  "experience": 6.0,
-  "cookingtime": 100
+  "result": "arsenic:tenebrium_ingot"
 }

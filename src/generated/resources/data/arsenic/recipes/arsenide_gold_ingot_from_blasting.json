@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 6.0,
   "ingredient": {
     "item": "arsenic:large_arsenide_gold_chunk"
   },
-  "result": "arsenic:arsenide_gold_ingot",
-  "experience": 6.0,
-  "cookingtime": 100
+  "result": "arsenic:arsenide_gold_ingot"
 }

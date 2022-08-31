@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "tenebrium_making_enabled",
-          "type": "arsenic:flag"
+          "type": "arsenic:flag",
+          "flag": "tenebrium_making_enabled"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:rotten_flesh"
+        },
+        "cookingtime": 600,
+        "experience": 10.0,
         "inputs": [
           {
             "item": "minecraft:obsidian"
@@ -18,14 +23,9 @@
             "item": "arsenic:arsenide_gold_ingot"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:rotten_flesh"
-        },
         "output": {
           "item": "arsenic:tenebrium_nugget"
-        },
-        "cookingtime": 600,
-        "experience": 10.0
+        }
       }
     }
   ]

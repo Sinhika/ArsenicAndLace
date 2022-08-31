@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 4.0,
   "ingredient": {
     "item": "arsenic:arsenide_salt"
   },
-  "result": "arsenic:medium_arsenic_chunk",
-  "experience": 4.0,
-  "cookingtime": 100
+  "result": "arsenic:medium_arsenic_chunk"
 }

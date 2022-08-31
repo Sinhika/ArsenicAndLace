@@ -1,5 +1,7 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 5.0,
   "ingredient": [
     {
       "item": "arsenic:arsenide_bronze_axe"
@@ -29,7 +31,5 @@
       "item": "arsenic:arsenide_bronze_leggings"
     }
   ],
-  "result": "arsenic:arsenide_bronze_nugget",
-  "experience": 5.0,
-  "cookingtime": 200
+  "result": "arsenic:arsenide_bronze_nugget"
 }
