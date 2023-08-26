@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import mod.akkamaddi.arsenic.config.ConfigHolder;
 import mod.akkamaddi.arsenic.init.ModBlockEntityTypes;
 import mod.akkamaddi.arsenic.init.ModBlocks;
+import mod.akkamaddi.arsenic.init.ModCreativeTabs;
 import mod.akkamaddi.arsenic.init.ModItems;
 import mod.akkamaddi.arsenic.init.ModMenuTypes;
 import mod.akkamaddi.arsenic.init.ModParticleTypes;
@@ -32,6 +33,7 @@ public class ArsenicAndLace
         
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         ModMenuTypes.CONTAINER_TYPES.register(modEventBus);
         ModBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
         ModParticleTypes.PARTICLETYPES.register(modEventBus);

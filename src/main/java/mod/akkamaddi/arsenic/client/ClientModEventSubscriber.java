@@ -51,7 +51,7 @@ public final class ClientModEventSubscriber
     @SubscribeEvent
     public static void onRegisterParticleFactories(final RegisterParticleProvidersEvent event)
     {
-        event.register(ModParticleTypes.necrotic_flame.get(), 
+        event.registerSpriteSet(ModParticleTypes.necrotic_flame.get(), 
                        NecroticFlameParticle.NecroticFlameParticleProvider::new);
     }
 } // end class

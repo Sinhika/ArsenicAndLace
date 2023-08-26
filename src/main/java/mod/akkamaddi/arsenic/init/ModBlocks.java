@@ -7,7 +7,8 @@ import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -30,44 +31,43 @@ public final class ModBlocks
 
     // ore blocks - hard (requires iron tools to mine), but brittle (low strength & blast resistance)
     public static final RegistryObject<DropExperienceBlock> arsenic_ore_stone =  BLOCKS.register("arsenic_ore_stone",
-    		() -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
+    		() -> new DropExperienceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                     .strength( 2.0F, 1.0F)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<DropExperienceBlock> arsenic_ore_deepslate =  BLOCKS.register("arsenic_ore_deepslate",
-    		() -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
+    		() -> new DropExperienceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                     .strength( 2.0F, 1.0F)
                     .requiresCorrectToolForDrops()));
     
     // storage blocks
     public static final RegistryObject<Block> arsenic_block = BLOCKS.register("arsenic_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(3.0F, 10.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> raw_arsenic_block = BLOCKS.register("raw_arsenic_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(3.0F, 10.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> arsenide_bronze_block = BLOCKS.register("arsenide_bronze_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(5.0F, 20.0F).sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> arsenide_gold_block = BLOCKS.register("arsenide_gold_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(4.0F, 16.0F).sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()));    
     public static final RegistryObject<Block> tenebrium_block = BLOCKS.register("tenebrium_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(12.0F, 55.0F).sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()));    
    
     // pressure plate
     public static final RegistryObject<PressurePlateBlock> arsenic_plate = BLOCKS.register("arsenic_plate",
             () -> new  PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, 
-                                          BlockBehaviour.Properties.of(Material.METAL, 
-                                                  ModBlocks.arsenic_block.get().defaultMaterialColor())
-                                          .noCollission().strength(0.5F).sound(SoundType.METAL)));
+                                          BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
+                                          .noCollission().strength(0.5F).sound(SoundType.METAL), BlockSetType.GOLD));
     
-    // ovens - TEMPORARY
+    // ovens 
     public static final RegistryObject<TaintedFurnaceBlock> tainted_furnace = BLOCKS.register("tainted_furnace",
-            () -> new TaintedFurnaceBlock(Block.Properties.of(Material.METAL).strength(2.0F, 1.0F).sound(SoundType.METAL)
+            () -> new TaintedFurnaceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.0F, 1.0F).sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()));
     
 } // end class
