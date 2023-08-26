@@ -50,5 +50,6 @@
         "min": 1.0
       }
     }
-  ]
+  ],
+  "random_sequence": "arsenic:inject/abandoned_mineshaft"
 }

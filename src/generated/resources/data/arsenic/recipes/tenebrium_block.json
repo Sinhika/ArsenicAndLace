@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "S": {
       "item": "arsenic:tenebrium_ingot"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "arsenic:tenebrium_block"
-  }
+  },
+  "show_notification": true
 }

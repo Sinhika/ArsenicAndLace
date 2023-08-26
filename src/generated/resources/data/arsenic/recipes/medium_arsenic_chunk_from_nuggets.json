@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "S": {
       "item": "arsenic:arsenic_nugget"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "arsenic:medium_arsenic_chunk"
-  }
+  },
+  "show_notification": true
 }

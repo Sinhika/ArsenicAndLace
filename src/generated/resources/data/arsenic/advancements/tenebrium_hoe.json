@@ -26,7 +26,8 @@
           "recipes": [
             "arsenic:tenebrium_hoe"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

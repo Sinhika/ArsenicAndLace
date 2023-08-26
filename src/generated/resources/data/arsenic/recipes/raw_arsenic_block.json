@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "S": {
       "item": "arsenic:raw_arsenic"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "arsenic:raw_arsenic_block"
-  }
+  },
+  "show_notification": true
 }

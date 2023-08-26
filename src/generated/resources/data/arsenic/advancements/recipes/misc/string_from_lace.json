@@ -30,5 +30,6 @@
     "recipes": [
       "arsenic:string_from_lace"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

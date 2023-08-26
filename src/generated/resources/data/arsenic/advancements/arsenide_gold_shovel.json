@@ -26,7 +26,8 @@
           "recipes": [
             "arsenic:arsenide_gold_shovel"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

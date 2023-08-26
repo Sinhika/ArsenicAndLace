@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "S": {
             "item": "arsenic:arsenide_bronze_ingot"
@@ -22,7 +23,8 @@
         ],
         "result": {
           "item": "arsenic:arsenide_bronze_helmet"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "A": {
       "item": "arsenic:arsenic_ingot"
@@ -18,5 +19,6 @@
   ],
   "result": {
     "item": "arsenic:tainted_furnace"
-  }
+  },
+  "show_notification": true
 }

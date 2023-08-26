@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "S": {
             "item": "arsenic:arsenide_gold_ingot"
@@ -25,7 +26,8 @@
         ],
         "result": {
           "item": "arsenic:arsenide_gold_shovel"
-        }
+        },
+        "show_notification": true
       }
     }
   ]
