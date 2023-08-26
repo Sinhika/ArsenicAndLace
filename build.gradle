@@ -1,7 +1,7 @@
 plugins {
     id 'eclipse'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version [6.0,6.2)'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
@@ -162,7 +162,11 @@ tasks.named('processResources', ProcessResources).configure {
             buckletlib_range : buckletlib_range,            
             simpleores_version : simpleores_version,
             simpleores_range : simpleores_range,
+            version_mcjei : version_mcjei,
+            jei_version : jei_version,
             jei_version_range : jei_version_range,
+            fusion_version : fusion_version,
+            fusion_range : fusion_range,
     ]
     inputs.properties replaceProperties
 
