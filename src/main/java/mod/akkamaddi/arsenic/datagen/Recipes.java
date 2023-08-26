@@ -8,8 +8,9 @@ import mod.akkamaddi.arsenic.init.ModBlocks;
 import mod.akkamaddi.arsenic.init.ModItems;
 import mod.alexndr.simplecorelib.api.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simplecorelib.api.datagen.RecipeSetBuilder;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
@@ -22,14 +23,14 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 {
     private RecipeSetBuilder setbuilder;
 
-    public Recipes(DataGenerator generatorIn)
+    public Recipes(PackOutput pOutput)
     {
-        super(generatorIn);
+        super(pOutput);
         setbuilder = new RecipeSetBuilder(ArsenicAndLace.MODID);
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -137,19 +138,19 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     private void registerMiscRecipes(Consumer<FinishedRecipe> consumer)
     {
         // lace breakdown
-        ShapelessRecipeBuilder.shapeless(Items.STRING, 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.STRING, 4)
             .requires(ModItems.old_lace_chest.get())
             .unlockedBy("has_item", has(ModItems.old_lace_chest.get()))
             .save(consumer, "arsenic:string_from_lace");
         
         // arsenide_salt
-        ShapelessRecipeBuilder.shapeless(ModItems.arsenide_salt.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.arsenide_salt.get())
             .requires(ModItems.realgar.get()).requires(ModItems.orpiment.get())
             .unlockedBy("has_item", has(ModItems.realgar.get()))
             .save(consumer);
         
         // realgar
-        ShapedRecipeBuilder.shaped(ModItems.realgar.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.realgar.get())
             .define('Z', Items.ROTTEN_FLESH)
             .define('B', Items.BONE)
             .pattern("ZZZ")
@@ -159,7 +160,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
             .save(consumer);
         
         // orpiment
-        ShapedRecipeBuilder.shaped(ModItems.orpiment.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.orpiment.get())
             .define('Z', Items.ROTTEN_FLESH)
             .define('S', Items.SLIME_BALL)
             .pattern("ZZZ")
@@ -169,26 +170,26 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
             .save(consumer);
         
         // toxic lump
-        ShapelessRecipeBuilder.shapeless(ModItems.arsenic_toxic_lump.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.arsenic_toxic_lump.get())
             .requires(ModItems.arsenic_toxic_soot.get(), 9)
             .unlockedBy("has_item", has(ModItems.arsenic_toxic_soot.get()))
             .save(consumer);
         
         // convert raw_arsenic to large_arsenic_chunk
-        ShapelessRecipeBuilder.shapeless(ModItems.large_arsenic_chunk.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.large_arsenic_chunk.get())
             .requires(ModItems.raw_arsenic.get())
             .unlockedBy("has_item", has(ModItems.raw_arsenic.get()))
             .save(consumer, "arsenic:convert_raw_to_chunk");
         
         // arsenic pressure plate
-        ShapedRecipeBuilder.shaped(ModBlocks.arsenic_plate.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.arsenic_plate.get())
             .define('A', ModItems.arsenic_ingot.get())
             .pattern("AA ")
             .unlockedBy("has_item", has(ModItems.arsenic_ingot.get()))
             .save(consumer);
         
         // necrotic/tainted furnace
-        ShapedRecipeBuilder.shaped(ModBlocks.tainted_furnace.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.tainted_furnace.get())
             .define('A', ModItems.arsenic_ingot.get())
             .define('S', Items.BONE)
             .define('R', Items.ROTTEN_FLESH)

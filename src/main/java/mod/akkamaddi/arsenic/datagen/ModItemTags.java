@@ -1,32 +1,38 @@
 package mod.akkamaddi.arsenic.datagen;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import mod.akkamaddi.arsenic.ArsenicAndLace;
 import mod.akkamaddi.arsenic.init.ModBlocks;
 import mod.akkamaddi.arsenic.init.ModItems;
 import mod.alexndr.simplecorelib.api.datagen.MiningItemTags;
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModItemTags extends MiningItemTags
 {
 
-    public ModItemTags(DataGenerator dataGenerator, ExistingFileHelper existingFileHelper)
+    public ModItemTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+			CompletableFuture<TagLookup<Block>> blockTagProvider, ExistingFileHelper existingFileHelper)
     {
-        super(dataGenerator, new ModBlockTags(dataGenerator, existingFileHelper), ArsenicAndLace.MODID, existingFileHelper);
+        super(output, lookupProvider, blockTagProvider, ArsenicAndLace.MODID, existingFileHelper);
     }
 
     @Override
-    protected void addTags()
+    protected void addTags(HolderLookup.Provider lookupProvider)
     {
-        super.addTags();
+        super.addTags(lookupProvider);
         registerDustTags();
         registerNuggetTags();
         registerIngotTags();
         registerStorageBlockTags();
         registerMiscTags();
+        registerToolTags(ModItems.ITEMS);
+        registerArmorTags(ModItems.ITEMS);
     }
 
     

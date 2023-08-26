@@ -2,8 +2,17 @@ package mod.akkamaddi.arsenic.datagen;
 
 import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
 import mod.akkamaddi.arsenic.ArsenicAndLace;
+import mod.alexndr.simplecorelib.api.datagen.SimpleLootTableProvider;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -24,12 +33,25 @@ public class ArsenicDataGenerator
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator gen = event.getGenerator();
-        gen.addProvider(event.includeServer(), new Recipes(gen));
-        gen.addProvider(event.includeServer(), new FusionRecipes(gen));
-        gen.addProvider(event.includeServer(), new ModBlockTags(gen, event.getExistingFileHelper()));
-        gen.addProvider(event.includeServer(), new ModItemTags(gen, event.getExistingFileHelper()));
-        gen.addProvider(event.includeServer(), new ArsenicLootTableProvider(gen));
-        gen.addProvider(event.includeServer(), new ArsenicLootInjectorProvider(gen));
+        PackOutput packOutput = gen.getPackOutput();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();		
+
+        // server side
+        ModBlockTags blockTags = new ModBlockTags(packOutput, lookupProvider, existingFileHelper);
+        gen.addProvider(event.includeServer(), blockTags);
+        gen.addProvider(event.includeServer(),
+            	new ModItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), event.getExistingFileHelper()));
+
+        gen.addProvider(event.includeServer(), new Recipes(packOutput));
+        gen.addProvider(event.includeServer(), new FusionRecipes(packOutput));
+        
+        gen.addProvider(event.includeServer(), 
+            	new SimpleLootTableProvider(packOutput, List.of(
+            			new LootTableProvider.SubProviderEntry(ArsenicLootTableSubprovider::new, LootContextParamSets.BLOCK),
+                		new LootTableProvider.SubProviderEntry( ArsenicLootInjectorSubprovider::new, LootContextParamSets.CHEST)
+                		)));
+        
      } // end gatherData()
 
 } // end class
